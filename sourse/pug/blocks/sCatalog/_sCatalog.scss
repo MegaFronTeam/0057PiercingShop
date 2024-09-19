@@ -4,8 +4,16 @@
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
 	&__row{
-		// --bs-gutter-x: #{rem()};
-		--bs-gutter-y: var(--bs-gutter-x);
+		--bs-gutter-x: #{rem(7)};
+		--bs-gutter-y: #{rem(36)};
+    @include media-breakpoint-up(lg) {
+      --bs-gutter-x: #{rem(20)};
+      --bs-gutter-y: #{rem(14)};
+    }
+    margin-bottom: rem(49);
+    @include media-breakpoint-up(lg) {
+      margin-bottom: rem(57);
+    }
 
 	}
 	.section-title{
@@ -21,6 +29,10 @@
 		height: auto;
 	}
 
+  &__btn-wrap {
+
+  }
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -35,19 +47,116 @@
 .product-item{
 	display: flex;
 	flex-direction: column;
+
 	min-height: 100%;
-	background: #FFFFFF; 
-	border: 1px solid #E2E2E2;
-	border-radius: 15px;
-	overflow: hidden;
 	position: relative;
-	&__img-wrap{
-		@include block(298, 190);
+
+	&__img-wrap {
+    background: #FFFFFF;
+    border-radius: 12px;
+    @include block(268, 203);
+    @include media-breakpoint-up(lg) {
+      @include block(361, 317);
+    //   border-radius: 0;
+    }
 	}
 	&__caption{
 		flex-grow: 1;
 		display: flex;
 		flex-direction: column;
-		padding: rem(20);
+    gap: rem(6);
+		padding-top: rem(12);
 	}
+
+  &__title {
+    font-weight: 600;
+    font-size: rem(14);
+    line-height: 120%;
+    letter-spacing: 0.02em;
+    color: $gray-900;
+    @include media-breakpoint-up(lg) {
+      font-size: rem(20);
+    }
+  }
+
+  &__price {
+    color: $gray-900;
+    font-family: $headings-font-family;
+    letter-spacing: 0.03em;
+    font-size: rem(14);
+    @include media-breakpoint-up(lg) {
+      font-size: rem(18);
+    }
+  }
+
+	&__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(6);
+    flex-wrap: wrap;
+  }
+
+  img {
+    max-width: 94%;
+  }
+
+  .icon {
+    position: absolute;
+
+    top: var(--icon-pad);
+    right: var(--icon-pad);
+    --icon-pad: 10px;
+    font-size: rem(26);
+    @include media-breakpoint-up(lg) {
+      --icon-pad: 23px;
+      font-size: rem(35);
+    }
+    z-index: 2;
+    @include mt;
+
+    stroke: $gray-650;
+    stroke-width: 2px;
+    fill: transparent;
+    &:hover,
+    .active {
+      fill: $red;
+      stroke: $red;
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 0.03em;
+    color: #fff;
+    background: $black;
+    padding: rem(7);
+    border-radius: 10px;
+
+    top: var(--badge-pad);
+    left: var(--badge-pad);
+    font-size: 11px;
+    --badge-pad: 10px;
+    @include media-breakpoint-up(lg) {
+      font-size: 13px;
+      --badge-pad: 27px;
+    }
+  }
+
+  .btn {
+    @include media-breakpoint-down(md) {
+      font-size: rem(11);
+    }
+  }
+
+  .btn-primary {
+    --bs-btn-padding-y: #{rem(12)};
+    --bs-btn-padding-x: #{rem(20)};
+    @include media-breakpoint-up(lg) {
+      --bs-btn-padding-y: #{rem(10)};
+      --bs-btn-padding-x: #{rem(26)};
+    }
+  }
 }

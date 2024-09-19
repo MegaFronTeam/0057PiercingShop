@@ -1,0 +1,45 @@
+// start .sBrands
+.sBrands {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	--sTPB: #{rem(31)};
+  @include media-breakpoint-up(md) {
+    // --sTPB: #{rem(35)};
+  }
+	
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title{
+		
+	}
+  .swiper-wrapper {
+    align-items: center;
+  }
+	.swiper {
+    overflow: visible;
+  }
+
+	&__slider {
+		position: relative;
+  }
+
+	&__slide {
+    width: auto;
+    text-align: left;
+		@include media-breakpoint-down(md) {
+      img {
+        width: 85px;
+      }
+    }
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sBrands

@@ -59,6 +59,23 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true,
 	});
+
+  
+	const partnersSwiper = document.querySelector('.sBrands__slider--js');
+	new Swiper(partnersSwiper.querySelector('.swiper'), {
+		spaceBetween: 16,
+		slidesPerView: "auto",
+		loop: true,
+		navigation: {
+			nextEl: partnersSwiper.querySelector(".swiper-button-next"),
+			prevEl: partnersSwiper.querySelector(".swiper-button-prev"),
+		},
+    breakpoints: {
+      768: {
+        spaceBetween: 60,
+      }
+    }
+	});
 }
 if (document.readyState !== "loading") {
 	eventHandler();

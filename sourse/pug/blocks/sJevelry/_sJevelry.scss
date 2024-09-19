@@ -1,0 +1,76 @@
+// start .sJevelry
+.sJevelry {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	--sTPB: #{rem(37)};
+  @include media-breakpoint-up(lg) {
+    --sTPB: #{rem(54)};
+  }
+	
+	&__row{
+		--bs-gutter-x: #{rem(10)};
+		--bs-gutter-y: #{rem(11)};
+    @include media-breakpoint-up(lg) {
+      --bs-gutter-x: #{rem(34)};
+      --bs-gutter-y: #{rem(30)};
+    }
+	}
+	.section-title {
+		display: flex;
+    justify-content: center;
+    @include media-breakpoint-up(md) {
+      justify-content: space-between;
+    }
+	}
+	&__col{
+		
+	}
+	&__item{
+		
+	}
+
+  .btn {
+    --bs-btn-padding-y: #{rem(16.5)};
+    --bs-btn-padding-x: #{rem(32.5)};
+  }
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sJevelry
+
+.jewelry-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(8);
+
+  color: $body-color;
+  background: $white;
+  height: 100%;
+  border-radius: rem(10);
+  padding: rem(20) rem(10);
+	@include media-breakpoint-up(lg) {
+    padding: rem(20);
+  }
+
+  &:hover {
+    box-shadow: 2px 5px 15px 0 rgba(43, 49, 52, 0.1);
+  }
+
+  img {
+    width: rem(166);
+    max-width: 90%;
+  }
+
+  &__text {
+    max-width: rem(140);
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+}

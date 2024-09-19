@@ -1,0 +1,36 @@
+mixin sJevelry(data)
+	// start sJevelry
+	+b.SECTION.sJevelry.section#sJevelry&attributes(attributes)
+		.container
+			+b.section-title.text-center-md
+				h2 Украшения
+				+e.btn.btn.btn-outline-secondary(href='#').d-none.d-md-block перейти в каталог >
+			+e.row.row
+				+e.col.col-6.col-md-4.col-lg-3
+					+jewelryCard(1, 'Подвески и цепи')
+				+e.col.col-6.col-md-4.col-lg-3
+					+jewelryCard(2, 'Топы с кристаллами')
+				+e.col.col-6.col-md-4.col-lg-3
+					+jewelryCard(3, 'Кольца и циркуляры')
+				+e.col.col-6.col-md-4.col-lg-3
+					+jewelryCard(4, 'Для сосков')
+				+e.col.col-6.col-md-4.col-lg-3
+					+jewelryCard(5, 'Кликеры с камнями')
+				+e.col.col-6.col-md-4.col-lg-3
+					+jewelryCard(6, 'Тоннели и плаги')
+				+e.col.col-6.col-md-4.col-lg-3
+					+jewelryCard(7, 'Топы с камнями')
+				+e.col.col-6.col-md-4.col-lg-3
+					+jewelryCard(8, 'Топы без камней')
+				+e.col.col-6.col-md-4.col-lg-3
+					+jewelryCard(9, 'Для пупка')
+				+e.col.col-6.col-md-4.col-lg-3
+					+jewelryCard(10, 'Базовые украшения')
+				+e.col.col-12.col-md-4.col-lg-3
+					+jewelryCard(11, 'Другое')
+	// end sJevelry
+
+mixin jewelryCard(i, text)
+	+b.jewelry-card(href='#')
+		+img(`img/jewelry-${i}.png`)
+		+e.text= text

@@ -7,6 +7,11 @@
 	fill: currentColor;
 }
 
+.icon-arrow-top {
+	$h: 12;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(12 / #{$h} *1em );
+}
 .icon-bag {
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
@@ -47,6 +52,11 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(20 / #{$h} *1em );
 }
+.icon-close {
+	$h: 17;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(16 / #{$h} *1em );
+}
 .icon-delivery {
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
@@ -56,6 +66,11 @@
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(24 / #{$h} *1em );
+}
+.icon-filter {
+	$h: 16;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(18 / #{$h} *1em );
 }
 .icon-heart {
 	$h: 22;

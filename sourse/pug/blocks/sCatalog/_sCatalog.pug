@@ -22,7 +22,7 @@ mixin sCatalog(h2)
 		.container
 			+b.section-title.text-center-md
 				h2 Все украшения
-
+			+filterGroup('Фильтры')
 			+e.row.row
 				- const wrapClass="col-6 col-md-4 col-lg-3"
 				+e.col(class= wrapClass)
@@ -44,3 +44,59 @@ mixin sCatalog(h2)
 			+e.btn-wrap.text-center: +e.btn.btn.btn-primary(href='#') показать еще
 
 	// end sCatalog
+
+mixin filterGroup(title)
+	.filters-group
+		.filters-wrap.filter-nav.d-lg-none
+			+e.title= title
+			+icon('filter')
+		.filters-wrap.filters-wrap--js
+			.modail-title-wrap.d-lg-none
+				.title Фильтры
+				.icon-close-wrap: +icon('close')
+			.filters
+				.text.d-lg-none Выберите размер
+				+b.filter--js
+					+e.title Размеры
+						+icon('arrow-top')
+						+e.wrap
+							+in-c("checkbox", 'Красный')
+							+in-c("checkbox", 'Зеленый Зеленый')
+							+in-c("checkbox", 'Красный')(checked)
+				.text.d-lg-none Цвета
+				+b.filter--js
+					+e.title Цвета
+						+icon('arrow-top')
+						+e.wrap
+							+in-c("checkbox", 'Красный')
+							+in-c("checkbox", 'Зеленый')
+							+in-c("checkbox", 'Красный')
+							+in-c("checkbox", 'Зеленый')
+							+in-c("checkbox", 'Красный')
+				.text.d-lg-none Выберите материал
+				+b.filter--js
+					+e.title Материалы
+						+icon('arrow-top')
+						+e.wrap
+							+in-c("checkbox", 'Красный')
+							+in-c("checkbox", 'Зеленый')
+							+in-c("checkbox", 'Красный')
+							+in-c("checkbox", 'Зеленый')
+							+in-c("checkbox", 'Красный')
+				.text.d-lg-none Бренды
+				+b.filter--js
+					+e.title Бренд
+						+icon('arrow-top')
+						+e.wrap
+							+in-c("checkbox", 'Красный')
+							+in-c("checkbox", 'Зеленый')
+							+in-c("checkbox", 'Красный')
+							+in-c("checkbox", 'Зеленый')
+							+in-c("checkbox", 'Красный')
+			+e.price-wrap
+				+e.price-div
+					+e.price Цена
+					+range(1000, 6000)
+				button.btn.btn-apply.btn-primary#btn-apply-mob.d-lg-none Применить фильтры
+				button.btn.btn-apply.btn-primary#btn-apply.d-none.d-lg-inline Применить
+		button.btn.btn-secondary#btn-clear.d-none.d-lg-inline Очистить все

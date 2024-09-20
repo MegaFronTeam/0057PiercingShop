@@ -52,3 +52,8 @@ mixin iconsWrap
 		a(href='#'): +icon('insta')
 		a(href='#'): +icon('tg')
 		a(href='#'): +icon('whatsapp')
+
+
+mixin range(c1, c2, fromTxt='От', toTxt='До',)
+	+b.range-wrap.price_slider_amount&attributes(attributes)
+		input.range-slider.slider-js(type='text'  data-min=c1  data-max=c2)

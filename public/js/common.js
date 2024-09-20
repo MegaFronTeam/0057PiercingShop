@@ -108,6 +108,146 @@ function eventHandler() {
         console.log('курсор ушел из headerBlock');
     });
   }
+
+  /* filters */
+  /* filters */
+  const filtersWraps = document.querySelectorAll('.filter__wrap')
+  if (filtersWraps.length) {
+    filtersWraps.forEach((filter) => {
+      filter.addEventListener('click', (e)=> {
+        e.stopPropagation()
+      })
+    })
+  }
+
+  const filterNav = document.querySelector('.filters-wrap.filter-nav')
+  const filterWrap = document.querySelector('.filters-wrap--js')
+  const iconClose = document.querySelector('.filters-wrap--js .icon-close-wrap')
+  const btnClose = document.querySelector('.filters-wrap--js #btn-apply-mob')
+
+  if(filterNav) {
+    filterNav.addEventListener('click', ()=> {
+      filterWrap.classList.toggle('show')
+    })
+  }
+
+  if (iconClose) {
+    const closeItems = [iconClose, btnClose]
+    closeItems.forEach((item) => {
+      item.addEventListener('click', ()=> {
+        filterWrap.classList.remove('show')
+      })
+    })
+  }
+
+  const filters = document.querySelectorAll('.filter--js')
+  let activeFilter = null;
+
+  function closeAllFilters() {
+    filters.forEach(filter => filter.classList.remove('show'));
+    activeFilter = null;
+  }
+
+  function handleFilterClick(event) {
+    const filter = event.currentTarget;
+
+    if (activeFilter && activeFilter !== filter) {
+      closeAllFilters();
+    }
+
+    filter.classList.toggle('show');
+
+    if (filter.classList.contains('show')) {
+      activeFilter = filter;
+    } else {
+      activeFilter = null;
+    }
+    event.stopPropagation();
+  }
+
+  if (filters.length) {
+    filters.forEach(filter => {
+      filter.addEventListener('click', handleFilterClick);
+    });
+  }
+
+  document.addEventListener('click', () => {
+    if (activeFilter) {
+      closeAllFilters();
+    }
+  });
+
+  /* range */
+  function currencyFormat(num) {
+    return num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
+  }
+
+  $(".range-wrap").each(function () {
+    let _this = $(this);
+
+    var $range = _this.find(".slider-js");
+
+    var $inputFrom = _this.find(".input_from");
+
+    var $inputTo = _this.find(".input_to");
+
+    var instance,
+        from,
+        to,
+        min = $range.data('min'),
+        max = $range.data('max');
+    $range.ionRangeSlider({
+      skin: "round",
+      type: "double",
+      grid: false,
+      grid_snap: false,
+      hide_min_max: true,
+      hide_from_to: false,
+      //here
+      onStart: updateInputs,
+      onChange: updateInputs,
+      onFinish: updateInputs
+    });
+    instance = $range.data("ionRangeSlider");
+
+    function updateInputs(data) {
+      from = data.from;
+      to = data.to;
+      $inputFrom.prop("value", currencyFormat(from));
+      $inputTo.prop("value", currencyFormat(to)); // InputFormat();
+    }
+
+    $inputFrom.on("change input ", function () {
+      var val = +$(this).prop("value").replace(/\s/g, ''); // validate
+
+      if (val < min) {
+        val = min;
+      } else if (val > to) {
+        val = to;
+      }
+
+      instance.update({
+        from: val
+      });
+      $(this).prop("value", currencyFormat(val));
+      console.log(val);
+    });
+    $inputTo.on("change input ", function () {
+      var val = +$(this).prop("value").replace(/\s/g, ''); // validate
+
+      if (val < from) {
+        val = from;
+      } else if (val > max) {
+        val = max;
+      }
+
+      instance.update({
+        to: val
+      });
+      $(this).prop("value", currencyFormat(val));
+    });
+  });
+
 }
 if (document.readyState !== "loading") {
 	eventHandler();

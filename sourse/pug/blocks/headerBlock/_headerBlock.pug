@@ -1,11 +1,45 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
+		+img('img/header-img.png').img
+		.before.before-js
+		.after.after-js
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-				+icon('telegram')
-				+iconC('telegram')
-			.row
-						
+			+e.row.row
+				+e.col.col.col-lg-7
+					+e.item.item_black.before-js
+						+e.title-wrap
+							h3 Студия<br>пирсинга
+							+e.btn.btn.btn-primary(href='#') записаться
+						+e.list.d-none.d-lg-flex
+							a(href='#modal-1').link-modal-js
+								+icon('clean')
+								| Чисто и безопасно
+							a(href='#modal-2').link-modal-js
+								+icon('list-2')
+								| Удобное расположение
+							a(href='#modal-3').link-modal-js
+								+icon('list-3')
+								| Бесплатная консультация
+							a(href='#modal-4').link-modal-js
+								+icon('list-4')
+								| Опытные мастера
+				+e.col.col.col-lg-5
+					+e.item.item_primary.after-js
+						+e.title-wrap
+							h3 Магазин<br>украшений
+							+e.btn.btn.btn-dark(href='#') купить украшение
+						+e.list.d-none.d-lg-flex
+							a(href='#modal-5').link-modal-js
+								+icon('delivery')
+								| Доставка по всей России
+							a(href='#modal-6').link-modal-js
+								+icon('ring')
+								| Более 2000 украшений в наличии
+							a(href='#modal-7').link-modal-js
+								+icon('list-2')
+								| Находимся в центре в 4 минутах от метро
+							a(href='#modal-8').link-modal-js
+								+icon('list-1')
+								| Приятные цены на любой кошелёк
 	// end headerBlock

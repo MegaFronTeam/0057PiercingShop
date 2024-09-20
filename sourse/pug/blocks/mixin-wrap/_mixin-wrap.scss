@@ -179,3 +179,128 @@
   border-radius: 24px;
   box-shadow: 0 1px 3px rgba(0, 0, 255, 0.3);
 }
+
+.product-item{
+	display: flex;
+	flex-direction: column;
+
+	min-height: 100%;
+	position: relative;
+
+	&__img-wrap {
+    background: #FFFFFF;
+    border-radius: 12px;
+    @include block(268, 203);
+    @include media-breakpoint-up(lg) {
+      @include block(361, 327);
+    //   border-radius: 0;
+    }
+    &:hover {
+      box-shadow: 2px 5px 15px 0 rgba(43, 49, 52, 0.1);
+    }
+	}
+	&__caption{
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+    gap: rem(11);
+		padding-top: rem(14);
+    @include media-breakpoint-up(lg) {
+      gap: rem(6);
+    }
+	}
+
+  &__title {
+    font-weight: 600;
+    font-size: rem(14);
+    line-height: 120%;
+    letter-spacing: 0.02em;
+    color: $gray-900;
+    @include media-breakpoint-up(lg) {
+      font-size: rem(20);
+    }
+  }
+
+  &__price {
+    color: $gray-900;
+    font-family: $headings-font-family;
+    letter-spacing: 0.03em;
+    font-size: rem(14);
+    @include media-breakpoint-up(lg) {
+      font-size: rem(18);
+    }
+  }
+
+	&__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(6);
+    flex-wrap: wrap;
+  }
+
+  img {
+    max-width: 94%;
+  }
+
+  .icon {
+    position: absolute;
+
+    top: var(--icon-pad);
+    right: var(--icon-pad);
+    --icon-pad: 10px;
+    font-size: rem(26);
+    @include media-breakpoint-up(lg) {
+      --icon-pad: 23px;
+      font-size: rem(35);
+    }
+    z-index: 2;
+    @include mt;
+
+    stroke: $gray-650;
+    stroke-width: 2px;
+    fill: transparent;
+    &:hover,
+    &.active {
+      fill: $red;
+      stroke: $red;
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 0.03em;
+    color: #fff;
+    background: $black;
+    padding: rem(7);
+    border-radius: 10px;
+
+    top: var(--badge-pad);
+    left: var(--badge-pad);
+    font-size: 11px;
+    --badge-pad: 10px;
+    @include media-breakpoint-up(lg) {
+      font-size: 13px;
+      --badge-pad: 27px;
+    }
+  }
+
+  .btn {
+    @include media-breakpoint-down(md) {
+      font-size: rem(11);
+    }
+    @include media-breakpoint-up(lg) {
+      --bs-btn-padding-y: #{rem(10)};
+    }
+  }
+
+  .btn-primary {
+    --bs-btn-padding-y: #{rem(12)};
+    --bs-btn-padding-x: #{rem(20)};
+    @include media-breakpoint-up(lg) {
+      --bs-btn-padding-x: #{rem(26)};
+    }
+  }
+}

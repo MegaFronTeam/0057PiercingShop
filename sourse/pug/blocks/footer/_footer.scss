@@ -35,7 +35,7 @@
 
   .p-left {
     @include media-breakpoint-down(md) {
-      padding-left: rem(20);
+      padding-left: 8vw;
     }
 
   }
@@ -85,7 +85,12 @@
       font-size: rem(14) !important;
     }
   }
-  &__icons-wrap {
+  
+  .container {
+    @include media-breakpoint-down(sm) {
+      margin-left: rem(-10);
+      margin-right: rem(-10);
+    }
 
   }
 // 

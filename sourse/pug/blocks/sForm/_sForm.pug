@@ -1,16 +1,13 @@
 mixin sForm()
 	// start sForm
-	+b.SECTION.sForm.section#sForm&attributes(attributes)
+	+b.SECTION.sForm.d-lg-none.section#sForm&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			+e.row.row
-			+form-wrap
-				+input("",'')
-				+input("",'')
-				+input("",'')
-				+input("",'')
-				+e.btn.btn.btn-primary(type="submit") Submit
-				+policy
+			.contact.contact_wide
+				+b.section-title.text-center
+					h2 Получите онлайн консультацию
+					.sub-text.small Оставьте свой номер телефона и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;течении 30-ти минут
+				+form-wrap
+					+input("Телефон",'tel')
+					+e.btn.btn.btn-primary(type="submit") Получить консультацию
+					+iconsWrap
 	// end sForm

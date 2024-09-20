@@ -1,0 +1,20 @@
+mixin sProductSlider(data)
+	// start sProductSlider
+	+b.SECTION.sProductSlider.section#sProductSlider&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Похожие товары
+			+e.slider--js
+				+arrow
+				.swiper-wrapper
+					+e.slide.swiper-slide
+						+product-item(`2`,`Треугольник`,`2 800 ₽`)
+					+e.slide.swiper-slide
+						+product-item(`3`,`Кольцо-кликер`,`2 800 ₽`)
+					+e.slide.swiper-slide
+						+product-item(`7`,`Кольцо-кликер с двойным рядом кристаллов`,`2 800 ₽`)
+					+e.slide.swiper-slide
+						+product-item(`2`,`Треугольник`,`2 800 ₽`)
+					+e.slide.swiper-slide
+						+product-item(`3`,`Кольцо-кликер`,`2 800 ₽`)
+	// end sProductSlider

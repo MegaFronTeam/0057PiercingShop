@@ -1,0 +1,22 @@
+extends ../layout/main.pug
+
+include ../blocks/sForm/_sForm.pug
+
+include ../blocks/sOrder/_sOrder.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= index.head.title
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+sOrder
+		
+	+parts('footer')

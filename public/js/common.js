@@ -60,19 +60,36 @@ function eventHandler() {
 		freeModeMomentum: true,
 	});
 
-  
-	const partnersSwiper = document.querySelector('.sBrands__slider--js');
-	new Swiper(partnersSwiper.querySelector('.swiper'), {
+	const partnersSwiper = new Swiper('.sBrands__slider--js .swiper', {
 		spaceBetween: 16,
 		slidesPerView: "auto",
 		loop: true,
 		navigation: {
-			nextEl: partnersSwiper.querySelector(".swiper-button-next"),
-			prevEl: partnersSwiper.querySelector(".swiper-button-prev"),
+			nextEl: ".swiper-button-next",
+			// prevEl: ".swiper-button-prev",
 		},
     breakpoints: {
       768: {
         spaceBetween: 60,
+      }
+    }
+	});
+
+	const productSwiper = new Swiper('.sProductSlider__slider--js', {
+		spaceBetween: 7,
+		slidesPerView: 2,
+		loop: true,
+		navigation: {
+			nextEl: ".sProductSlider__slider--js .swiper-button-next",
+			prevEl: ".sProductSlider__slider--js .swiper-button-prev",
+		},
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+      },
+      992: {
+        spaceBetween: 20,
+        slidesPerView: 4,
       }
     }
 	});
@@ -109,7 +126,6 @@ function eventHandler() {
     });
   }
 
-  /* filters */
   /* filters */
   const filtersWraps = document.querySelectorAll('.filter__wrap')
   if (filtersWraps.length) {

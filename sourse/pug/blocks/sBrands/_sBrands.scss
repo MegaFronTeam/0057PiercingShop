@@ -1,10 +1,13 @@
 // start .sBrands
 .sBrands {
-	// --sPT: #{rem()};
+	--sPT: #{rem(60)};
 	// --sPB: #{rem()};
-	--sTPB: #{rem(31)};
-  @include media-breakpoint-up(md) {
+	--sTPB: #{rem(40)};
+  @include media-breakpoint-up(lg) {
     // --sTPB: #{rem(35)};
+	--sPT: #{rem(82)};
+	--sTPB: #{rem(31)};
+    --sPB: #{rem(30)};
   }
 	
 	&__row{

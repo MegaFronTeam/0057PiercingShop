@@ -1,7 +1,7 @@
 
 	// start .sContact
 	.sContact {
-	--sPT: #{rem(24)};
+	--sPT: #{rem(13)};
 	--sPB: #{rem(0)};
 	// --sTPB: #{rem()};
     @include media-breakpoint-up(lg) {
@@ -80,13 +80,9 @@
   }
 
   .contact {
-    background: $white;
-    padding: rem(21) rem(29);
-    border-radius: rem(16);
     margin-bottom: rem(7);
     @include media-breakpoint-up(lg) {
       max-width: rem(425);
-      border-radius: rem(20);
     }
 
     &__btn {
@@ -158,4 +154,18 @@
 } // end.sContact
 .search-placemark-title__title {
   font-weight: 700;
+}
+
+.contact {
+  background: $white;
+  padding: rem(30) rem(29) rem(21);
+  border-radius: rem(16);
+  @include media-breakpoint-up(lg) {
+    border-radius: rem(20);
+  }
+
+  &_wide {
+    padding-top: rem(36);
+    padding-bottom: rem(47);
+  }
 }

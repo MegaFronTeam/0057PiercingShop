@@ -1,21 +1,35 @@
 // start .sReviews
 .sReviews {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: #{rem(56)};
+	--sPB: #{rem(41)};
 	// --sTPB: #{rem()};
+    @include media-breakpoint-up(lg) {
+      --sPB: #{rem(60)};
+    }
 	
+    @include media-breakpoint-down(lg) {
+    background: #EAEBF3;
+    }
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
 	}
-	.section-title{
-		
+	h2 {
+    font-size: rem(24);
+    @include media-breakpoint-up(lg) {
+      font-size: rem(36);
+    }
 	}
 	&__col{
 		
 	}
-	&__item{
-		
+	&__review-wrap {
+		max-width: rem(1082);
+    margin: auto;
+    margin-bottom: rem(35);
+    @include media-breakpoint-up(lg) {
+      margin-bottom: rem(70);
+    }
 	}
   &__btn {
     font-size: rem(12);
@@ -27,6 +41,10 @@
       --bs-btn-padding-y: #{rem(20)};
       --bs-btn-padding-x: #{rem(40)};
     }
+  }
+
+  .img {
+    max-width: 100%;
   }
 
 	@include media-breakpoint-up(xl) {}

@@ -1,26 +1,53 @@
 
 	// start .sForm
 	.sForm {
-		// --sPT: #{rem()};
-	// --sPB: #{rem()};
-	// --sTPB: #{rem()};
+		--sPT: #{rem(24)};
+    --sPB: #{rem(0)};
+	--sTPB: #{rem(31)};
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
 
 	}
-	.section-title{
-		
-	}
+  .section-title {
+    max-width: rem(350);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .sub-text {
+    font-family: $headings-font-family;
+    color: #3c3a3a;
+    line-height: 175%;
+  }
+	h2 {
+    font-size: rem(24);
+    margin-bottom: rem(20);
+    line-height: 142%;
+  }
 	&__col{
 
 	}
 	&__item{
 
 	}
-	&__slide{
-		height: auto;
-	}
+	.icons-wrap {
+    justify-content: center;
+    margin-top: rem(20);
+    gap: rem(30);
+  }
+
+  form {
+    // max-width: 90%;
+    margin: auto;
+    button {
+      width: 100%;
+      --bs-btn-padding-y: #{rem(21)};
+      font-size: 12px;
+    }
+    .form-wrap__input-wrap {
+      margin-bottom: rem(31);
+    }
+  }
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

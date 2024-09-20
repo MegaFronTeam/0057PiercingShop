@@ -4,6 +4,7 @@ mixin sReviews(data)
 		.container
 			+b.section-title.text-center
 				h2 Отзывы о студии
-			+e.row.row
+			+e.review-wrap
+				+img('img/sReviews-img.png').img
 			+e.btn-wrap.text-center: +e.btn.btn.btn-primary(href='#') Оставить отзыв
 	// end sReviews

@@ -1,9 +1,11 @@
 // start .sJevelry
 .sJevelry {
 	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPB: #{rem(30)};
 	--sTPB: #{rem(37)};
   @include media-breakpoint-up(lg) {
+    --sPT: #{rem(54)};
+    --sPB: #{rem(100)};
     --sTPB: #{rem(54)};
   }
 	
@@ -12,7 +14,7 @@
 		--bs-gutter-y: #{rem(11)};
     @include media-breakpoint-up(lg) {
       --bs-gutter-x: #{rem(34)};
-      --bs-gutter-y: #{rem(30)};
+      --bs-gutter-y: #{rem(32)};
     }
 	}
 	.section-title {

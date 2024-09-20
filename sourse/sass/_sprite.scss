@@ -72,6 +72,16 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(24 / #{$h} *1em );
 }
+.icon-location-2 {
+	$h: 39;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(39 / #{$h} *1em );
+}
+.icon-phone {
+	$h: 39;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(38 / #{$h} *1em );
+}
 .icon-search {
 	$h: 17;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);

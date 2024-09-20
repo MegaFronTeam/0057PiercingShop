@@ -29,8 +29,16 @@
 		height: auto;
 	}
 
-  &__btn-wrap {
-
+  &__btn {
+    font-size: rem(12);
+    --bs-btn-padding-y: #{rem(15.5)};
+    --bs-btn-padding-x: #{rem(49)};
+    border-radius: rem(52);
+    @include media-breakpoint-up(lg) {
+      font-size: rem(16);
+      --bs-btn-padding-y: #{rem(26.5)};
+      --bs-btn-padding-x: #{rem(72)};
+    }
   }
 
 	@include media-breakpoint-up(xl) {}
@@ -56,16 +64,22 @@
     border-radius: 12px;
     @include block(268, 203);
     @include media-breakpoint-up(lg) {
-      @include block(361, 317);
+      @include block(361, 327);
     //   border-radius: 0;
+    }
+    &:hover {
+      box-shadow: 2px 5px 15px 0 rgba(43, 49, 52, 0.1);
     }
 	}
 	&__caption{
 		flex-grow: 1;
 		display: flex;
 		flex-direction: column;
-    gap: rem(6);
-		padding-top: rem(12);
+    gap: rem(11);
+		padding-top: rem(14);
+    @include media-breakpoint-up(lg) {
+      gap: rem(6);
+    }
 	}
 
   &__title {
@@ -149,13 +163,15 @@
     @include media-breakpoint-down(md) {
       font-size: rem(11);
     }
+    @include media-breakpoint-up(lg) {
+      --bs-btn-padding-y: #{rem(10)};
+    }
   }
 
   .btn-primary {
     --bs-btn-padding-y: #{rem(12)};
     --bs-btn-padding-x: #{rem(20)};
     @include media-breakpoint-up(lg) {
-      --bs-btn-padding-y: #{rem(10)};
       --bs-btn-padding-x: #{rem(26)};
     }
   }

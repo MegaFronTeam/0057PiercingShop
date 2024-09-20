@@ -28,7 +28,7 @@ mixin addblock()
 mixin search()
 	+b.search-block
 		form
-			input(type="text" placeholder="Поиск по номеру или названию запчасти" inputmode='search')
+			input(type="text" placeholder="Поиск..." inputmode='search')
 			button 
 				+icon("search")
 
@@ -44,3 +44,11 @@ mixin parts(elem)
 	script.
 		addBlock(`#{elem}`)
 	div(id=`${elem}Wrap`)
+
+
+mixin iconsWrap
+	+b.icons-wrap
+		a(href='#'): +icon('vk')
+		a(href='#'): +icon('insta')
+		a(href='#'): +icon('tg')
+		a(href='#'): +icon('whatsapp')

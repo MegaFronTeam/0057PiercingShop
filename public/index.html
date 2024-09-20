@@ -343,6 +343,59 @@
 					</div>
 				</div>
 				<!-- end sCatalog-->
+				<!-- start sReviews-->
+				<section class="sReviews section" id="sReviews">
+					<div class="container">
+						<div class="section-title text-center">
+							<h2>Отзывы о студии</h2>
+						</div>
+						<div class="sReviews__row row">
+						</div>
+						<div class="sReviews__btn-wrap text-center">
+							<a class="sReviews__btn btn btn-primary" href="#">Оставить отзыв
+							</a>
+						</div>
+					</div>
+				</section>
+				<!-- end sReviews-->
+				<!-- start sContact-->
+				<section class="sContact section" id="sContact">
+					<div class="container">
+						<div class="contact">
+							<h3>Контакты</h3>
+							<ul>
+								<li><a href="#">
+										<svg class="icon icon-location-2 ">
+											<use xlink:href="img/svg/sprite.svg#location-2"></use>
+										</svg>Москва, Малый Харитоньевский пер., 9/13 стр. 6</a></li>
+								<li><a href="tel:+79269199136">
+										<svg class="icon icon-phone ">
+											<use xlink:href="img/svg/sprite.svg#phone"></use>
+										</svg>+7 (926) 919-91-36</a></li>
+							</ul>
+							<div class="icons-wrap"><a href="#">
+									<svg class="icon icon-vk ">
+										<use xlink:href="img/svg/sprite.svg#vk"></use>
+									</svg></a><a href="#">
+									<svg class="icon icon-insta ">
+										<use xlink:href="img/svg/sprite.svg#insta"></use>
+									</svg></a><a href="#">
+									<svg class="icon icon-tg ">
+										<use xlink:href="img/svg/sprite.svg#tg"></use>
+									</svg></a><a href="#">
+									<svg class="icon icon-whatsapp ">
+										<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+									</svg></a>
+							</div>
+							<a class="contact__btn btn btn-primary" href="#">Записаться на пирсинг
+							</a>
+						</div>
+					</div>
+					<div class="sContact__map">
+						<div id="map"></div>
+					</div>
+				</section>
+				<!-- end sContact-->
 			</main>
 			<script>addBlock(`footer`)</script>
 			<div id="footerWrap"></div>
@@ -390,5 +443,32 @@
 		<script src="libs/select2/js/i18n/ru.js"> </script>
 		<script src="js/JSCCommon.js"></script>
 		<script src="js/common.js"></script>
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c"> </script>
+		<script>var myMap;
+
+					ymaps.ready(init);
+
+					function init () {
+						myMap = new ymaps.Map('map', {
+							center:[55.765857, 37.646736],
+							clusterize: true,
+							zoom:16
+						});
+
+						var placemark = new ymaps.Placemark([55.765857, 37.646736], {
+							// Свойства метки (например, описание)	,
+							balloonContent: 'Малый Харитоньевский пер., 9/13 стр. 6',
+							iconCaption: 'Малый Харитоньевский пер., 9/13 стр. 6'
+						}, {
+							iconColor: '#FF4433',
+						});
+						myMap.geoObjects.add(placemark);
+
+						myMap.behaviors.disable('scrollZoom');
+						if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+							myMap.behaviors.disable('drag');
+						};
+					};
+		</script>
 	</body>
 </html>

@@ -17,6 +17,17 @@
 	&__item{
 		
 	}
+  &__btn {
+    font-size: rem(12);
+    --bs-btn-padding-y: #{rem(13)};
+    --bs-btn-padding-x: #{rem(24)};
+    // border-radius: rem(52);
+    @include media-breakpoint-up(lg) {
+      font-size: rem(16);
+      --bs-btn-padding-y: #{rem(20)};
+      --bs-btn-padding-x: #{rem(40)};
+    }
+  }
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

@@ -2,8 +2,17 @@ mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
-			+e.row.row
+			+b.contact
+				h3 Контакты
+				ul
+					li: a(href='#')
+						+icon('location-2')
+						| Москва, Малый Харитоньевский пер., 9/13 стр. 6
+					li: a(href="tel:+79269199136")
+						+icon('phone')
+						|+7 (926) 919-91-36
+				+iconsWrap
+				+e.btn.btn.btn-primary(href="#") Записаться на пирсинг
+		+e.map
+			#map
 	// end sContact

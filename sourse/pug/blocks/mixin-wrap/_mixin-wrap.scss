@@ -82,22 +82,35 @@
 .search-block{
 	position: relative;
 	input{
-		font-size: 14px;
+		font-size: 12px;
 		width: 100%;
-		border: none !important;
+		// border: none !important;
+    border-color: $border-color;
+    border-width: 1px;
 		outline: none !important;
-		padding-left: rem(30);
-		padding-top: rem(14);
-		padding-bottom: rem(14);
+    border-radius: rem(5);
+		padding-left: rem(46);
+		padding-top: rem(10);
+		padding-bottom: rem(10);
+    background: transparent;
+    &::placeholder {
+      color: #545353;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+    
 	}
 	.icon{
-		font-size: rem(20);
+		font-size: rem(16);
 		border: none !important;
+    fill: #737373;
 	}
 	button{
 		position: absolute;
 		left: 0;
 		top: 0;
+    padding-left: rem(15);
 		height: 100%;
 		display: flex;
 		justify-content: center;
@@ -110,4 +123,22 @@
 .breadcrumb-item{
 	width: auto;
 	// margin-right: rem(32);
+}
+
+.icons-wrap {
+  display: flex;
+  align-items: center;
+  gap: rem(13);
+
+  @include media-breakpoint-up(md) {
+    gap: rem(22);
+  }
+
+  .icon {
+    fill: $gray-900;
+    @include mt;
+    &:hover {
+      fill: $primary;
+    }
+  }
 }

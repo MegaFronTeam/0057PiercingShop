@@ -1,9 +1,29 @@
 mixin footer()
 	+b.FOOTER.footer.section
 		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+			+e.row.row
+				.col-12.col-lg-3
+					a(href='#'): +img('img/svg/logo.svg')
+				.col-6.col-lg.order-lg-last
+					+e.tel.title(href="tel:+79269199136") +7 (926) 919-91-36
+					+e.time.small Ежедневно с 12:00 до 21:00
+					+e.time.address.small Москва, Малый Харитоньевский пер., 9/13 стр. 6
+					+iconsWrap
+				.col-3.p-left
+					+e.title.title Студия
+					ul
+						li: a(href='#') Записаться
+						li: a(href='#') Мастера
+						li: a(href='#') Уход
+						li: a(href='#') Галерея
+				.col-6.d-lg-none
+					+e.btn.btn.btn-dark.btn-circle.small(href='#')
+						+img('img/svg/circle.svg')
+						| Онлайн запись
+				.col.p-left
+					+e.title.title Магазин
+					ul
+						li: a(href='#') Доставка и оплата
+						li: a(href='#') Сертификаты
+						li: a(href='#') Условия оферты
+						li: a(href='#') Помощь

@@ -1,9 +1,10 @@
 mixin topLine()
 	// start topLine
-	+b.topLine.section#topLine&attributes(attributes)
+	+b.topLine.section#topLine.d-none.d-lg-block&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 topLine
-				
-			.row
+			+e.item
+				+mnu()
+				+b.phone
+					+e.tel.title(href="tel:+79269199136") +7 (926) 919-91-36
+					+e.time.small Ежедневно с 12:00 до 21:00
 	// end topLine

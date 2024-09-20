@@ -53,7 +53,7 @@
   background: $white;
   height: 100%;
   border-radius: rem(10);
-  padding: rem(20) rem(10);
+  padding: rem(20) rem(10) rem(23);
 	@include media-breakpoint-up(lg) {
     padding: rem(20);
   }

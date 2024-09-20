@@ -1,5 +1,5 @@
 mixin menu-toggle()
-	+b.toggle-menu-mobile--js.d-lg-none
+	+b.toggle-menu-mobile--js
 		span
 mixin mob-mnu()
 	-
@@ -16,19 +16,43 @@ mixin mob-mnu()
 			span
 		+e.inner
 			+mnu()
-	//  мобильное меню
+	// мобильное меню
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
 			+e.row.row
-				.col-4
-				.col.order-lg-0.order-last
-					.menu-mobile.menu-mobile--js
-						.menu-mobile__inner
-							+menu-toggle()
-							+mnu()
-					
-				.col-auto.d-lg-none
+				.col.col-lg-auto
 					+menu-toggle()
+				.col.col-lg-2
+					a(href='#').logo-wrap: +img('img/svg/logo.svg').logo
+				.col.col-lg-4.order-lg-3
+					+iconsNav
+				.col-12.col-lg-4
+					+search()
+			.menu-mobile.menu-mobile--js
+				.menu-mobile__inner
+					.top-wrap
+						a(href='#'): +img('img/svg/logo-light.svg')
+						.d-lg-none: +menu-toggle()
+					+mnu()
+					+e.item.phone.title(href="tel:+79269199136") +7 (926) 919-91-36
+					+e.item.btn.btn-primary(href='#') Заказать звонок
 	// end top-nav
+
+mixin iconsNav
+	+b.icons-nav
+		a(href='#')
+			+e.icon-wrap
+				+icon('heart')
+				.icon-span.title 10
+			.text Избранное
+		a(href='#')
+			+e.icon-wrap
+				+icon('bag')
+				.icon-span.title 7
+			.text Корзина
+		a(href='#')
+			+icon('user')
+			.text Профиль
+				.span Войти

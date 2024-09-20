@@ -1,31 +1,98 @@
 
 <!-- start header-->
 <header class="header" id="header">
+	<!-- start topLine-->
+	<div class="topLine section d-none d-lg-block" id="topLine">
+		<div class="container">
+			<div class="topLine__item">
+				<nav>
+					<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Главная</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Записаться</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О студии</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Мастера</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+					</ul>
+				</nav>
+				<div class="phone">
+					<a class="phone__tel title" href="tel:+79269199136">+7 (926) 919-91-36
+					</a>
+					<div class="phone__time small">Ежедневно с 12:00 до 21:00
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end topLine-->
 	<!-- start top-nav-->
 	<div class="top-nav block-with-lazy">
 		<div class="container">
 			<div class="top-nav__row row">
-				<div class="col-4"></div>
-				<div class="col order-lg-0 order-last">
-					<div class="menu-mobile menu-mobile--js">
-						<div class="menu-mobile__inner">
-							<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
-							</div>
-							<nav>
-								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
-								</ul>
-							</nav>
-						</div>
+				<div class="col col-lg-auto">
+					<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 					</div>
 				</div>
-				<div class="col-auto d-lg-none">
-					<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+				<div class="col col-lg-2"><a class="logo-wrap" href="#"><img class="logo" src="img/svg/logo.svg" alt="" loading="lazy"/></a></div>
+				<div class="col col-lg-4 order-lg-3">
+					<div class="icons-nav"><a href="#">
+							<div class="icons-nav__icon-wrap">
+								<svg class="icon icon-heart ">
+									<use xlink:href="img/svg/sprite.svg#heart"></use>
+								</svg>
+								<div class="icon-span title">10</div>
+							</div>
+							<div class="text">Избранное</div></a><a href="#">
+							<div class="icons-nav__icon-wrap">
+								<svg class="icon icon-bag ">
+									<use xlink:href="img/svg/sprite.svg#bag"></use>
+								</svg>
+								<div class="icon-span title">7</div>
+							</div>
+							<div class="text">Корзина</div></a><a href="#">
+							<svg class="icon icon-user ">
+								<use xlink:href="img/svg/sprite.svg#user"></use>
+							</svg>
+							<div class="text">Профиль
+								<div class="span">Войти</div>
+							</div></a>
 					</div>
+				</div>
+				<div class="col-12 col-lg-4">
+					<div class="search-block">
+						<form>
+							<input type="text" placeholder="Поиск..." inputmode="search"/>
+							<button> 
+								<svg class="icon icon-search ">
+									<use xlink:href="img/svg/sprite.svg#search"></use>
+								</svg>
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="menu-mobile menu-mobile--js">
+				<div class="menu-mobile__inner">
+					<div class="top-wrap"><a href="#"><img src="img/svg/logo-light.svg" alt="" loading="lazy"/></a>
+						<div class="d-lg-none">
+							<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+							</div>
+						</div>
+					</div>
+					<nav>
+						<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Главная</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Записаться</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О студии</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Мастера</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+						</ul>
+					</nav>
+					<a class="top-nav__item phone title" href="tel:+79269199136">+7 (926) 919-91-36
+					</a>
+					<a class="top-nav__item btn btn-primary" href="#">Заказать звонок
+					</a>
 				</div>
 			</div>
 		</div>

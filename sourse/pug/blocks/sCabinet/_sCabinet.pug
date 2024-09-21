@@ -1,0 +1,52 @@
+mixin sCabinet(data)
+	// start sCabinet
+	+b.sCabinet.section#sCabinet&attributes(attributes)
+		.container
+			+e.row.row
+
+				+e.col-main.col-lg
+					+b.cabinet-main-block 
+						.d-lg-none
+							h1 Личные  данные
+						+form-wrap
+							.row
+								.col-md-6
+									+input("Имя")
+									+input("+7 (950) 343-46-34",'tel')
+									+input("Email",'email')
+								.col-md-6
+									+input("Город") 
+									+input("Адрес")
+									+input("Индекс")
+									button.btn.btn-primary(type="submit") Сохранить
+				+e.col-aiside.col-lg-auto.order-lg-first
+					+b.cabinet-aside-menu
+						+e.header
+							+e.img-wrap
+								img(src="img/catalog-2.png" alt="user")
+							div
+								+e.title Иван
+								+e.text личный кабинет
+						+e.body
+							ul
+								li: a(href="#").active
+									+e.icon-wrap: +icon("user-cabinet")
+									|  Личные данные
+									
+								li: a(href="#")
+									+e.icon-wrap: +icon("package-box")
+									|  Мои заказы
+								li: a(href="#")
+									+e.icon-wrap: +icon("heart")
+									|  Избранное
+					 
+								li: a(href="#")
+									+e.icon-wrap: +icon("location")
+									|  Адреса доставки
+								li: a(href="#")
+									+e.icon-wrap: +icon("card")
+									|  Способы оплаты
+								li: a(href="#")
+									+e.icon-wrap: +icon("settings")
+									|  Настройки профиля
+	// end sCabinet

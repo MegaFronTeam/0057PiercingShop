@@ -1,0 +1,136 @@
+// start .sCabinet
+.sCabinet {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+
+	&__row {
+		// --bs-gutter-x: #{rem()};
+		--bs-gutter-y: 2rem;
+	}
+	.section-title {
+	}
+	&__col {
+	}
+	&__item {
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sCabinet
+
+.cabinet-aside-menu {
+	min-height: 100%;
+
+	@include media-breakpoint-up(lg) {
+		width: 262px;
+	}
+	border-radius: 17px;
+	background: #ffffff;
+	overflow: hidden;
+	/* Gray/Gray-20% */
+	border: 1px solid rgba(164, 161, 170, 0.2);
+	/* DS_2 */
+	box-shadow:
+		0px 10px 40px -4px rgba(16, 24, 40, 0.02),
+		0px 8px 8px -4px rgba(16, 24, 40, 0.02);
+
+	&__header {
+		border-bottom: 1px solid rgba(164, 161, 170, 0.2);
+		padding: rem(20);
+		display: flex;
+		align-items: center;
+		gap: rem(20);
+	}
+
+	&__img-wrap {
+		width: rem(51);
+		aspect-ratio: 1;
+		background-color: rgba(0, 0, 0, 0.2);
+		border-radius: 50%;
+		overflow: hidden;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__title {
+		font-weight: bold;
+		color: #131118;
+	}
+
+	&__text {
+		font-weight: 500;
+		font-size: 11px;
+		color: #827d7d;
+	}
+
+	&__body {
+		padding-block: rem(20);
+	}
+
+	&__icon-wrap {
+		width: 24px;
+		margin-right: 12px;
+		flex: 0 0 auto;
+	}
+	ul {
+		list-style: none;
+		a {
+			display: flex;
+			align-items: center;
+			padding: rem(16) rem(20);
+			color: $body-color;
+			&:hover,
+			&.active {
+				background: $body-color;
+				color: #fff;
+			}
+		}
+		.icon {
+			font-size: 24px;
+			&-heart {
+				font-size: 20px;
+			}
+			&:not(.icon-settings) {
+				fill: none;
+				stroke: currentColor;
+			}
+		}
+	}
+}
+
+.cabinet-main-block {
+	border-radius: 17px;
+	background: #ffffff;
+	padding: rem(39) rem(35);
+	h1 {
+		font-size: 24px;
+		margin-bottom: 1em;
+	}
+
+	min-height: 100%;
+	.form-control {
+		padding-block: rem(15);
+	}
+	.btn {
+		border-radius: rem(10);
+		width: 100%;
+		@include media-breakpoint-up(sm) {
+			max-width: rem(300);
+		}
+	}
+}

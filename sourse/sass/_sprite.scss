@@ -122,6 +122,11 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(39 / #{$h} *1em );
 }
+.icon-package-box {
+	$h: 24;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(24 / #{$h} *1em );
+}
 .icon-phone {
 	$h: 39;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
@@ -136,6 +141,11 @@
 	$h: 17;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(17 / #{$h} *1em );
+}
+.icon-setting {
+	$h: 24;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(24 / #{$h} *1em );
 }
 .icon-settings {
 	$h: 24;
@@ -156,6 +166,11 @@
 	$h: 25;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(25 / #{$h} *1em );
+}
+.icon-user-cabinet {
+	$h: 24;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(24 / #{$h} *1em );
 }
 .icon-user-no-border {
 	$h: 24;

@@ -3,6 +3,9 @@
 		// @extend .form-group;
 		margin-bottom: rem(15);
 	}
+	&__input-title {
+		font-size: 12px;
+	}
 	&__input {
 		// @extend .form-control;
 		//  outline: 0 !important;

@@ -1,0 +1,22 @@
+mixin sAuth(title)
+	// start sAuth
+	+b.SECTION.sAuth.section#sAuth
+		.container
+			.panel-block&attributes(attributes)
+				h1= title
+				+form-wrap
+					+input("Email",'email','Email')
+					+input("Введите пароль",'password','Введите пароль')
+					.row.mb-3
+						.col
+							+e.col-auto
+								label.form-check
+									input.form-check-input(type="checkbox")
+									span.form-check-label
+										| Запомнить меня
+							
+						.col-auto
+							a(href="#").text-body.small Забыли пароль?
+					button.btn.btn-primary.mb-2(type="submit") Войти
+					button.btn.btn-primary.btn-body(type="submit") Зарегистрироваться
+	// end sAuth

@@ -2,14 +2,14 @@ extends ../layout/main.pug
 
 include ../blocks/sForm/_sForm.pug
 
-include ../blocks/sCabinet/_sCabinet.pug
+include ../blocks/sAuth/_sAuth.pug
 
 block variables
-	- let  mainPage= 'main-page' 
+	- let  mainPage= 'auth-pages' 
 	- let  bg= null
 
 block title
-	- let  title= 'Личный кабинет 1'
+	- let  title= 'Вход'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -17,6 +17,6 @@ block pagecontent
 	
 	+parts('header')
 	main
-		+sCabinet
+		+sAuth(title)
 		
 	+parts('footer')

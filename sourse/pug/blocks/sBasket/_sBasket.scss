@@ -1,23 +1,98 @@
 // start .sBasket
 .sBasket {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
-	// --sTPB: #{rem()};
+	--sPT: #{rem(17)};
+	--sPB: #{rem(20)};
+	--sTPB: #{rem(28)};
+    @include media-breakpoint-up(lg) {
+      --sPT: #{rem(90)};
+      --sPB: #{rem(70)};
+      --sTPB: #{rem(36)};
+    }
 	
-	&__row{
-		// --bs-gutter-x: #{rem()};
-		// --bs-gutter-y: #{rem()};
-	}
-	.section-title{
-		
-	}
-	&__col{
-		
-	}
-	&__item{
-		
+	&__header{
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    padding-bottom: rem(15);
+    margin-bottom: rem(23);
+    border-bottom: 1px solid #ededed;
+    @include media-breakpoint-up(xxl) {
+      grid-template-columns: 62% 1fr;
+    }
+    .wrap {
+      display: flex;
+      justify-content: space-between;
+    }
 	}
 
+	.section-title h2 {
+    @include media-breakpoint-down(lg) {
+      font-size: rem(20);
+    }
+	}
+
+  &__title-item {
+    color: #9A8B8B;
+  }
+
+  &__items {
+    @include media-breakpoint-up(lg) {
+      min-height: rem(280);
+    }
+  }
+	&__item {
+		display: flex;
+    justify-content: space-between;
+	}
+	&__inner-wrap {
+    background: $white;
+    border-radius: rem(10);
+		padding: rem(29) rem(15) rem(39);
+    @include media-breakpoint-up(lg) {
+      padding: rem(60) rem(55) rem(44);
+    }
+	}
+
+  &__btn-wrap {
+    @include media-breakpoint-up(lg) {
+      text-align: end;
+      margin-top: rem(65);
+    }
+  }
+
+  &__btn {
+    border-radius: rem(10);
+    --bs-btn-padding-y: #{rem(16)};
+    width: 100%;
+    font-size: rem(14px);
+    line-height: 110%;
+    font-family: $default-font;
+    @include media-breakpoint-up(lg) {
+      width: rem(311px);
+    }
+  }
+
+  .cart-product {
+    margin-bottom: rem(30);
+  }
+
+  &__title:not(.item-sum) {
+    font-size: rem(12px);
+    color: #686464;
+    @include media-breakpoint-up(lg) {
+    }
+  }
+  &__price, .item-sum {
+    font-size: rem(14px);
+  }
+
+  &__sum {
+    border-top: 1px solid #ededed;
+  }
+
+  &__sum-wrap {
+    padding: rem(10);
+    margin-bottom: rem(25);
+  }
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

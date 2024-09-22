@@ -73,6 +73,12 @@ class JSCCommon {
 		});
 	}
 	// /modalCall
+  static setCustomScrollbar() {
+		$(".custom-scroll").mCustomScrollbar({
+			theme: "minimal-dark",
+			alwaysShowScrollbar: true,
+		});
+	}
 
 	static toggleMenu() {
 		const toggle = document.querySelectorAll(".toggle-menu-mobile--js");
@@ -422,6 +428,7 @@ class JSCCommon {
 		this.disabledBtn();
 		this.customSelect();
 		this.setScreen();
+		this.setCustomScrollbar();
 		// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 		// JSCCommon.animateScroll();
 

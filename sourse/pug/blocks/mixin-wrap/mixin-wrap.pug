@@ -22,7 +22,13 @@ mixin arrow()
 mixin addblock()
 	+b.addBlock
 		+e.btn--minus(type="button")
-		input(type="text" value="1"  inputmode='numeric')
+		input(type="text" value="999"  inputmode='numeric')
+		+e.btn--plus(type="button")
+
+mixin addblocksm()
+	+b.addBlock--sm
+		+e.btn--minus(type="button")
+		input(type="text" value="99"  inputmode='numeric')
 		+e.btn--plus(type="button")
 
 mixin search()
@@ -93,3 +99,44 @@ mixin product-item-fav(i, t,pr, badge)
 			if badge
 				+e.btn.btn.btn-secondary(href='#') узнать о поступлении
 	// /.product-item
+
+
+mixin cartProduct
+	+b.cart-product
+		a(href='#').img-wrap: +img('img/cart-1.png').img
+		+e.descr
+			+e.title-wrap
+				+e.title.title Кольцо-кликер с двойным рядом кристаллов
+				+e.article.d-none.d-lg-block HMClicCryх2Hel
+			+e.descr-wrap
+				.text-secondary цвет: серый
+				.text-secondary бренд: Anatometal
+				.text-secondary резьба : безрезьбовое
+				.text-secondary материал: Titanium ASTM F-136
+			+e.price.d-none.d-lg-block 2 990 ₽
+			+e.item-wrap.d-lg-none
+				+e.item
+					+e.item-title.text-secondary Размер:
+					+e.item-text 3.5ММ
+				+e.item
+					+e.item-title.text-secondary Количество:
+					+e.item-t: +input("10",'select','')
+			.d-none.d-lg-block.add: +addblock()
+			+e.price.price-xxl 13 990 ₽
+		+e.icon-wrap.d-lg-none(href='#'): +icon('close')
+
+mixin cartProductModal
+	+b.cart-product--modal.d-block
+		+e.descr
+			a(href='#').img-wrap: +img('img/cart-1.png').img
+			+e.title-wrap
+				+e.title.title Кольцо-кликер с двойным рядом кристаллов
+				+e.article HMClicCryх2Hel
+			+e.descr-wrap
+				.text-secondary цвет: серый
+				.text-secondary бренд: Anatometal
+				.text-secondary резьба : безрезьбовое
+				.text-secondary материал: Titanium ASTM F-136
+			.add: +addblocksm()
+			+e.price 13 990 ₽
+			+e.icon-wrap(href='#'): +icon('close')

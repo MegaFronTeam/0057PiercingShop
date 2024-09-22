@@ -14,6 +14,37 @@ mixin modal()
 				+e.BUTTON.btn.btn(type="submit"  ) submit
 				+policy()
 				+policy()
+	div(id="modal-cart")
+		+b.modal-win--lg
+			+e.inner-wrap
+				+e.title.h3 Корзина товаров
+				+e.header.sBasket__header.d-block 4 товара
+				+e.items
+					.custom-scroll()
+						+cartProductModal()
+						+cartProductModal()
+						+cartProductModal()
+						+cartProductModal()
+						+cartProductModal()
+						+cartProductModal()
+						+cartProductModal()
+						+cartProductModal()
+						+cartProductModal()
+						+cartProductModal()
+						+cartProductModal()
+						+cartProductModal()
+			+e.sum.sBasket__sum
+				+e.sum-wrap.sBasket__sum-wrap
+					+e.item.sBasket__item
+						.small.sBasket__title Стоимость
+						+e.price.sBasket__price.fw-500 0 ₽
+					+e.item.sBasket__item
+						.small.sBasket__title Доставка
+						+e.price.sBasket__price.fw-500 0 ₽
+					+e.item.sBasket__item.summary
+						.sBasket__title.item-sum.fw-500 Итого:
+						+e.price.sBasket__price.fw-500 13 990 ₽
+				+e.btn-wrap: +e.BUTTON.btn.btn.btn-primary(type="submit"  ) Оформить заказ
 	// #modal-call
 	div(id="modal-1"  style="display: none" )
 		+b.modal-win

@@ -1,0 +1,112 @@
+extends ../layout/main.pug
+
+include ../blocks/sForm/_sForm.pug
+
+include ../blocks/sCabinet/_sCabinet.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'Мои заказы'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+sCabinet
+			+b.cabinet-orders
+				table 
+					tbody
+						tr
+							td
+								+e.imgs
+									+e.img-wrap
+										img(src='img/catalog-1.png' alt='Заказ №12345')
+							td
+								+e.title Заказ от 12 апреля
+								 
+								+b.status-order(style="color: #1E960A")
+									+icon('box-tick')
+									| Доставлен 
+							td.product-properties 
+								div размер топа :  3.5мм
+								div цвет: серый
+								div бренд: Anatometal
+								div резьба : безрезьбовое
+								div материал: Titanium ASTM F-136
+							td.product-count 1 товар
+							td
+								+e.price  5 900 ₽
+							td
+								+e.btn.btn.btn-outline-primary(href='#') 
+									+icon('chevron-right')
+									span Смотреть заказ
+		
+						tr
+							td
+								+e.imgs
+									+e.img-wrap
+										img(src='img/catalog-1.png' alt='Заказ №12345')
+									+e.img-wrap
+										img(src='img/catalog-1.png' alt='Заказ №12345')
+									+e.img-wrap
+										img(src='img/catalog-1.png' alt='Заказ №12345')
+									+e.img-wrap
+										img(src='img/catalog-1.png' alt='Заказ №12345')
+							td
+								+e.title Заказ от 12 апреля
+								 
+								+b.status-order(style="color: #694C11")
+									+icon('truck-fast')
+									| В пути
+							td.product-properties 
+								div размер топа :  3.5мм
+								div цвет: серый
+								div бренд: Anatometal
+								div резьба : безрезьбовое
+								div материал: Titanium ASTM F-136
+							td.product-count 1 товар
+							td
+								+e.price  5 900 ₽
+							td
+								+e.btn.btn.btn-outline-primary(href='#') 
+									+icon('chevron-right')
+									span Смотреть заказ
+		
+						tr
+							td
+								+e.imgs
+									+e.img-wrap
+										img(src='img/catalog-1.png' alt='Заказ №12345')
+									+e.img-wrap
+										img(src='img/catalog-1.png' alt='Заказ №12345')
+									+e.img-wrap
+										img(src='img/catalog-1.png' alt='Заказ №12345')
+									+e.img-wrap
+										img(src='img/catalog-1.png' alt='Заказ №12345')
+							td
+								+e.title Заказ от 12 апреля
+								+b.status-order(style="color: #F71F2C")
+									+icon('box-remove')
+									| Отменён 
+							td.product-properties 
+								div размер топа :  3.5мм
+								div цвет: серый
+								div бренд: Anatometal
+								div резьба : безрезьбовое
+								div материал: Titanium ASTM F-136
+							td.product-count 1 товар
+							td
+								+e.price
+									span.d-xl-none Сумма заказа 
+									| 5 900 ₽
+							td
+								+e.btn.btn.btn-outline-primary(href='#') 
+									+icon('chevron-right')
+									span Смотреть заказ
+		
+	+parts('footer')

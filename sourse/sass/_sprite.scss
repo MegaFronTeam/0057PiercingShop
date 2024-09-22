@@ -32,6 +32,16 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(24 / #{$h} *1em );
 }
+.icon-box-remove {
+	$h: 16;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(17 / #{$h} *1em );
+}
+.icon-box-tick {
+	$h: 17;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(18 / #{$h} *1em );
+}
 .icon-card {
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
@@ -176,6 +186,11 @@
 	$h: 30;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(30 / #{$h} *1em );
+}
+.icon-truck-fast {
+	$h: 14;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(17 / #{$h} *1em );
 }
 .icon-user {
 	$h: 26;

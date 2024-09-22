@@ -8,17 +8,20 @@ mixin sCabinet(data)
 					+b.cabinet-main-block.panel-block
 						.d-lg-none
 							h1 Личные  данные
-						+form-wrap
-							.row
-								.col-md-6
-									+input("Имя")
-									+input("+7 (950) 343-46-34",'tel')
-									+input("Email",'email')
-								.col-md-6
-									+input("Город") 
-									+input("Адрес")
-									+input("Индекс")
-									button.btn.btn-primary(type="submit") Сохранить
+						if block
+							block
+						else
+							+form-wrap
+								.row
+									.col-md-6
+										+input("Имя")
+										+input("+7 (950) 343-46-34",'tel')
+										+input("Email",'email')
+									.col-md-6
+										+input("Город") 
+										+input("Адрес")
+										+input("Индекс")
+										button.btn.btn-primary(type="submit") Сохранить
 				+e.col-aiside.col-lg-auto.order-lg-first
 					+b.cabinet-aside-menu
 						+e.header

@@ -18,5 +18,25 @@ mixin sAuth(title)
 						.col-auto
 							a(href="#").text-body.small Забыли пароль?
 					button.btn.btn-primary.mb-2(type="submit") Войти
+					a.btn.btn-primary.btn-body(href="#") Зарегистрироваться
+	// end sAuth
+mixin sAuth2(title)
+	// start sAuth
+	+b.SECTION.sAuth.section#sAuth
+		.container
+			.panel-block&attributes(attributes)
+				h1= title
+				+form-wrap
+					+input("Фамилия",'tet','Фамилия')
+					+input("Имя",'tet','Имя')
+					+input("Email",'email','Email')
+					+input("Введите пароль",'password','Введите пароль')
+					.row.mb-3
+						.col
+							+e.col-auto
+								label.form-check
+									input.form-check-input(type="checkbox")
+									span.form-check-label
+										| Я даю согласие на обработку персональных данных 
 					button.btn.btn-primary.btn-body(type="submit") Зарегистрироваться
 	// end sAuth

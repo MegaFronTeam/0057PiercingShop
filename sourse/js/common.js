@@ -135,11 +135,6 @@ function eventHandler() {
 	const afterEls = document.querySelectorAll(".after-js");
 	const after = document.querySelector(".after");
 
-	const headerBlock = document.querySelector(".headerBlock");
-	const beforeEls = document.querySelectorAll(".before-js");
-	const afterEls = document.querySelectorAll(".after-js");
-	const after = document.querySelector(".after");
-
 	if (beforeEls.length) {
 		beforeEls.forEach(beforeEl => {
 			beforeEl.addEventListener("mouseenter", function () {

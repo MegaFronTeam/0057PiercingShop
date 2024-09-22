@@ -71,3 +71,44 @@ mixin sAuth4(title)
 					+input("Email",'email','Email')  
 					button.btn.btn-primary.btn-body(type="submit") Выслать код
 	// end sAuth
+mixin sAuth5(title)
+	// start sAuth
+	+b.SECTION.sAuth.section#sAuth
+		.container
+			.panel-block&attributes(attributes)
+				+e.header 
+					a.text-body.link-back(href="#") 
+						+icon("chevron-left")
+						| Назад
+					h1= title
+					p Мы отправили код на ваш электронный адрес
+				+form-wrap
+					.passcode-inputs
+						+input("-",'text').passcode-js
+						+input("-",'text').passcode-js
+						+input("-",'text').passcode-js
+						+input("-",'text').passcode-js
+						+input("-",'text').passcode-js 
+					button.btn.btn-primary.btn-body(type="submit") Подтвердить аккаунт
+	// end sAuth
+mixin sAuth6(title)
+	// start sAuth
+	+b.SECTION.sAuth.section#sAuth
+		.container
+			.panel-block&attributes(attributes)
+				+e.header  
+					h1= title 
+				+form-wrap
+					+input("Введите новый пароль",'password','Введите новый пароль')  
+					button.btn.btn-primary.btn-body(type="submit") Изменить пароль
+	// end sAuth
+mixin sAuth7(title)
+	// start sAuth
+	+b.SECTION.sAuth.section#sAuth
+		.container
+			.panel-block&attributes(attributes).text-center
+				+e.header  
+					h1= title
+					p Ваш пароль был успешно изменен
+				a.btn.btn-primary(type="submit") Перейти в профиль
+	// end sAuth

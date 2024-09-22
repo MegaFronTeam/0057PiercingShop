@@ -39,7 +39,7 @@
 	}
 
 	.panel-block {
-		max-width: 551px;
+		max-width: 600px;
 		margin-inline: auto;
 	}
 
@@ -59,6 +59,17 @@
 			.btn {
 				font-size: 10px;
 				padding-inline: 0.3rem;
+			}
+		}
+	}
+
+	.panel-block {
+		.sAuth__header {
+			max-width: 100%;
+		}
+		&.text-center {
+			.btn {
+				max-width: rem(287);
 			}
 		}
 	}
@@ -95,5 +106,21 @@
 		margin-right: em(5);
 		position: relative;
 		top: em(-2);
+	}
+}
+
+.passcode-inputs {
+	display: flex;
+	@include media-breakpoint-up(sm) {
+		gap: rem(20);
+	}
+	gap: rem(10);
+	margin-bottom: 20px;
+	input {
+		width: rem(50);
+		@include media-breakpoint-up(sm) {
+			width: rem(56);
+		}
+		text-align: center;
 	}
 }

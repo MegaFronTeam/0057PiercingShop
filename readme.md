@@ -10,6 +10,9 @@
 1. <https://megafronteam.github.io/0057PiercingShop/13-auth-sing-up.html>
 1. <https://megafronteam.github.io/0057PiercingShop/13-auth-success.html>
 1. <https://megafronteam.github.io/0057PiercingShop/13-auth-password-forget.html>
+1. <https://megafronteam.github.io/0057PiercingShop/13-auth-code.html>
+1. <https://megafronteam.github.io/0057PiercingShop/13-auth-new-password.html>
+1. <https://megafronteam.github.io/0057PiercingShop/13-auth-new-password-success.html>
 
 In progress
 

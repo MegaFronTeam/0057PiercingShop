@@ -60,7 +60,7 @@ function eventHandler() {
 		freeModeMomentum: true,
 	});
 
-	const partnersSwiper = new Swiper('.sBrands__slider--js .swiper', {
+	const partnersSwiper = new Swiper(".sBrands__slider--js .swiper", {
 		spaceBetween: 16,
 		slidesPerView: "auto",
 		loop: true,
@@ -68,14 +68,14 @@ function eventHandler() {
 			nextEl: ".swiper-button-next",
 			// prevEl: ".swiper-button-prev",
 		},
-    breakpoints: {
-      768: {
-        spaceBetween: 60,
-      }
-    }
+		breakpoints: {
+			768: {
+				spaceBetween: 60,
+			},
+		},
 	});
 
-	const productSwiper = new Swiper('.sProductSlider__slider--js', {
+	const productSwiper = new Swiper(".sProductSlider__slider--js", {
 		spaceBetween: 7,
 		slidesPerView: 2,
 		loop: true,
@@ -83,187 +83,198 @@ function eventHandler() {
 			nextEl: ".sProductSlider__slider--js .swiper-button-next",
 			prevEl: ".sProductSlider__slider--js .swiper-button-prev",
 		},
-    breakpoints: {
-      768: {
-        slidesPerView: 3,
-      },
-      992: {
-        spaceBetween: 20,
-        slidesPerView: 4,
-      }
-    }
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+			},
+			992: {
+				spaceBetween: 20,
+				slidesPerView: 4,
+			},
+		},
 	});
 
-    /* headerBlock animation */
-    
-  const headerBlock = document.querySelector('.headerBlock');
-  const beforeEls = document.querySelectorAll('.before-js');
-  const afterEls = document.querySelectorAll('.after-js');
-  const after = document.querySelector('.after');
+	/* headerBlock animation */
 
-  if (beforeEls.length) {
+	const headerBlock = document.querySelector(".headerBlock");
+	const beforeEls = document.querySelectorAll(".before-js");
+	const afterEls = document.querySelectorAll(".after-js");
+	const after = document.querySelector(".after");
 
-    beforeEls.forEach((beforeEl) => {
-      beforeEl.addEventListener('mouseenter', function() {
-        after.style.transform = 'translateX(100px)';
-        console.log('вправо (before)');
-      });
-    })
+	if (beforeEls.length) {
+		beforeEls.forEach(beforeEl => {
+			beforeEl.addEventListener("mouseenter", function () {
+				after.style.transform = "translateX(100px)";
+				console.log("вправо (before)");
+			});
+		});
 
+		afterEls.forEach(afterEl => {
+			afterEl.addEventListener("mouseenter", function () {
+				after.style.transform = "translateX(-100px)";
+				console.log("влево (after)");
+			});
+		});
 
-    afterEls.forEach((afterEl) => {
-      afterEl.addEventListener('mouseenter', function() {
+		headerBlock.addEventListener("mouseleave", function () {
+			after.style.transform = "translateX(0)";
+			console.log("курсор ушел из headerBlock");
+		});
+	}
 
-        after.style.transform = 'translateX(-100px)';
-        console.log('влево (after)');
+	/* filters */
+	const filtersWraps = document.querySelectorAll(".filter__wrap");
+	if (filtersWraps.length) {
+		filtersWraps.forEach(filter => {
+			filter.addEventListener("click", e => {
+				e.stopPropagation();
+			});
+		});
+	}
 
-      });
-    })
+	const filterNav = document.querySelector(".filters-wrap.filter-nav");
+	const filterWrap = document.querySelector(".filters-wrap--js");
+	const iconClose = document.querySelector(
+		".filters-wrap--js .icon-close-wrap"
+	);
+	const btnClose = document.querySelector(".filters-wrap--js #btn-apply-mob");
 
-    headerBlock.addEventListener('mouseleave', function() {
-        after.style.transform = 'translateX(0)';
-        console.log('курсор ушел из headerBlock');
-    });
-  }
+	if (filterNav) {
+		filterNav.addEventListener("click", () => {
+			filterWrap.classList.toggle("show");
+		});
+	}
 
-  /* filters */
-  const filtersWraps = document.querySelectorAll('.filter__wrap')
-  if (filtersWraps.length) {
-    filtersWraps.forEach((filter) => {
-      filter.addEventListener('click', (e)=> {
-        e.stopPropagation()
-      })
-    })
-  }
+	if (iconClose) {
+		const closeItems = [iconClose, btnClose];
+		closeItems.forEach(item => {
+			item.addEventListener("click", () => {
+				filterWrap.classList.remove("show");
+			});
+		});
+	}
 
-  const filterNav = document.querySelector('.filters-wrap.filter-nav')
-  const filterWrap = document.querySelector('.filters-wrap--js')
-  const iconClose = document.querySelector('.filters-wrap--js .icon-close-wrap')
-  const btnClose = document.querySelector('.filters-wrap--js #btn-apply-mob')
+	const filters = document.querySelectorAll(".filter--js");
+	let activeFilter = null;
 
-  if(filterNav) {
-    filterNav.addEventListener('click', ()=> {
-      filterWrap.classList.toggle('show')
-    })
-  }
+	function closeAllFilters() {
+		filters.forEach(filter => filter.classList.remove("show"));
+		activeFilter = null;
+	}
 
-  if (iconClose) {
-    const closeItems = [iconClose, btnClose]
-    closeItems.forEach((item) => {
-      item.addEventListener('click', ()=> {
-        filterWrap.classList.remove('show')
-      })
-    })
-  }
+	function handleFilterClick(event) {
+		const filter = event.currentTarget;
 
-  const filters = document.querySelectorAll('.filter--js')
-  let activeFilter = null;
+		if (activeFilter && activeFilter !== filter) {
+			closeAllFilters();
+		}
 
-  function closeAllFilters() {
-    filters.forEach(filter => filter.classList.remove('show'));
-    activeFilter = null;
-  }
+		filter.classList.toggle("show");
 
-  function handleFilterClick(event) {
-    const filter = event.currentTarget;
+		if (filter.classList.contains("show")) {
+			activeFilter = filter;
+		} else {
+			activeFilter = null;
+		}
+		event.stopPropagation();
+	}
 
-    if (activeFilter && activeFilter !== filter) {
-      closeAllFilters();
-    }
+	if (filters.length) {
+		filters.forEach(filter => {
+			filter.addEventListener("click", handleFilterClick);
+		});
+	}
 
-    filter.classList.toggle('show');
+	document.addEventListener("click", () => {
+		if (activeFilter) {
+			closeAllFilters();
+		}
+	});
 
-    if (filter.classList.contains('show')) {
-      activeFilter = filter;
-    } else {
-      activeFilter = null;
-    }
-    event.stopPropagation();
-  }
+	/* range */
+	function currencyFormat(num) {
+		return num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1 ");
+	}
 
-  if (filters.length) {
-    filters.forEach(filter => {
-      filter.addEventListener('click', handleFilterClick);
-    });
-  }
+	$(".range-wrap").each(function () {
+		let _this = $(this);
 
-  document.addEventListener('click', () => {
-    if (activeFilter) {
-      closeAllFilters();
-    }
-  });
+		var $range = _this.find(".slider-js");
 
-  /* range */
-  function currencyFormat(num) {
-    return num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
-  }
+		var $inputFrom = _this.find(".input_from");
 
-  $(".range-wrap").each(function () {
-    let _this = $(this);
+		var $inputTo = _this.find(".input_to");
 
-    var $range = _this.find(".slider-js");
+		var instance,
+			from,
+			to,
+			min = $range.data("min"),
+			max = $range.data("max");
+		$range.ionRangeSlider({
+			skin: "round",
+			type: "double",
+			grid: false,
+			grid_snap: false,
+			hide_min_max: true,
+			hide_from_to: false,
+			//here
+			onStart: updateInputs,
+			onChange: updateInputs,
+			onFinish: updateInputs,
+		});
+		instance = $range.data("ionRangeSlider");
 
-    var $inputFrom = _this.find(".input_from");
+		function updateInputs(data) {
+			from = data.from;
+			to = data.to;
+			$inputFrom.prop("value", currencyFormat(from));
+			$inputTo.prop("value", currencyFormat(to)); // InputFormat();
+		}
 
-    var $inputTo = _this.find(".input_to");
+		$inputFrom.on("change input ", function () {
+			var val = +$(this).prop("value").replace(/\s/g, ""); // validate
 
-    var instance,
-        from,
-        to,
-        min = $range.data('min'),
-        max = $range.data('max');
-    $range.ionRangeSlider({
-      skin: "round",
-      type: "double",
-      grid: false,
-      grid_snap: false,
-      hide_min_max: true,
-      hide_from_to: false,
-      //here
-      onStart: updateInputs,
-      onChange: updateInputs,
-      onFinish: updateInputs
-    });
-    instance = $range.data("ionRangeSlider");
+			if (val < min) {
+				val = min;
+			} else if (val > to) {
+				val = to;
+			}
 
-    function updateInputs(data) {
-      from = data.from;
-      to = data.to;
-      $inputFrom.prop("value", currencyFormat(from));
-      $inputTo.prop("value", currencyFormat(to)); // InputFormat();
-    }
+			instance.update({
+				from: val,
+			});
+			$(this).prop("value", currencyFormat(val));
+			console.log(val);
+		});
+		$inputTo.on("change input ", function () {
+			var val = +$(this).prop("value").replace(/\s/g, ""); // validate
 
-    $inputFrom.on("change input ", function () {
-      var val = +$(this).prop("value").replace(/\s/g, ''); // validate
+			if (val < from) {
+				val = from;
+			} else if (val > max) {
+				val = max;
+			}
 
-      if (val < min) {
-        val = min;
-      } else if (val > to) {
-        val = to;
-      }
+			instance.update({
+				to: val,
+			});
+			$(this).prop("value", currencyFormat(val));
+		});
+	});
 
-      instance.update({
-        from: val
-      });
-      $(this).prop("value", currencyFormat(val));
-      console.log(val);
-    });
-    $inputTo.on("change input ", function () {
-      var val = +$(this).prop("value").replace(/\s/g, ''); // validate
+	let passCode = document.querySelectorAll(".passcode-js");
 
-      if (val < from) {
-        val = from;
-      } else if (val > max) {
-        val = max;
-      }
-
-      instance.update({
-        to: val
-      });
-      $(this).prop("value", currencyFormat(val));
-    });
-  });
-
+	if (passCode.length > 0) {
+		passCode.forEach((item, index) => {
+			item.addEventListener("input", e => {
+				if (index < passCode.length - 1) {
+					if (!e.data == "") {
+						passCode[index + 1].focus();
+					}
+				}
+			});
+		});
+	}
 }
 if (document.readyState !== "loading") {
 	eventHandler();

@@ -16,6 +16,50 @@
 	// min-height: 100%; 
 	padding: rem(48) rem(39);
 
+  &--lg {
+    width: rem(664);
+    padding: rem(48) rem(21) rem(43);
+    
+    .btn {
+      border-radius: rem(10);
+      --bs-btn-padding-y: #{rem(16)};
+      width: 100%;
+      font-size: rem(14px);
+      line-height: 110%;
+      font-family: $default-font;
+    }
+
+    .summary {
+      margin-top: rem(12);
+    }
+    .custom-scroll {
+      height: 100%;
+    }
+    .modal-win {
+      &__items {
+        height: calc(100vh - 400px);
+      }
+      &__title {
+        font-size: rem(24px);
+        margin-bottom: rem(17);
+      }
+
+      &__sum-wrap {
+        margin-bottom: rem(10);
+      }
+
+      &__header {
+        text-align: end;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 110%;
+        letter-spacing: 0.02em;
+        color: #8f99ab;
+        padding-bottom: rem(5);
+      }
+    }
+  }
+
 	.modal-content {
 		// max-width: 485px;
 		// padding-right: 40px 15px;
@@ -208,4 +252,18 @@ a {
     transform: translate3d(0, 10%, 0);
     opacity: 0;
   }
+}
+
+.fancybox__content>.f-button.is-close-btn  {
+  top: 32px;
+  right: 30px;
+  --f-button-color: #{$black};
+}
+
+.fancybox__container:not(.is-compact) .fancybox__slide.has-close-btn {
+  padding-top: 10px;
+}
+
+.mCSB_scrollTools {
+  right: -18px !important;
 }

@@ -202,9 +202,12 @@
     margin-bottom: rem(28);
     font-weight: 700;
     @include media-breakpoint-up(lg) {
-      font-size: rem(36);
+      // font-size: rem(30);
       margin-bottom: 0;
       line-height: 108%;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: rem(36);
     }
     @include media-breakpoint-down(lg) {
       text-align: center;

@@ -9,6 +9,7 @@
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="libs/ion-rangeslider/css/ion.rangeSlider.min.css"/>
+		<link href="libs/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 		<script>
 			function addBlock(elem) {
@@ -31,14 +32,176 @@
 				<!-- start sBasket-->
 				<section class="sBasket section" id="sBasket">
 					<div class="container">
-						<div class="section-title text-center">
-							<h2>sBasket</h2>
-						</div>
-						<div class="sBasket__row row">
+						<div class="sBasket__inner-wrap">
+							<div class="section-title">
+								<div class="d-lg-none">
+									<h2>Корзина</h2>
+								</div>
+								<div class="d-none d-lg-block">
+									<h2>Корзина товаров</h2>
+								</div>
+							</div>
+							<div class="sBasket__header fw-600 d-none d-lg-grid">
+								<div class="sBasket__title-item">Товар
+								</div>
+								<div class="wrap">
+									<div class="sBasket__title-item">Цена
+									</div>
+									<div class="sBasket__title-item">Кол-во
+									</div>
+									<div class="sBasket__title-item">Стоимость
+									</div>
+								</div>
+							</div>
+							<div class="sBasket__items">
+								<div class="cart-product"><a class="img-wrap" href="#"><img class="img" src="img/cart-1.png" alt="" loading="lazy"/></a>
+									<div class="cart-product__descr">
+										<div class="cart-product__title-wrap">
+											<div class="cart-product__title title">Кольцо-кликер с двойным рядом кристаллов
+											</div>
+											<div class="cart-product__article d-none d-lg-block">HMClicCryх2Hel
+											</div>
+										</div>
+										<div class="cart-product__descr-wrap">
+											<div class="text-secondary">цвет: серый</div>
+											<div class="text-secondary">бренд: Anatometal</div>
+											<div class="text-secondary">резьба : безрезьбовое</div>
+											<div class="text-secondary">материал: Titanium ASTM F-136</div>
+										</div>
+										<div class="cart-product__price d-none d-lg-block">2 990 ₽
+										</div>
+										<div class="cart-product__item-wrap d-lg-none">
+											<div class="cart-product__item">
+												<div class="cart-product__item-title text-secondary">Размер:
+												</div>
+												<div class="cart-product__item-text">3.5ММ
+												</div>
+											</div>
+											<div class="cart-product__item">
+												<div class="cart-product__item-title text-secondary">Количество:
+												</div>
+												<div class="cart-product__item-t">
+													<div class="cart-product__input-wrap form-group custom-select-wrap">
+														<select class="cart-product__input form-select custom-select-js" name="select" data-placeholder="10">
+															<option value="10">10</option>
+															<option value="101">101</option>
+															<option value="102">102</option>
+															<option value="103">103</option>
+															<option value="104">104</option>
+														</select>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+											</div>
+										</div>
+										<div class="d-none d-lg-block add">
+											<div class="addBlock">
+												<button class="addBlock__btn addBlock__btn--minus" type="button">
+												</button>
+												<input type="text" value="999" inputmode="numeric"/>
+												<button class="addBlock__btn addBlock__btn--plus" type="button">
+												</button>
+											</div>
+										</div>
+										<div class="cart-product__price price-xxl">13 990 ₽
+										</div>
+									</div>
+									<a class="cart-product__icon-wrap d-lg-none" href="#">
+										<svg class="icon icon-close ">
+											<use xlink:href="img/svg/sprite.svg#close"></use>
+										</svg>
+									</a>
+								</div>
+								<div class="cart-product"><a class="img-wrap" href="#"><img class="img" src="img/cart-1.png" alt="" loading="lazy"/></a>
+									<div class="cart-product__descr">
+										<div class="cart-product__title-wrap">
+											<div class="cart-product__title title">Кольцо-кликер с двойным рядом кристаллов
+											</div>
+											<div class="cart-product__article d-none d-lg-block">HMClicCryх2Hel
+											</div>
+										</div>
+										<div class="cart-product__descr-wrap">
+											<div class="text-secondary">цвет: серый</div>
+											<div class="text-secondary">бренд: Anatometal</div>
+											<div class="text-secondary">резьба : безрезьбовое</div>
+											<div class="text-secondary">материал: Titanium ASTM F-136</div>
+										</div>
+										<div class="cart-product__price d-none d-lg-block">2 990 ₽
+										</div>
+										<div class="cart-product__item-wrap d-lg-none">
+											<div class="cart-product__item">
+												<div class="cart-product__item-title text-secondary">Размер:
+												</div>
+												<div class="cart-product__item-text">3.5ММ
+												</div>
+											</div>
+											<div class="cart-product__item">
+												<div class="cart-product__item-title text-secondary">Количество:
+												</div>
+												<div class="cart-product__item-t">
+													<div class="cart-product__input-wrap form-group custom-select-wrap">
+														<select class="cart-product__input form-select custom-select-js" name="select" data-placeholder="10">
+															<option value="10">10</option>
+															<option value="101">101</option>
+															<option value="102">102</option>
+															<option value="103">103</option>
+															<option value="104">104</option>
+														</select>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+											</div>
+										</div>
+										<div class="d-none d-lg-block add">
+											<div class="addBlock">
+												<button class="addBlock__btn addBlock__btn--minus" type="button">
+												</button>
+												<input type="text" value="999" inputmode="numeric"/>
+												<button class="addBlock__btn addBlock__btn--plus" type="button">
+												</button>
+											</div>
+										</div>
+										<div class="cart-product__price price-xxl">13 990 ₽
+										</div>
+									</div>
+									<a class="cart-product__icon-wrap d-lg-none" href="#">
+										<svg class="icon icon-close ">
+											<use xlink:href="img/svg/sprite.svg#close"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+							<div class="sBasket__sum">
+								<div class="sBasket__sum-wrap d-lg-none">
+									<div class="sBasket__item">
+										<div class="sBasket__title small">Стоимость
+										</div>
+										<div class="sBasket__price fw-500">0 ₽
+										</div>
+									</div>
+									<div class="sBasket__item">
+										<div class="sBasket__title small">Доставка
+										</div>
+										<div class="sBasket__price fw-500">0 ₽
+										</div>
+									</div>
+									<div class="sBasket__item">
+										<div class="sBasket__title item-sum fw-500">Итого:
+										</div>
+										<div class="sBasket__price fw-500">13 990 ₽
+										</div>
+									</div>
+								</div>
+								<div class="sBasket__btn-wrap">
+									<a class="sBasket__btn btn btn-primary" href="#">Оформить заказ
+									</a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</section>
 				<!-- end sBasket-->
+				<!--.span(style='background-color:#E6BBC1;')-->
 			</main>
 			<script>addBlock(`footer`)</script>
 			<div id="footerWrap"></div>
@@ -73,6 +236,427 @@
 							</label>
 						</div>
 					</form>
+				</div>
+			</div>
+		</div>
+		<div id="modal-cart">
+			<div class="modal-win modal-win--lg">
+				<div class="modal-win__inner-wrap">
+					<div class="modal-win__title h3">Корзина товаров
+					</div>
+					<div class="modal-win__header sBasket__header d-block">4 товара
+					</div>
+					<div class="modal-win__items">
+						<div class="custom-scroll">
+							<div class="cart-product cart-product--modal d-block">
+								<div class="cart-product__descr"><a class="img-wrap" href="#"><img class="img" src="img/cart-1.png" alt="" loading="lazy"/></a>
+									<div class="cart-product__title-wrap">
+										<div class="cart-product__title title">Кольцо-кликер с двойным рядом кристаллов
+										</div>
+										<div class="cart-product__article">HMClicCryх2Hel
+										</div>
+									</div>
+									<div class="cart-product__descr-wrap">
+										<div class="text-secondary">цвет: серый</div>
+										<div class="text-secondary">бренд: Anatometal</div>
+										<div class="text-secondary">резьба : безрезьбовое</div>
+										<div class="text-secondary">материал: Titanium ASTM F-136</div>
+									</div>
+									<div class="add">
+										<div class="addBlock addBlock--sm">
+											<button class="addBlock__btn addBlock__btn--minus" type="button">
+											</button>
+											<input type="text" value="99" inputmode="numeric"/>
+											<button class="addBlock__btn addBlock__btn--plus" type="button">
+											</button>
+										</div>
+									</div>
+									<div class="cart-product__price">13 990 ₽
+									</div>
+									<a class="cart-product__icon-wrap" href="#">
+										<svg class="icon icon-close ">
+											<use xlink:href="img/svg/sprite.svg#close"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+							<div class="cart-product cart-product--modal d-block">
+								<div class="cart-product__descr"><a class="img-wrap" href="#"><img class="img" src="img/cart-1.png" alt="" loading="lazy"/></a>
+									<div class="cart-product__title-wrap">
+										<div class="cart-product__title title">Кольцо-кликер с двойным рядом кристаллов
+										</div>
+										<div class="cart-product__article">HMClicCryх2Hel
+										</div>
+									</div>
+									<div class="cart-product__descr-wrap">
+										<div class="text-secondary">цвет: серый</div>
+										<div class="text-secondary">бренд: Anatometal</div>
+										<div class="text-secondary">резьба : безрезьбовое</div>
+										<div class="text-secondary">материал: Titanium ASTM F-136</div>
+									</div>
+									<div class="add">
+										<div class="addBlock addBlock--sm">
+											<button class="addBlock__btn addBlock__btn--minus" type="button">
+											</button>
+											<input type="text" value="99" inputmode="numeric"/>
+											<button class="addBlock__btn addBlock__btn--plus" type="button">
+											</button>
+										</div>
+									</div>
+									<div class="cart-product__price">13 990 ₽
+									</div>
+									<a class="cart-product__icon-wrap" href="#">
+										<svg class="icon icon-close ">
+											<use xlink:href="img/svg/sprite.svg#close"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+							<div class="cart-product cart-product--modal d-block">
+								<div class="cart-product__descr"><a class="img-wrap" href="#"><img class="img" src="img/cart-1.png" alt="" loading="lazy"/></a>
+									<div class="cart-product__title-wrap">
+										<div class="cart-product__title title">Кольцо-кликер с двойным рядом кристаллов
+										</div>
+										<div class="cart-product__article">HMClicCryх2Hel
+										</div>
+									</div>
+									<div class="cart-product__descr-wrap">
+										<div class="text-secondary">цвет: серый</div>
+										<div class="text-secondary">бренд: Anatometal</div>
+										<div class="text-secondary">резьба : безрезьбовое</div>
+										<div class="text-secondary">материал: Titanium ASTM F-136</div>
+									</div>
+									<div class="add">
+										<div class="addBlock addBlock--sm">
+											<button class="addBlock__btn addBlock__btn--minus" type="button">
+											</button>
+											<input type="text" value="99" inputmode="numeric"/>
+											<button class="addBlock__btn addBlock__btn--plus" type="button">
+											</button>
+										</div>
+									</div>
+									<div class="cart-product__price">13 990 ₽
+									</div>
+									<a class="cart-product__icon-wrap" href="#">
+										<svg class="icon icon-close ">
+											<use xlink:href="img/svg/sprite.svg#close"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+							<div class="cart-product cart-product--modal d-block">
+								<div class="cart-product__descr"><a class="img-wrap" href="#"><img class="img" src="img/cart-1.png" alt="" loading="lazy"/></a>
+									<div class="cart-product__title-wrap">
+										<div class="cart-product__title title">Кольцо-кликер с двойным рядом кристаллов
+										</div>
+										<div class="cart-product__article">HMClicCryх2Hel
+										</div>
+									</div>
+									<div class="cart-product__descr-wrap">
+										<div class="text-secondary">цвет: серый</div>
+										<div class="text-secondary">бренд: Anatometal</div>
+										<div class="text-secondary">резьба : безрезьбовое</div>
+										<div class="text-secondary">материал: Titanium ASTM F-136</div>
+									</div>
+									<div class="add">
+										<div class="addBlock addBlock--sm">
+											<button class="addBlock__btn addBlock__btn--minus" type="button">
+											</button>
+											<input type="text" value="99" inputmode="numeric"/>
+											<button class="addBlock__btn addBlock__btn--plus" type="button">
+											</button>
+										</div>
+									</div>
+									<div class="cart-product__price">13 990 ₽
+									</div>
+									<a class="cart-product__icon-wrap" href="#">
+										<svg class="icon icon-close ">
+											<use xlink:href="img/svg/sprite.svg#close"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+							<div class="cart-product cart-product--modal d-block">
+								<div class="cart-product__descr"><a class="img-wrap" href="#"><img class="img" src="img/cart-1.png" alt="" loading="lazy"/></a>
+									<div class="cart-product__title-wrap">
+										<div class="cart-product__title title">Кольцо-кликер с двойным рядом кристаллов
+										</div>
+										<div class="cart-product__article">HMClicCryх2Hel
+										</div>
+									</div>
+									<div class="cart-product__descr-wrap">
+										<div class="text-secondary">цвет: серый</div>
+										<div class="text-secondary">бренд: Anatometal</div>
+										<div class="text-secondary">резьба : безрезьбовое</div>
+										<div class="text-secondary">материал: Titanium ASTM F-136</div>
+									</div>
+									<div class="add">
+										<div class="addBlock addBlock--sm">
+											<button class="addBlock__btn addBlock__btn--minus" type="button">
+											</button>
+											<input type="text" value="99" inputmode="numeric"/>
+											<button class="addBlock__btn addBlock__btn--plus" type="button">
+											</button>
+										</div>
+									</div>
+									<div class="cart-product__price">13 990 ₽
+									</div>
+									<a class="cart-product__icon-wrap" href="#">
+										<svg class="icon icon-close ">
+											<use xlink:href="img/svg/sprite.svg#close"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+							<div class="cart-product cart-product--modal d-block">
+								<div class="cart-product__descr"><a class="img-wrap" href="#"><img class="img" src="img/cart-1.png" alt="" loading="lazy"/></a>
+									<div class="cart-product__title-wrap">
+										<div class="cart-product__title title">Кольцо-кликер с двойным рядом кристаллов
+										</div>
+										<div class="cart-product__article">HMClicCryх2Hel
+										</div>
+									</div>
+									<div class="cart-product__descr-wrap">
+										<div class="text-secondary">цвет: серый</div>
+										<div class="text-secondary">бренд: Anatometal</div>
+										<div class="text-secondary">резьба : безрезьбовое</div>
+										<div class="text-secondary">материал: Titanium ASTM F-136</div>
+									</div>
+									<div class="add">
+										<div class="addBlock addBlock--sm">
+											<button class="addBlock__btn addBlock__btn--minus" type="button">
+											</button>
+											<input type="text" value="99" inputmode="numeric"/>
+											<button class="addBlock__btn addBlock__btn--plus" type="button">
+											</button>
+										</div>
+									</div>
+									<div class="cart-product__price">13 990 ₽
+									</div>
+									<a class="cart-product__icon-wrap" href="#">
+										<svg class="icon icon-close ">
+											<use xlink:href="img/svg/sprite.svg#close"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+							<div class="cart-product cart-product--modal d-block">
+								<div class="cart-product__descr"><a class="img-wrap" href="#"><img class="img" src="img/cart-1.png" alt="" loading="lazy"/></a>
+									<div class="cart-product__title-wrap">
+										<div class="cart-product__title title">Кольцо-кликер с двойным рядом кристаллов
+										</div>
+										<div class="cart-product__article">HMClicCryх2Hel
+										</div>
+									</div>
+									<div class="cart-product__descr-wrap">
+										<div class="text-secondary">цвет: серый</div>
+										<div class="text-secondary">бренд: Anatometal</div>
+										<div class="text-secondary">резьба : безрезьбовое</div>
+										<div class="text-secondary">материал: Titanium ASTM F-136</div>
+									</div>
+									<div class="add">
+										<div class="addBlock addBlock--sm">
+											<button class="addBlock__btn addBlock__btn--minus" type="button">
+											</button>
+											<input type="text" value="99" inputmode="numeric"/>
+											<button class="addBlock__btn addBlock__btn--plus" type="button">
+											</button>
+										</div>
+									</div>
+									<div class="cart-product__price">13 990 ₽
+									</div>
+									<a class="cart-product__icon-wrap" href="#">
+										<svg class="icon icon-close ">
+											<use xlink:href="img/svg/sprite.svg#close"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+							<div class="cart-product cart-product--modal d-block">
+								<div class="cart-product__descr"><a class="img-wrap" href="#"><img class="img" src="img/cart-1.png" alt="" loading="lazy"/></a>
+									<div class="cart-product__title-wrap">
+										<div class="cart-product__title title">Кольцо-кликер с двойным рядом кристаллов
+										</div>
+										<div class="cart-product__article">HMClicCryх2Hel
+										</div>
+									</div>
+									<div class="cart-product__descr-wrap">
+										<div class="text-secondary">цвет: серый</div>
+										<div class="text-secondary">бренд: Anatometal</div>
+										<div class="text-secondary">резьба : безрезьбовое</div>
+										<div class="text-secondary">материал: Titanium ASTM F-136</div>
+									</div>
+									<div class="add">
+										<div class="addBlock addBlock--sm">
+											<button class="addBlock__btn addBlock__btn--minus" type="button">
+											</button>
+											<input type="text" value="99" inputmode="numeric"/>
+											<button class="addBlock__btn addBlock__btn--plus" type="button">
+											</button>
+										</div>
+									</div>
+									<div class="cart-product__price">13 990 ₽
+									</div>
+									<a class="cart-product__icon-wrap" href="#">
+										<svg class="icon icon-close ">
+											<use xlink:href="img/svg/sprite.svg#close"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+							<div class="cart-product cart-product--modal d-block">
+								<div class="cart-product__descr"><a class="img-wrap" href="#"><img class="img" src="img/cart-1.png" alt="" loading="lazy"/></a>
+									<div class="cart-product__title-wrap">
+										<div class="cart-product__title title">Кольцо-кликер с двойным рядом кристаллов
+										</div>
+										<div class="cart-product__article">HMClicCryх2Hel
+										</div>
+									</div>
+									<div class="cart-product__descr-wrap">
+										<div class="text-secondary">цвет: серый</div>
+										<div class="text-secondary">бренд: Anatometal</div>
+										<div class="text-secondary">резьба : безрезьбовое</div>
+										<div class="text-secondary">материал: Titanium ASTM F-136</div>
+									</div>
+									<div class="add">
+										<div class="addBlock addBlock--sm">
+											<button class="addBlock__btn addBlock__btn--minus" type="button">
+											</button>
+											<input type="text" value="99" inputmode="numeric"/>
+											<button class="addBlock__btn addBlock__btn--plus" type="button">
+											</button>
+										</div>
+									</div>
+									<div class="cart-product__price">13 990 ₽
+									</div>
+									<a class="cart-product__icon-wrap" href="#">
+										<svg class="icon icon-close ">
+											<use xlink:href="img/svg/sprite.svg#close"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+							<div class="cart-product cart-product--modal d-block">
+								<div class="cart-product__descr"><a class="img-wrap" href="#"><img class="img" src="img/cart-1.png" alt="" loading="lazy"/></a>
+									<div class="cart-product__title-wrap">
+										<div class="cart-product__title title">Кольцо-кликер с двойным рядом кристаллов
+										</div>
+										<div class="cart-product__article">HMClicCryх2Hel
+										</div>
+									</div>
+									<div class="cart-product__descr-wrap">
+										<div class="text-secondary">цвет: серый</div>
+										<div class="text-secondary">бренд: Anatometal</div>
+										<div class="text-secondary">резьба : безрезьбовое</div>
+										<div class="text-secondary">материал: Titanium ASTM F-136</div>
+									</div>
+									<div class="add">
+										<div class="addBlock addBlock--sm">
+											<button class="addBlock__btn addBlock__btn--minus" type="button">
+											</button>
+											<input type="text" value="99" inputmode="numeric"/>
+											<button class="addBlock__btn addBlock__btn--plus" type="button">
+											</button>
+										</div>
+									</div>
+									<div class="cart-product__price">13 990 ₽
+									</div>
+									<a class="cart-product__icon-wrap" href="#">
+										<svg class="icon icon-close ">
+											<use xlink:href="img/svg/sprite.svg#close"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+							<div class="cart-product cart-product--modal d-block">
+								<div class="cart-product__descr"><a class="img-wrap" href="#"><img class="img" src="img/cart-1.png" alt="" loading="lazy"/></a>
+									<div class="cart-product__title-wrap">
+										<div class="cart-product__title title">Кольцо-кликер с двойным рядом кристаллов
+										</div>
+										<div class="cart-product__article">HMClicCryх2Hel
+										</div>
+									</div>
+									<div class="cart-product__descr-wrap">
+										<div class="text-secondary">цвет: серый</div>
+										<div class="text-secondary">бренд: Anatometal</div>
+										<div class="text-secondary">резьба : безрезьбовое</div>
+										<div class="text-secondary">материал: Titanium ASTM F-136</div>
+									</div>
+									<div class="add">
+										<div class="addBlock addBlock--sm">
+											<button class="addBlock__btn addBlock__btn--minus" type="button">
+											</button>
+											<input type="text" value="99" inputmode="numeric"/>
+											<button class="addBlock__btn addBlock__btn--plus" type="button">
+											</button>
+										</div>
+									</div>
+									<div class="cart-product__price">13 990 ₽
+									</div>
+									<a class="cart-product__icon-wrap" href="#">
+										<svg class="icon icon-close ">
+											<use xlink:href="img/svg/sprite.svg#close"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+							<div class="cart-product cart-product--modal d-block">
+								<div class="cart-product__descr"><a class="img-wrap" href="#"><img class="img" src="img/cart-1.png" alt="" loading="lazy"/></a>
+									<div class="cart-product__title-wrap">
+										<div class="cart-product__title title">Кольцо-кликер с двойным рядом кристаллов
+										</div>
+										<div class="cart-product__article">HMClicCryх2Hel
+										</div>
+									</div>
+									<div class="cart-product__descr-wrap">
+										<div class="text-secondary">цвет: серый</div>
+										<div class="text-secondary">бренд: Anatometal</div>
+										<div class="text-secondary">резьба : безрезьбовое</div>
+										<div class="text-secondary">материал: Titanium ASTM F-136</div>
+									</div>
+									<div class="add">
+										<div class="addBlock addBlock--sm">
+											<button class="addBlock__btn addBlock__btn--minus" type="button">
+											</button>
+											<input type="text" value="99" inputmode="numeric"/>
+											<button class="addBlock__btn addBlock__btn--plus" type="button">
+											</button>
+										</div>
+									</div>
+									<div class="cart-product__price">13 990 ₽
+									</div>
+									<a class="cart-product__icon-wrap" href="#">
+										<svg class="icon icon-close ">
+											<use xlink:href="img/svg/sprite.svg#close"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-win__sum sBasket__sum">
+					<div class="modal-win__sum-wrap sBasket__sum-wrap">
+						<div class="modal-win__item sBasket__item">
+							<div class="small sBasket__title">Стоимость</div>
+							<div class="modal-win__price sBasket__price fw-500">0 ₽
+							</div>
+						</div>
+						<div class="modal-win__item sBasket__item">
+							<div class="small sBasket__title">Доставка</div>
+							<div class="modal-win__price sBasket__price fw-500">0 ₽
+							</div>
+						</div>
+						<div class="modal-win__item sBasket__item summary">
+							<div class="sBasket__title item-sum fw-500">Итого:</div>
+							<div class="modal-win__price sBasket__price fw-500">13 990 ₽
+							</div>
+						</div>
+					</div>
+					<div class="modal-win__btn-wrap">
+						<button class="modal-win__btn btn btn-primary" type="submit">Оформить заказ
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -214,6 +798,7 @@
 		<script src="libs/select2/js/select2.min.js"> </script>
 		<script src="libs/select2/js/i18n/ru.js"> </script>
 		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+		<script src="libs/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"> </script>
 		<script src="js/JSCCommon.js"></script>
 		<script src="js/common.js"></script>
 	</body>

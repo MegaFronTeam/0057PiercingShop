@@ -64,6 +64,11 @@
     margin-left: 10%;
   }
 
+  .icon-user {
+	@include media-breakpoint-down(lg) {
+    transform: translateY(1px);
+  }
+  }
 
 	@include media-breakpoint-up(sm) {}
 	

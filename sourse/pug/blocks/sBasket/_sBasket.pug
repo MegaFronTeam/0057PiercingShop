@@ -2,8 +2,31 @@ mixin sBasket(data)
 	// start sBasket
 	+b.SECTION.sBasket.section#sBasket&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sBasket
-				
-			+e.row.row
+			+e.inner-wrap
+				+b.section-title
+					.d-lg-none: h2 Корзина
+					.d-none.d-lg-block: h2 Корзина товаров
+				+e.header.fw-600.d-none.d-lg-grid
+					+e.title-item Товар
+					.wrap
+						+e.title-item Цена
+						+e.title-item Кол-во
+						+e.title-item Стоимость
+				+e.items
+					+cartProduct()
+					+cartProduct()
+				+e.sum
+					+e.sum-wrap.d-lg-none
+						+e.item
+							+e.title.small Стоимость
+							+e.price.fw-500 0 ₽
+						+e.item
+							+e.title.small Доставка
+							+e.price.fw-500 0 ₽
+						+e.item
+							+e.title.item-sum.fw-500 Итого:
+							+e.price.fw-500 13 990 ₽
+					+e.btn-wrap: +e.btn.btn.btn-primary(href='#') Оформить заказ
 	// end sBasket
+
+	//.span(style='background-color:#E6BBC1;')

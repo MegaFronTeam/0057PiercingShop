@@ -8,6 +8,8 @@
 1. <https://megafronteam.github.io/0057PiercingShop/12-cabinet.html>
 1. <https://megafronteam.github.io/0057PiercingShop/13-auth-login.html>
 1. <https://megafronteam.github.io/0057PiercingShop/13-auth-sing-up.html>
+1. <https://megafronteam.github.io/0057PiercingShop/13-auth-success.html>
+1. <https://megafronteam.github.io/0057PiercingShop/13-auth-password-forget.html>
 
 In progress
 

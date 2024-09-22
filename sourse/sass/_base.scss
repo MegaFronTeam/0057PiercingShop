@@ -564,14 +564,17 @@ h3,
 .container-xl,
 .container-xxl {
 	@include media-breakpoint-down(sm) {
-		--bs-gutter-x: #{rem(70)};
+		--bs-gutter-x: #{rem(30)};
 	}
 }
 
 .panel-block {
 	border-radius: 17px;
 	background: #ffffff;
-	padding: rem(39) rem(35);
+	@include media-breakpoint-up(sm) {
+		padding: rem(39) rem(35);
+	}
+	padding: rem(39) rem(20);
 }
 
 .auth-pages {

@@ -40,3 +40,34 @@ mixin sAuth2(title)
 										| Я даю согласие на обработку персональных данных 
 					button.btn.btn-primary.btn-body(type="submit") Зарегистрироваться
 	// end sAuth
+mixin sAuth3(title)
+	// start sAuth
+	+b.SECTION.sAuth.section#sAuth
+		.container
+			.panel-block&attributes(attributes)
+				+e.header 
+					h1= title
+					p Вы&nbsp;можете перейти в&nbsp;профиль и&nbsp;настроить его или начать поиск украшений с&nbsp;главной
+
+				
+				+e.btns-mobile-small.row
+					.col-6
+						a.btn.btn-primary(href="#") Перейти в профиль
+					.col-6
+						a.btn.btn-primary.btn-body(href="#") Продолжить покупки
+	// end sAuth
+mixin sAuth4(title)
+	// start sAuth
+	+b.SECTION.sAuth.section#sAuth
+		.container
+			.panel-block&attributes(attributes)
+				+e.header 
+					a.text-body.link-back(href="#") 
+						+icon("chevron-left")
+						| Назад
+					h1= title
+					p Введите свой адрес электронной почты и&nbsp;мы&nbsp;вышлем вам код для смены пароля
+				+form-wrap 
+					+input("Email",'email','Email')  
+					button.btn.btn-primary.btn-body(type="submit") Выслать код
+	// end sAuth

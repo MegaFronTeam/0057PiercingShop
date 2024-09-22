@@ -1,0 +1,84 @@
+mixin sProductDetail(data)
+	// start sProductDetail
+	+b.SECTION.sProductDetail.section#sProductDetail&attributes(attributes)
+		.container
+			+e.inner-wrap
+				+e.icon-wrapper.p-left.d-lg-none(href='#'): +icon('back')
+				+e.icon-wrapper.p-right.d-lg-none(href='#'): +icon('heart')
+				+breadcrumb('Главная', 'Все украшения', 'Кольцо кликер')
+				+e.row.row
+					+e.col.col-12.col-lg-4
+						+e.slider-wrap
+							.swiper.sProdCard-slider-js
+								.swiper-wrapper
+									+sProdCardSlide('1')
+									+sProdCardSlide('2')
+									+sProdCardSlide('1')
+									+sProdCardSlide('1')
+									+sProdCardSlide('1')
+						+e.thumb-wrap
+							.swiper.sProdCard-thumb-js
+								.swiper-wrapper
+									+sProdCardThumb('1')
+									+sProdCardThumb('2')
+									+sProdCardThumb('1')
+									+sProdCardThumb('1')
+									+sProdCardThumb('1')
+					+e.col.col-12.col-lg-8.before-bg: .content
+						.icon-heart-wrap: +icon('heart')
+						+e.title-wrap
+							h2 Кольцо-кликер с двойным рядом кристаллов
+							+e.badge.bagde_green.product-item__badge оплата долями
+							+e.art.text-secondary Артикул: HMClicCryх2Hel
+						+e.price 2 800 ₽
+						+filterGroup2
+						+e.btns-wrap
+							+e.btn.btn.btn-primary(href="#") В корзину
+							+e.btn.btn.btn-dark(href="#") Записаться на установку
+							a(href="#").link #[span Поделиться]
+								+icon('share')
+						+ddGroup
+							+ddGroupItem('Описание', )
+							+ddGroupItem('Оплата')
+							+ddGroupItem('Доставка', '')
+	// end sProductDetail
+
+
+mixin filterGroup2(title)
+	.filters-group.prod
+		.filters-wrap.filters-wrap--js
+			.filters.row.d-flex
+				+e.col.col-6.col-xl-5
+					.text Размер
+					+b.filter
+						.dropdown
+							.dropdown-toggle(type="button" data-bs-toggle="dropdown" aria-expanded="false") Размер 1
+							ul.dropdown-menu
+								li Размер 1
+								li Размер 2
+								li Размер 3
+								li Размер 4
+					.popover(data-bs-toggle="popover", data-bs-placement="top",	data-bs-content="Popover title" ): +icon('question')
+				+e.col.col-6.col-xl-4
+					.text Цвет
+					+b.filter--color
+						.wrap-color(style="background-color: red;")
+							input(type="radio" id="red" name="color" value="red" checked)
+							label(for="red")
+						.wrap-color(style="background-color: #DBDFE7;")
+							input(type="radio" id="green" name="color" value="green")
+							label(for="green")
+						.wrap-color(style="background-color: #C5FCA3;")
+							input(type="radio" id="blue" name="color" value="blue")
+							label(for="blue")
+
+
+mixin sProdCardSlide(imgNum)
+	.swiper-slide
+		+e.s-img(href=`img/catalog-${imgNum}.png` data-fancybox='sProdCardSlide')
+			img(loading="lazy" src=`img/catalog-${imgNum}.png` alt="")
+
+mixin sProdCardThumb(imgNum)
+	.swiper-slide
+		.slide-item-1
+			img(loading="lazy" src=`img/catalog-${imgNum}.png` alt="")

@@ -94,6 +94,44 @@ function eventHandler() {
     }
 	});
 
+  let prodCardThumb = new Swiper(".sProdCard-thumb-js", {
+		slidesPerView: 4,
+		spaceBetween: 0,
+	});
+	let prodCardSlider = new Swiper(".sProdCard-slider-js", {
+		spaceBetween: 10,
+		thumbs: {
+			swiper: prodCardThumb,
+		},
+		loop: true,
+	}); //
+
+  const popoverTriggerList = document.querySelectorAll(
+    '[data-bs-toggle="popover"]'
+  );
+  const popoverList = [...popoverTriggerList].map(
+    popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl)
+  );
+
+  /* dropdown */
+  const regionLinks = document.querySelectorAll(
+		".dropdown li"
+	);
+
+	const dropdownToggle = document.querySelector(
+		".dropdown .dropdown-toggle"
+	);
+
+	if (regionLinks && dropdownToggle) {
+		regionLinks.forEach(link => {
+			link.addEventListener("click", function (event) {
+				event.preventDefault();
+
+				dropdownToggle.textContent = this.textContent;
+			});
+		});
+	}
+
     /* headerBlock animation */
     
   const headerBlock = document.querySelector('.headerBlock');

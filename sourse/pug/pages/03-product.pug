@@ -3,7 +3,8 @@ extends ../layout/main.pug
 include ../blocks/headerBlock/_headerBlock.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
- 
+
+include ../blocks/sProductDetail/_sProductDetail.pug
 include ../blocks/sProductSlider/_sProductSlider.pug
 
 block variables
@@ -19,6 +20,7 @@ block pagecontent
 	
 	+parts('header')
 	main
+		+sProductDetail
 		+sProductSlider
 		
 	+parts('footer')

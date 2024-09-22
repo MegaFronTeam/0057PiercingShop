@@ -53,6 +53,10 @@ class JSCCommon {
 			});
 		});
 
+		Fancybox.bind(".sProductDetail__s-img[data-fancybox]", {
+			Toolbar: false,
+		});
+
 		document.addEventListener("click", event => {
 			let element = event.target.closest(link);
 			if (!element) return;

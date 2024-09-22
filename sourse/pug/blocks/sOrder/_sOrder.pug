@@ -2,8 +2,67 @@ mixin sOrder(data)
 	// start sOrder
 	+b.SECTION.sOrder.section#sOrder&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sOrder
-				
 			+e.row.row
+				+e.col.col-12.col-lg-5.order-lg-last
+					+e.item
+						h3 Ваш заказ
+						+e.products
+							+e.product
+								a(href='#').img-wrap: +img('img/cart-1.png').img
+								+e.descr
+									+e.title.title Кольцо-кликер с двойным рядом кристаллов
+									+e.descr-wrap.ttu
+										.text-secondary количество: 2
+										.text-secondary размер: 2
+										.text-secondary цвет: 2
+							+e.product
+								a(href='#').img-wrap: +img('img/cart-1.png').img
+								+e.descr
+									+e.title.title Кольцо-кликер с двойным рядом кристаллов
+									+e.descr-wrap.ttu
+										.text-secondary количество: 2
+										.text-secondary размер: 2
+										.text-secondary цвет: 2
+						+e.sum
+							+e.item-s
+								+e.title-s.small Сумма заказа
+								+e.price.fw-500 0 ₽
+							+e.item-s
+								+e.title-s.small Скидка
+								+e.price.fw-500 0 ₽
+							+e.item-s
+								+e.title-s.small Доставка
+								+e.price.fw-500 0 ₽
+							+e.item-s.item-sum.fw-500
+								+e.title-s.item-sum К оплате:
+								+e.price 13 990 ₽
+				+e.col.col-12.col-lg-7
+					+e.item.item_lg-wide: +form-wrap
+						+e.item-wrap
+							+e.title.title.title_lg-large Оформление заказа
+							+input("ФИО*",'text')
+							+input("Телефон",'tel')
+							+input("Email",'mail')
+							+input("Введите промокод",'text')
+						+e.item-wrap
+							+e.title.title Доставка
+							.small Выберите способ доставки:
+							.radio-wrap
+								+in-c('radio','СДЭК')(checked)
+									+e.SPAN.text.form-check-label СДЭК
+									+img('img/svg/cdek.svg')
+								+in-c('radio','Почта России')
+									+e.SPAN.text.form-check-label Почта России
+									+img('img/svg/post.svg')
+								+in-c('radio','Самовывоз')
+									+e.SPAN.text.form-check-label Самовывоз
+									+img('img/svg/delivery.svg')
+							+input("Санкт-Петербург",'text')
+								+icon('search')
+							+e.selectedCity.small Россия, Санкт-Петербург
+							+input("Улица",'text')
+							.row
+								.col-6: +input("Дом",'text')
+								.col-6: +input("Квартира / офис",'text')
+							+e.btn.btn.btn-primary(type="submit") Оформить заказ
 	// end sOrder

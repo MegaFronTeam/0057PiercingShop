@@ -1,0 +1,24 @@
+extends ../layout/main.pug
+
+include ../blocks/sForm/_sForm.pug
+
+include ../blocks/sBlog/_sBlog.pug
+include ../blocks/sInstructions/_sInstructions.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'Блог'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+sBlog
+		+sInstructions
+		
+	+parts('footer')

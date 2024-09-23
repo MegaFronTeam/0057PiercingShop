@@ -42,6 +42,11 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(18 / #{$h} *1em );
 }
+.icon-calendar {
+	$h: 12;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(11 / #{$h} *1em );
+}
 .icon-card {
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
@@ -66,6 +71,11 @@
 	$h: 20;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(20 / #{$h} *1em );
+}
+.icon-clock {
+	$h: 13;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(13 / #{$h} *1em );
 }
 .icon-close {
 	$h: 17;

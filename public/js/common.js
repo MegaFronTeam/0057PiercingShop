@@ -47,7 +47,8 @@ function eventHandler() {
 		slidesPerView: "auto",
 		freeMode: true,
 		watchOverflow: true,
-	});	new Swiper(".sBlog-slider--js", {
+	});
+  new Swiper(".sBlog-slider--js", {
 		slidesPerView: "auto",
 		freeMode: true,
 		watchOverflow: true,
@@ -75,6 +76,23 @@ function eventHandler() {
 		breakpoints: {
 			768: {
 				spaceBetween: 60,
+			},
+		},
+	});
+
+	const certifSwiper = new Swiper(".sCertificates__slider--js .swiper", {
+		spaceBetween: 13,
+
+		slidesPerView: "auto",
+		freeMode: true,
+		watchOverflow: true,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			// prevEl: ".swiper-button-prev",
+		},
+		breakpoints: {
+			768: {
+				spaceBetween: 21,
 			},
 		},
 	});

@@ -1,0 +1,34 @@
+extends ../layout/main.pug
+
+include ../blocks/sForm/_sForm.pug
+
+include ../blocks/sBlog/_sBlog.pug
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sCertificates/_sCertificates.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sReviews/_sReviews.pug
+include ../blocks/sMasters/_sMasters.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'Pirsing'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+headerBlock 
+		+sCertificates
+		+sMasters
+		+sReviews
+		+sContact()
+	+parts('footer')
+block scripts
+	script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c") 
+	script
+		include ../blocks/sContact/map.js

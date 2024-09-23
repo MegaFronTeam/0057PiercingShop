@@ -1,0 +1,24 @@
+mixin sCertificates(data)
+	// start sCertificates
+	+b.SECTION.sCertificates.section#sCertificates&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Сертификаты
+			+e.slider--js
+				+arrow
+				.swiper
+					.swiper-wrapper
+						+e.slide.swiper-slide: +certifSlide(1)
+						+e.slide.swiper-slide: +certifSlide(2)
+						+e.slide.swiper-slide: +certifSlide(3)
+						+e.slide.swiper-slide: +certifSlide(4)
+						+e.slide.swiper-slide: +certifSlide(5)
+						+e.slide.swiper-slide: +certifSlide(3)
+						+e.slide.swiper-slide: +certifSlide(4)
+						+e.slide.swiper-slide: +certifSlide(5)
+			+e.btn-wrap.d-none.d-lg-block.text-center: +e.btn.btn.btn-primary(href="#") Записаться
+	// end sCertificates
+
+mixin certifSlide(i)
+	a.sCertificates__img-wrap(href=`img/sCertificates-${i}.png` data-fancybox='sCertificates')
+		+img(`img/sCertificates-${i}.png`).img-bg

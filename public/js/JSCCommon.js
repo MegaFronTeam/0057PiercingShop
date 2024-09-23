@@ -56,6 +56,9 @@ class JSCCommon {
 		Fancybox.bind(".sProductDetail__s-img[data-fancybox]", {
 			Toolbar: false,
 		});
+		Fancybox.bind(".sCertificates__img-wrap[data-fancybox]", {
+			Toolbar: false,
+		});
 
 		document.addEventListener("click", event => {
 			let element = event.target.closest(link);

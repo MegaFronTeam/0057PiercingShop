@@ -4,6 +4,23 @@ mixin sInstructions(data)
 		.container
 			+b.section-title
 				h2 Памятки
-				
-			+e.row.row
-	// end sInstructions
+			+e.articles
+				+sInstructionCard('3', 'Памятка по уходу за проколами в ротовой полости')
+				+sInstructionCard('1', 'Памятка по уходу за микродермалами')
+				+sInstructionCard('3', 'Памятка по уходу за проколами хрящей и мягких тканей')
+				+sInstructionCard('3', 'Памятка по уходу за проколами хрящей и мягких тканей')
+	// end sInstructions sInstruction
+
+mixin sInstructionCard(img, title)
+	+b.instruction-card(href='#')
+		+e.img-wrap
+			+img(`img/svg/sInstruction-${img}.svg`).img
+			+e.title.title.fw-600= title
+		+e.date-wrap
+			+e.date.small
+				+icon('calendar')
+				| 02 Декабря	2022
+			+e.time.small
+				+icon('clock')
+				| 3 мин. чтения
+			

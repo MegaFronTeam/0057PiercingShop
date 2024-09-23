@@ -564,7 +564,7 @@ h3,
 .container-xl,
 .container-xxl {
 	@include media-breakpoint-down(sm) {
-		--bs-gutter-x: #{rem(30)};
+		--bs-gutter-x: #{rem(70)};
 	}
 }
 

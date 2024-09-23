@@ -32,8 +32,185 @@
 				<!-- start sBlog-->
 				<section class="sBlog section" id="sBlog">
 					<div class="container">
-						<div class="section-title">
-							<h2>Статьи</h2>
+						<div class="sBlog__row-top section-title row">
+							<div class="col col-lg-12">
+								<h2>Статьи</h2>
+							</div>
+							<div class="col col-lg-auto order-lg-last">
+								<div class="sBlog__sort">
+									<div class="sBlog__filter">Сортировать
+									</div>
+									<div class="sBlog__input-wrap form-group custom-select-wrap">
+										<select class="sBlog__input form-select custom-select-js" name="select" data-placeholder="Все рубрики">
+											<option value="Все рубрики">Все рубрики</option>
+											<option value="Все рубрики1">Все рубрики1</option>
+											<option value="Все рубрики2">Все рубрики2</option>
+											<option value="Все рубрики3">Все рубрики3</option>
+											<option value="Все рубрики4">Все рубрики4</option>
+										</select>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+							</div>
+							<div class="col-12 line col-lg-8">
+								<div class="sBlog__categories sBlog-slider sBlog-slider--js">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide"><a class="category active" href="#">Все</a></div>
+										<div class="swiper-slide"><a class="category" href="#">Категория</a></div>
+										<div class="swiper-slide"><a class="category" href="#">Категория</a></div>
+										<div class="swiper-slide"><a class="category" href="#">Категория</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<a class="article-item article-item--big" href="#"><img class="img" src="img/sBlog-img.png" alt="" loading="lazy"/>
+							<div class="article-item__content">
+								<div class="article-item__badges-wrap">
+									<div class="article-item__badge product-item__badge bagde_yellow">категория
+									</div>
+									<div class="article-item__badge product-item__badge bagde_white">категория
+									</div>
+									<div class="article-item__badge product-item__badge bagde_white">категория
+									</div>
+								</div>
+								<div class="article-item__time-wrap">
+									<div class="article-item__date-wrap">
+										<div class="article-item__date small">
+											<svg class="icon icon-calendar ">
+												<use xlink:href="img/svg/sprite.svg#calendar"></use>
+											</svg>02 Декабря	2022
+										</div>
+										<div class="article-item__time small">
+											<svg class="icon icon-clock ">
+												<use xlink:href="img/svg/sprite.svg#clock"></use>
+											</svg>3 мин. чтения
+										</div>
+									</div>
+									<div class="article-item__title fw-600">Пирсинг - больно
+									</div>
+								</div>
+							</div>
+						</a>
+						<div class="sBlog__slider sBlog__slider--js">
+							<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+								<svg class="icon icon-chevron-right ">
+									<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+								</svg>
+							</div>
+							<div class="swiper-wrapper swiper-wrapper-js">
+								<div class="sBlog__slide swiper-slide">
+									<a class="article-item" href="#">
+										<div class="article-item__img-wrap"><img class="img" src="img/sBlog-img1.png" alt="" loading="lazy"/>
+											<div class="article-item__content">
+												<div class="article-item__badges-wrap">
+													<div class="article-item__badge product-item__badge bagde_yellow">категория
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="article-item__time-wrap">
+											<div class="article-item__date-wrap">
+												<div class="article-item__date small">
+													<svg class="icon icon-calendar ">
+														<use xlink:href="img/svg/sprite.svg#calendar"></use>
+													</svg>02 Декабря	2022
+												</div>
+												<div class="article-item__time small">
+													<svg class="icon icon-clock ">
+														<use xlink:href="img/svg/sprite.svg#clock"></use>
+													</svg>3 мин. чтения
+												</div>
+											</div>
+											<div class="article-item__title fw-600">10 правил красивого и безопасного пирсинга
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="sBlog__slide swiper-slide">
+									<a class="article-item" href="#">
+										<div class="article-item__img-wrap"><img class="img" src="img/sBlog-img2.png" alt="" loading="lazy"/>
+											<div class="article-item__content">
+												<div class="article-item__badges-wrap">
+													<div class="article-item__badge product-item__badge bagde_yellow">категория
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="article-item__time-wrap">
+											<div class="article-item__date-wrap">
+												<div class="article-item__date small">
+													<svg class="icon icon-calendar ">
+														<use xlink:href="img/svg/sprite.svg#calendar"></use>
+													</svg>02 Декабря	2022
+												</div>
+												<div class="article-item__time small">
+													<svg class="icon icon-clock ">
+														<use xlink:href="img/svg/sprite.svg#clock"></use>
+													</svg>3 мин. чтения
+												</div>
+											</div>
+											<div class="article-item__title fw-600">Украшения потеряло свой первоначальный вид?
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="sBlog__slide swiper-slide">
+									<a class="article-item" href="#">
+										<div class="article-item__img-wrap"><img class="img" src="img/sBlog-img3.png" alt="" loading="lazy"/>
+											<div class="article-item__content">
+												<div class="article-item__badges-wrap">
+													<div class="article-item__badge product-item__badge bagde_yellow">категория
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="article-item__time-wrap">
+											<div class="article-item__date-wrap">
+												<div class="article-item__date small">
+													<svg class="icon icon-calendar ">
+														<use xlink:href="img/svg/sprite.svg#calendar"></use>
+													</svg>02 Декабря	2022
+												</div>
+												<div class="article-item__time small">
+													<svg class="icon icon-clock ">
+														<use xlink:href="img/svg/sprite.svg#clock"></use>
+													</svg>3 мин. чтения
+												</div>
+											</div>
+											<div class="article-item__title fw-600">Что такое траблшутинг и зачем он нужен?
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="sBlog__slide swiper-slide">
+									<a class="article-item" href="#">
+										<div class="article-item__img-wrap"><img class="img" src="img/sBlog-img4.png" alt="" loading="lazy"/>
+											<div class="article-item__content">
+												<div class="article-item__badges-wrap">
+													<div class="article-item__badge product-item__badge bagde_yellow">категория
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="article-item__time-wrap">
+											<div class="article-item__date-wrap">
+												<div class="article-item__date small">
+													<svg class="icon icon-calendar ">
+														<use xlink:href="img/svg/sprite.svg#calendar"></use>
+													</svg>02 Декабря	2022
+												</div>
+												<div class="article-item__time small">
+													<svg class="icon icon-clock ">
+														<use xlink:href="img/svg/sprite.svg#clock"></use>
+													</svg>3 мин. чтения
+												</div>
+											</div>
+											<div class="article-item__title fw-600">Принятие своего тела через пирсинг
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
 						</div>
 						<div class="sBlog__row row">
 						</div>
@@ -46,11 +223,83 @@
 						<div class="section-title">
 							<h2>Памятки</h2>
 						</div>
-						<div class="sInstructions__row row">
+						<div class="sInstructions__articles">
+							<a class="instruction-card" href="#">
+								<div class="instruction-card__img-wrap"><img class="img" src="img/svg/sInstruction-3.svg" alt="" loading="lazy"/>
+									<div class="instruction-card__title title fw-600">Памятка по уходу за проколами в ротовой полости
+									</div>
+								</div>
+								<div class="instruction-card__date-wrap">
+									<div class="instruction-card__date small">
+										<svg class="icon icon-calendar ">
+											<use xlink:href="img/svg/sprite.svg#calendar"></use>
+										</svg>02 Декабря	2022
+									</div>
+									<div class="instruction-card__time small">
+										<svg class="icon icon-clock ">
+											<use xlink:href="img/svg/sprite.svg#clock"></use>
+										</svg>3 мин. чтения
+									</div>
+								</div>
+							</a>
+							<a class="instruction-card" href="#">
+								<div class="instruction-card__img-wrap"><img class="img" src="img/svg/sInstruction-1.svg" alt="" loading="lazy"/>
+									<div class="instruction-card__title title fw-600">Памятка по уходу за микродермалами
+									</div>
+								</div>
+								<div class="instruction-card__date-wrap">
+									<div class="instruction-card__date small">
+										<svg class="icon icon-calendar ">
+											<use xlink:href="img/svg/sprite.svg#calendar"></use>
+										</svg>02 Декабря	2022
+									</div>
+									<div class="instruction-card__time small">
+										<svg class="icon icon-clock ">
+											<use xlink:href="img/svg/sprite.svg#clock"></use>
+										</svg>3 мин. чтения
+									</div>
+								</div>
+							</a>
+							<a class="instruction-card" href="#">
+								<div class="instruction-card__img-wrap"><img class="img" src="img/svg/sInstruction-3.svg" alt="" loading="lazy"/>
+									<div class="instruction-card__title title fw-600">Памятка по уходу за проколами хрящей и мягких тканей
+									</div>
+								</div>
+								<div class="instruction-card__date-wrap">
+									<div class="instruction-card__date small">
+										<svg class="icon icon-calendar ">
+											<use xlink:href="img/svg/sprite.svg#calendar"></use>
+										</svg>02 Декабря	2022
+									</div>
+									<div class="instruction-card__time small">
+										<svg class="icon icon-clock ">
+											<use xlink:href="img/svg/sprite.svg#clock"></use>
+										</svg>3 мин. чтения
+									</div>
+								</div>
+							</a>
+							<a class="instruction-card" href="#">
+								<div class="instruction-card__img-wrap"><img class="img" src="img/svg/sInstruction-3.svg" alt="" loading="lazy"/>
+									<div class="instruction-card__title title fw-600">Памятка по уходу за проколами хрящей и мягких тканей
+									</div>
+								</div>
+								<div class="instruction-card__date-wrap">
+									<div class="instruction-card__date small">
+										<svg class="icon icon-calendar ">
+											<use xlink:href="img/svg/sprite.svg#calendar"></use>
+										</svg>02 Декабря	2022
+									</div>
+									<div class="instruction-card__time small">
+										<svg class="icon icon-clock ">
+											<use xlink:href="img/svg/sprite.svg#clock"></use>
+										</svg>3 мин. чтения
+									</div>
+								</div>
+							</a>
 						</div>
 					</div>
 				</section>
-				<!-- end sInstructions-->
+				<!-- end sInstructions sInstruction-->
 			</main>
 			<script>addBlock(`footer`)</script>
 			<div id="footerWrap"></div>

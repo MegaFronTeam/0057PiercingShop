@@ -47,6 +47,10 @@ function eventHandler() {
 		slidesPerView: "auto",
 		freeMode: true,
 		watchOverflow: true,
+	});	new Swiper(".sBlog-slider--js", {
+		slidesPerView: "auto",
+		freeMode: true,
+		watchOverflow: true,
 	});
 
 	const swiper4 = new Swiper(".sBanners__slider--js", {
@@ -82,6 +86,24 @@ function eventHandler() {
 		navigation: {
 			nextEl: ".sProductSlider__slider--js .swiper-button-next",
 			prevEl: ".sProductSlider__slider--js .swiper-button-prev",
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+			},
+			992: {
+				spaceBetween: 20,
+				slidesPerView: 4,
+			},
+		},
+	});
+	const blogSwiper = new Swiper(".sBlog__slider--js", {
+		spaceBetween: 20,
+		slidesPerView: 2,
+		loop: true,
+		navigation: {
+			nextEl: ".sBlog__slider--js .swiper-button-next",
+			prevEl: ".sBlog__slider--js .swiper-button-prev",
 		},
 		breakpoints: {
 			768: {

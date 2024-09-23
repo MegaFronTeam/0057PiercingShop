@@ -2,8 +2,64 @@ mixin sBlog(data)
 	// start sBlog
 	+b.SECTION.sBlog.section#sBlog&attributes(attributes)
 		.container
-			+b.section-title
-				h2 Статьи
-				
+			+e.row-top.section-title.row
+				.col.col-lg-12: h2 Статьи
+				.col.col-lg-auto.order-lg-last: +e.sort
+					+e.filter Сортировать
+					+input("Все рубрики",'select','')
+				.col-12.line.col-lg-8: +e.categories.sBlog-slider--js
+					.swiper-wrapper
+						.swiper-slide: a.category.active(href='#') Все
+						.swiper-slide: a.category(href='#') Категория
+						.swiper-slide: a.category(href='#') Категория
+						.swiper-slide: a.category(href='#') Категория
+			+articleItem('img', 'Пирсинг - больно', '--big')
+			+e.slider--js
+				+arrow
+				.swiper-wrapper.swiper-wrapper-js
+					+e.slide.swiper-slide
+						+articleItem1('img1', '10 правил красивого и безопасного пирсинга', '')
+					+e.slide.swiper-slide
+						+articleItem1('img2', 'Украшения потеряло свой первоначальный вид?', '')
+					+e.slide.swiper-slide
+						+articleItem1('img3', 'Что такое траблшутинг и зачем он нужен?', '')
+					+e.slide.swiper-slide
+						+articleItem1('img4', 'Принятие своего тела через пирсинг', '')
 			+e.row.row
 	// end sBlog
+
+mixin articleItem(img, title, itemClass)
+	+b.article-item(class= itemClass, href='#')
+		+img(`img/sBlog-${img}.png`).img
+		if itemClass
+			+e.content
+				+e.badges-wrap
+					+e.badge.product-item__badge.bagde_yellow категория
+					+e.badge.product-item__badge.bagde_white категория
+					+e.badge.product-item__badge.bagde_white категория
+				+e.time-wrap
+					+e.date-wrap
+						+e.date.small
+							+icon('calendar')
+							| 02 Декабря	2022
+						+e.time.small
+							+icon('clock')
+							| 3 мин. чтения
+					+e.title.fw-600= title
+
+mixin articleItem1(img, title, itemClass)
+	+b.article-item(href='#')
+		+e.img-wrap
+			+img(`img/sBlog-${img}.png`).img
+			+e.content
+				+e.badges-wrap
+					+e.badge.product-item__badge.bagde_yellow категория
+		+e.time-wrap
+			+e.date-wrap
+				+e.date.small
+					+icon('calendar')
+					| 02 Декабря	2022
+				+e.time.small
+					+icon('clock')
+					| 3 мин. чтения
+			+e.title.fw-600= title

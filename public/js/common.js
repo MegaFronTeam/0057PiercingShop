@@ -79,13 +79,13 @@ function eventHandler() {
 		},
 	});
 
-	const productSwiper = new Swiper(".sProductSlider__slider--js", {
+	const productSwiper = new Swiper("#sProductSlider1 .sProductSlider__slider--js", {
 		spaceBetween: 7,
 		slidesPerView: 2,
 		loop: true,
 		navigation: {
-			nextEl: ".sProductSlider__slider--js .swiper-button-next",
-			prevEl: ".sProductSlider__slider--js .swiper-button-prev",
+			nextEl: "#sProductSlider1 .swiper-button-next",
+			prevEl: "#sProductSlider1 .swiper-button-prev",
 		},
 		breakpoints: {
 			768: {
@@ -97,6 +97,26 @@ function eventHandler() {
 			},
 		},
 	});
+
+  const productSwiper2 = new Swiper("#sProductSlider2 .sProductSlider__slider--js", {
+		spaceBetween: 15,
+		slidesPerView: 2,
+		loop: true,
+		navigation: {
+			nextEl: "#sProductSlider2 .swiper-button-next",
+			prevEl: "#sProductSlider2 .swiper-button-prev",
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+			},
+			1400: {
+				spaceBetween: 32,
+				// slidesPerView: 4,
+			},
+		},
+	});
+
 	const blogSwiper = new Swiper(".sBlog__slider--js", {
 		spaceBetween: 20,
 		slidesPerView: 2,
@@ -127,6 +147,19 @@ function eventHandler() {
 		},
 		loop: true,
 	}); //
+
+  document.querySelectorAll('.article-navigation a').forEach(item => {
+    item.addEventListener('click', function(event) {
+        // event.preventDefault();
+        
+        let currentActive = document.querySelector('li.active');
+        if (currentActive) {
+            currentActive.classList.remove('active');
+        }
+
+        this.parentElement.classList.add('active');
+    });
+});
 
 	// const popoverTriggerList = document.querySelectorAll(
 	// 	'[data-bs-toggle="popover"]'

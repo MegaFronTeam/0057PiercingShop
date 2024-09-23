@@ -1,12 +1,12 @@
 mixin sProductSlider(data)
 	// start sProductSlider
-	+b.SECTION.sProductSlider.section#sProductSlider&attributes(attributes)
+	+b.SECTION.sProductSlider.section#sProductSlider1&attributes(attributes)
 		.container
 			+b.section-title
 				h2 Похожие товары
 			+e.slider--js
-				+arrow
-				.swiper-wrapper
+				.d-lg-none: +arrow
+				.swiper-wrapper.swiper-wrapper-1
 					+e.slide.swiper-slide
 						+product-item(`2`,`Треугольник`,`2 800 ₽`)
 					+e.slide.swiper-slide
@@ -18,3 +18,32 @@ mixin sProductSlider(data)
 					+e.slide.swiper-slide
 						+product-item(`3`,`Кольцо-кликер`,`2 800 ₽`)
 	// end sProductSlider
+
+
+mixin sProductSlider2(data)
+	// start sProductSlider
+	+b.SECTION.sProductSlider.section#sProductSlider2&attributes(attributes)
+		.container
+			+b.section-title.title_lg
+				h2 Читать также:
+			+e.slider--js.slider-full
+				+arrow
+				.swiper-wrapper
+					+e.slide.swiper-slide
+						+articleSlide(`1`)
+					+e.slide.swiper-slide
+						+articleSlide(`2`)
+					+e.slide.swiper-slide
+						+articleSlide(`3`)
+					+e.slide.swiper-slide
+						+articleSlide(`4`)
+					+e.slide.swiper-slide
+						+articleSlide(`1`)
+
+mixin articleSlide(img)
+	+b.article-slide(href='#')
+		+e.img-wrap
+			+img(`img/article-slide-${img}.png`).img
+		+e.date.small 02 Декабря 2022
+		+e.title.title Пирсинг - больно
+		+e.descr Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?

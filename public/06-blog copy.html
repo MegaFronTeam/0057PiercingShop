@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Детали продукта</title>
+		<title>Блог</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
@@ -29,306 +29,277 @@
 			<script>addBlock(`header`)</script>
 			<div id="headerWrap"></div>
 			<main>
-				<!-- start sProductDetail-->
-				<section class="sProductDetail section" id="sProductDetail">
+				<!-- start sBlog-->
+				<section class="sBlog section" id="sBlog">
 					<div class="container">
-						<div class="sProductDetail__inner-wrap">
-							<a class="sProductDetail__icon-wrapper p-left d-lg-none" href="#">
-								<svg class="icon icon-back ">
-									<use xlink:href="img/svg/sprite.svg#back"></use>
-								</svg>
-							</a>
-							<a class="sProductDetail__icon-wrapper p-right d-lg-none" href="#">
-								<svg class="icon icon-heart ">
-									<use xlink:href="img/svg/sprite.svg#heart"></use>
-								</svg>
-							</a>
-							<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
-								<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
-									<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
-											<meta itemprop="position" content="1"/></a></li>
-									<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Все украшения</span>
-											<meta itemprop="position" content="2"/></a></li>
-									<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Кольцо кликер</span>
-											<meta itemprop="position" content="3"/></a></li>
-								</ol>
-							</nav>
-							<div class="sProductDetail__row row">
-								<div class="sProductDetail__col col-12 col-lg-4">
-									<div class="sProductDetail__slider-wrap">
-										<div class="swiper sProdCard-slider-js">
-											<div class="swiper-wrapper">
-												<div class="swiper-slide">
-													<a class="sProductDetail__s-img" href="img/catalog-1.png" data-fancybox="sProdCardSlide"><img loading="lazy" src="img/catalog-1.png" alt=""/>
-													</a>
-												</div>
-												<div class="swiper-slide">
-													<a class="sProductDetail__s-img" href="img/catalog-2.png" data-fancybox="sProdCardSlide"><img loading="lazy" src="img/catalog-2.png" alt=""/>
-													</a>
-												</div>
-												<div class="swiper-slide">
-													<a class="sProductDetail__s-img" href="img/catalog-1.png" data-fancybox="sProdCardSlide"><img loading="lazy" src="img/catalog-1.png" alt=""/>
-													</a>
-												</div>
-												<div class="swiper-slide">
-													<a class="sProductDetail__s-img" href="img/catalog-1.png" data-fancybox="sProdCardSlide"><img loading="lazy" src="img/catalog-1.png" alt=""/>
-													</a>
-												</div>
-												<div class="swiper-slide">
-													<a class="sProductDetail__s-img" href="img/catalog-1.png" data-fancybox="sProdCardSlide"><img loading="lazy" src="img/catalog-1.png" alt=""/>
-													</a>
-												</div>
-											</div>
-										</div>
+						<div class="sBlog__row-top section-title row">
+							<div class="col col-lg-12">
+								<h2>Статьи</h2>
+							</div>
+							<div class="col col-lg-auto order-lg-last">
+								<div class="sBlog__sort">
+									<div class="sBlog__filter">Сортировать
 									</div>
-									<div class="sProductDetail__thumb-wrap">
-										<div class="swiper sProdCard-thumb-js">
-											<div class="swiper-wrapper">
-												<div class="swiper-slide">
-													<div class="slide-item-1"><img loading="lazy" src="img/catalog-1.png" alt=""/></div>
-												</div>
-												<div class="swiper-slide">
-													<div class="slide-item-1"><img loading="lazy" src="img/catalog-2.png" alt=""/></div>
-												</div>
-												<div class="swiper-slide">
-													<div class="slide-item-1"><img loading="lazy" src="img/catalog-1.png" alt=""/></div>
-												</div>
-												<div class="swiper-slide">
-													<div class="slide-item-1"><img loading="lazy" src="img/catalog-1.png" alt=""/></div>
-												</div>
-												<div class="swiper-slide">
-													<div class="slide-item-1"><img loading="lazy" src="img/catalog-1.png" alt=""/></div>
-												</div>
-											</div>
-										</div>
+									<div class="sBlog__input-wrap form-group custom-select-wrap">
+										<select class="sBlog__input form-select custom-select-js" name="select" data-placeholder="Все рубрики">
+											<option value="Все рубрики">Все рубрики</option>
+											<option value="Все рубрики1">Все рубрики1</option>
+											<option value="Все рубрики2">Все рубрики2</option>
+											<option value="Все рубрики3">Все рубрики3</option>
+											<option value="Все рубрики4">Все рубрики4</option>
+										</select>
 									</div>
+									<!-- +e.input-wrap-->
 								</div>
-								<div class="sProductDetail__col col-12 col-lg-8 before-bg">
-									<div class="content">
-										<div class="icon-heart-wrap">
-											<svg class="icon icon-heart ">
-												<use xlink:href="img/svg/sprite.svg#heart"></use>
-											</svg>
-										</div>
-										<div class="sProductDetail__title-wrap">
-											<h2>Кольцо-кликер с двойным рядом кристаллов</h2>
-											<div class="sProductDetail__badge bagde_green product-item__badge">оплата долями
-											</div>
-											<div class="sProductDetail__art text-secondary">Артикул: HMClicCryх2Hel
-											</div>
-										</div>
-										<div class="sProductDetail__price">2 800 ₽
-										</div>
-										<div class="filters-group prod">
-											<div class="filters-wrap filters-wrap--js">
-												<div class="filters row d-flex">
-													<div class="sProductDetail__col col-6 col-xl-5">
-														<div class="text">Размер</div>
-														<div class="filter">
-															<div class="dropdown">
-																<div class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Размер 1</div>
-																<ul class="dropdown-menu">
-																	<li>Размер 1</li>
-																	<li>Размер 2</li>
-																	<li>Размер 3</li>
-																	<li>Размер 4</li>
-																</ul>
-															</div>
-														</div>
-														<div class="tinny-item-js">
-															<svg class="icon icon-question ">
-																<use xlink:href="img/svg/sprite.svg#question"></use>
-															</svg>
-															<div class="tinny-template d-none">Info</div>
-														</div>
-													</div>
-													<div class="sProductDetail__col col-6 col-xl-4">
-														<div class="text">Цвет</div>
-														<div class="filter filter--color">
-															<div class="wrap-color" style="background-color: red;">
-																<input type="radio" id="red" name="color" value="red" checked="checked"/>
-																<label for="red"></label>
-															</div>
-															<div class="wrap-color" style="background-color: #DBDFE7;">
-																<input type="radio" id="green" name="color" value="green"/>
-																<label for="green"></label>
-															</div>
-															<div class="wrap-color" style="background-color: #C5FCA3;">
-																<input type="radio" id="blue" name="color" value="blue"/>
-																<label for="blue"></label>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="sProductDetail__btns-wrap">
-											<a class="sProductDetail__btn btn btn-primary" href="#">В корзину
-											</a>
-											<a class="sProductDetail__btn btn btn-dark" href="#">Записаться на установку
-											</a><a class="link" href="#"><span>Поделиться</span>
-												<svg class="icon icon-share ">
-													<use xlink:href="img/svg/sprite.svg#share"></use>
-												</svg></a>
-										</div>
-										<div class="dd-group dd-group-js">
-											<div class="dd-group__item">
-												<div class="dd-group__head dd-head-js">Описание
-												</div>
-												<div class="dd-group__content dd-content-js">
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.</p>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.</p>
-												</div>
-											</div>
-											<div class="dd-group__item">
-												<div class="dd-group__head dd-head-js">Оплата
-												</div>
-												<div class="dd-group__content dd-content-js">
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.</p>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.</p>
-												</div>
-											</div>
-											<div class="dd-group__item">
-												<div class="dd-group__head dd-head-js">Доставка
-												</div>
-												<div class="dd-group__content dd-content-js">
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.</p>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.</p>
-												</div>
-											</div>
-										</div>
+							</div>
+							<div class="col-12 line col-lg-8">
+								<div class="sBlog__categories sBlog-slider sBlog-slider--js">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide"><a class="category active" href="#">Все</a></div>
+										<div class="swiper-slide"><a class="category" href="#">Категория</a></div>
+										<div class="swiper-slide"><a class="category" href="#">Категория</a></div>
+										<div class="swiper-slide"><a class="category" href="#">Категория</a></div>
 									</div>
 								</div>
 							</div>
 						</div>
+						<a class="article-item article-item--big" href="#"><img class="img" src="img/sBlog-img.png" alt="" loading="lazy"/>
+							<div class="article-item__content">
+								<div class="article-item__badges-wrap">
+									<div class="article-item__badge product-item__badge bagde_yellow">категория
+									</div>
+									<div class="article-item__badge product-item__badge bagde_white">категория
+									</div>
+									<div class="article-item__badge product-item__badge bagde_white">категория
+									</div>
+								</div>
+								<div class="article-item__time-wrap">
+									<div class="article-item__date-wrap">
+										<div class="article-item__date small">
+											<svg class="icon icon-calendar ">
+												<use xlink:href="img/svg/sprite.svg#calendar"></use>
+											</svg>02 Декабря	2022
+										</div>
+										<div class="article-item__time small">
+											<svg class="icon icon-clock ">
+												<use xlink:href="img/svg/sprite.svg#clock"></use>
+											</svg>3 мин. чтения
+										</div>
+									</div>
+									<div class="article-item__title fw-600">Пирсинг - больно
+									</div>
+								</div>
+							</div>
+						</a>
+						<div class="sBlog__slider sBlog__slider--js">
+							<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+								<svg class="icon icon-chevron-right ">
+									<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+								</svg>
+							</div>
+							<div class="swiper-wrapper swiper-wrapper-js">
+								<div class="sBlog__slide swiper-slide">
+									<a class="article-item" href="#">
+										<div class="article-item__img-wrap"><img class="img" src="img/sBlog-img1.png" alt="" loading="lazy"/>
+											<div class="article-item__content">
+												<div class="article-item__badges-wrap">
+													<div class="article-item__badge product-item__badge bagde_yellow">категория
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="article-item__time-wrap">
+											<div class="article-item__date-wrap">
+												<div class="article-item__date small">
+													<svg class="icon icon-calendar ">
+														<use xlink:href="img/svg/sprite.svg#calendar"></use>
+													</svg>02 Декабря	2022
+												</div>
+												<div class="article-item__time small">
+													<svg class="icon icon-clock ">
+														<use xlink:href="img/svg/sprite.svg#clock"></use>
+													</svg>3 мин. чтения
+												</div>
+											</div>
+											<div class="article-item__title fw-600">10 правил красивого и безопасного пирсинга
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="sBlog__slide swiper-slide">
+									<a class="article-item" href="#">
+										<div class="article-item__img-wrap"><img class="img" src="img/sBlog-img2.png" alt="" loading="lazy"/>
+											<div class="article-item__content">
+												<div class="article-item__badges-wrap">
+													<div class="article-item__badge product-item__badge bagde_yellow">категория
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="article-item__time-wrap">
+											<div class="article-item__date-wrap">
+												<div class="article-item__date small">
+													<svg class="icon icon-calendar ">
+														<use xlink:href="img/svg/sprite.svg#calendar"></use>
+													</svg>02 Декабря	2022
+												</div>
+												<div class="article-item__time small">
+													<svg class="icon icon-clock ">
+														<use xlink:href="img/svg/sprite.svg#clock"></use>
+													</svg>3 мин. чтения
+												</div>
+											</div>
+											<div class="article-item__title fw-600">Украшения потеряло свой первоначальный вид?
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="sBlog__slide swiper-slide">
+									<a class="article-item" href="#">
+										<div class="article-item__img-wrap"><img class="img" src="img/sBlog-img3.png" alt="" loading="lazy"/>
+											<div class="article-item__content">
+												<div class="article-item__badges-wrap">
+													<div class="article-item__badge product-item__badge bagde_yellow">категория
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="article-item__time-wrap">
+											<div class="article-item__date-wrap">
+												<div class="article-item__date small">
+													<svg class="icon icon-calendar ">
+														<use xlink:href="img/svg/sprite.svg#calendar"></use>
+													</svg>02 Декабря	2022
+												</div>
+												<div class="article-item__time small">
+													<svg class="icon icon-clock ">
+														<use xlink:href="img/svg/sprite.svg#clock"></use>
+													</svg>3 мин. чтения
+												</div>
+											</div>
+											<div class="article-item__title fw-600">Что такое траблшутинг и зачем он нужен?
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="sBlog__slide swiper-slide">
+									<a class="article-item" href="#">
+										<div class="article-item__img-wrap"><img class="img" src="img/sBlog-img4.png" alt="" loading="lazy"/>
+											<div class="article-item__content">
+												<div class="article-item__badges-wrap">
+													<div class="article-item__badge product-item__badge bagde_yellow">категория
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="article-item__time-wrap">
+											<div class="article-item__date-wrap">
+												<div class="article-item__date small">
+													<svg class="icon icon-calendar ">
+														<use xlink:href="img/svg/sprite.svg#calendar"></use>
+													</svg>02 Декабря	2022
+												</div>
+												<div class="article-item__time small">
+													<svg class="icon icon-clock ">
+														<use xlink:href="img/svg/sprite.svg#clock"></use>
+													</svg>3 мин. чтения
+												</div>
+											</div>
+											<div class="article-item__title fw-600">Принятие своего тела через пирсинг
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="sBlog__row row">
+						</div>
 					</div>
 				</section>
-				<!-- end sProductDetail-->
-				<!-- start sProductSlider-->
-				<section class="sProductSlider section" id="sProductSlider1">
+				<!-- end sBlog-->
+				<!-- start sInstructions-->
+				<section class="sInstructions section" id="sInstructions">
 					<div class="container">
 						<div class="section-title">
-							<h2>Похожие товары</h2>
+							<h2>Памятки</h2>
 						</div>
-						<div class="sProductSlider__slider sProductSlider__slider--js">
-							<div class="d-lg-none">
-								<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
-									<svg class="icon icon-chevron-right ">
-										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
-									</svg>
+						<div class="sInstructions__articles">
+							<a class="instruction-card" href="#">
+								<div class="instruction-card__img-wrap"><img class="img" src="img/svg/sInstruction-3.svg" alt="" loading="lazy"/>
+									<div class="instruction-card__title title fw-600">Памятка по уходу за проколами в ротовой полости
+									</div>
 								</div>
-							</div>
-							<div class="swiper-wrapper swiper-wrapper-1">
-								<div class="sProductSlider__slide swiper-slide">
-									<article class="product-item">
-										<a class="product-item__img-wrap" href="#">
-											<svg class="icon icon-heart ">
-												<use xlink:href="img/svg/sprite.svg#heart"></use>
-											</svg>
-											<div class="img-wrap-center"> <img src="img/catalog-2.png" alt="" loading="lazy"/>
-											</div>
-										</a>
-										<div class="product-item__caption">
-											<div class="product-item__title">Треугольник
-											</div>
-											<div class="product-item__wrapper">
-												<div class="product-item__price fw-700">2 800 ₽
-												</div>
-												<a class="product-item__btn btn btn-primary" href="#">в корзину
-												</a>
-											</div>
-										</div>
-									</article>
+								<div class="instruction-card__date-wrap">
+									<div class="instruction-card__date small">
+										<svg class="icon icon-calendar ">
+											<use xlink:href="img/svg/sprite.svg#calendar"></use>
+										</svg>02 Декабря	2022
+									</div>
+									<div class="instruction-card__time small">
+										<svg class="icon icon-clock ">
+											<use xlink:href="img/svg/sprite.svg#clock"></use>
+										</svg>3 мин. чтения
+									</div>
 								</div>
-								<div class="sProductSlider__slide swiper-slide">
-									<article class="product-item">
-										<a class="product-item__img-wrap" href="#">
-											<svg class="icon icon-heart ">
-												<use xlink:href="img/svg/sprite.svg#heart"></use>
-											</svg>
-											<div class="img-wrap-center"> <img src="img/catalog-3.png" alt="" loading="lazy"/>
-											</div>
-										</a>
-										<div class="product-item__caption">
-											<div class="product-item__title">Кольцо-кликер
-											</div>
-											<div class="product-item__wrapper">
-												<div class="product-item__price fw-700">2 800 ₽
-												</div>
-												<a class="product-item__btn btn btn-primary" href="#">в корзину
-												</a>
-											</div>
-										</div>
-									</article>
+							</a>
+							<a class="instruction-card" href="#">
+								<div class="instruction-card__img-wrap"><img class="img" src="img/svg/sInstruction-1.svg" alt="" loading="lazy"/>
+									<div class="instruction-card__title title fw-600">Памятка по уходу за микродермалами
+									</div>
 								</div>
-								<div class="sProductSlider__slide swiper-slide">
-									<article class="product-item">
-										<a class="product-item__img-wrap" href="#">
-											<svg class="icon icon-heart ">
-												<use xlink:href="img/svg/sprite.svg#heart"></use>
-											</svg>
-											<div class="img-wrap-center"> <img src="img/catalog-7.png" alt="" loading="lazy"/>
-											</div>
-										</a>
-										<div class="product-item__caption">
-											<div class="product-item__title">Кольцо-кликер с двойным рядом кристаллов
-											</div>
-											<div class="product-item__wrapper">
-												<div class="product-item__price fw-700">2 800 ₽
-												</div>
-												<a class="product-item__btn btn btn-primary" href="#">в корзину
-												</a>
-											</div>
-										</div>
-									</article>
+								<div class="instruction-card__date-wrap">
+									<div class="instruction-card__date small">
+										<svg class="icon icon-calendar ">
+											<use xlink:href="img/svg/sprite.svg#calendar"></use>
+										</svg>02 Декабря	2022
+									</div>
+									<div class="instruction-card__time small">
+										<svg class="icon icon-clock ">
+											<use xlink:href="img/svg/sprite.svg#clock"></use>
+										</svg>3 мин. чтения
+									</div>
 								</div>
-								<div class="sProductSlider__slide swiper-slide">
-									<article class="product-item">
-										<a class="product-item__img-wrap" href="#">
-											<svg class="icon icon-heart ">
-												<use xlink:href="img/svg/sprite.svg#heart"></use>
-											</svg>
-											<div class="img-wrap-center"> <img src="img/catalog-2.png" alt="" loading="lazy"/>
-											</div>
-										</a>
-										<div class="product-item__caption">
-											<div class="product-item__title">Треугольник
-											</div>
-											<div class="product-item__wrapper">
-												<div class="product-item__price fw-700">2 800 ₽
-												</div>
-												<a class="product-item__btn btn btn-primary" href="#">в корзину
-												</a>
-											</div>
-										</div>
-									</article>
+							</a>
+							<a class="instruction-card" href="#">
+								<div class="instruction-card__img-wrap"><img class="img" src="img/svg/sInstruction-3.svg" alt="" loading="lazy"/>
+									<div class="instruction-card__title title fw-600">Памятка по уходу за проколами хрящей и мягких тканей
+									</div>
 								</div>
-								<div class="sProductSlider__slide swiper-slide">
-									<article class="product-item">
-										<a class="product-item__img-wrap" href="#">
-											<svg class="icon icon-heart ">
-												<use xlink:href="img/svg/sprite.svg#heart"></use>
-											</svg>
-											<div class="img-wrap-center"> <img src="img/catalog-3.png" alt="" loading="lazy"/>
-											</div>
-										</a>
-										<div class="product-item__caption">
-											<div class="product-item__title">Кольцо-кликер
-											</div>
-											<div class="product-item__wrapper">
-												<div class="product-item__price fw-700">2 800 ₽
-												</div>
-												<a class="product-item__btn btn btn-primary" href="#">в корзину
-												</a>
-											</div>
-										</div>
-									</article>
+								<div class="instruction-card__date-wrap">
+									<div class="instruction-card__date small">
+										<svg class="icon icon-calendar ">
+											<use xlink:href="img/svg/sprite.svg#calendar"></use>
+										</svg>02 Декабря	2022
+									</div>
+									<div class="instruction-card__time small">
+										<svg class="icon icon-clock ">
+											<use xlink:href="img/svg/sprite.svg#clock"></use>
+										</svg>3 мин. чтения
+									</div>
 								</div>
-							</div>
+							</a>
+							<a class="instruction-card" href="#">
+								<div class="instruction-card__img-wrap"><img class="img" src="img/svg/sInstruction-3.svg" alt="" loading="lazy"/>
+									<div class="instruction-card__title title fw-600">Памятка по уходу за проколами хрящей и мягких тканей
+									</div>
+								</div>
+								<div class="instruction-card__date-wrap">
+									<div class="instruction-card__date small">
+										<svg class="icon icon-calendar ">
+											<use xlink:href="img/svg/sprite.svg#calendar"></use>
+										</svg>02 Декабря	2022
+									</div>
+									<div class="instruction-card__time small">
+										<svg class="icon icon-clock ">
+											<use xlink:href="img/svg/sprite.svg#clock"></use>
+										</svg>3 мин. чтения
+									</div>
+								</div>
+							</a>
 						</div>
 					</div>
 				</section>
-				<!-- end sProductSlider-->
+				<!-- end sInstructions sInstruction-->
 			</main>
 			<script>addBlock(`footer`)</script>
 			<div id="footerWrap"></div>

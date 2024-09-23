@@ -1,0 +1,76 @@
+mixin sArticle(data)
+	// start sArticle
+	+b.SECTION.sArticle.section#sArticle&attributes(attributes)
+		.container
+			+e.inner-wrap: +e.row.row
+				+e.col.col-12
+					+e.nav-wrap.d-none.d-lg-flex
+						+timeToRead
+						a(href='#').link-back-btn.small.fw-500 < Все статьи
+					+e.img-wrap: +img(src="img/sArticle-img.png", alt="").img-bg
+				+e.col.col-12.col-lg-9.order-lg-last: +e.article-wrap
+					.d-none.d-lg-flex: +shareAndSave
+					.d-lg-none: +timeToRead
+					+b.section-title
+						h3 10 правил красивого и безопасного пирсинга
+					+e.rules
+						+ruleItem('Выбор мастера', '1')
+						+ruleItem('Выбор мастера', '2')
+						+ruleItem('Выбор мастера', '3')
+						+ruleItem('Выбор мастера', '4')
+						+ruleItem('Выбор мастера', '5')
+						+ruleItem('Выбор мастера', '6')
+						+ruleItem('Выбор мастера', '7')
+						+ruleItem('Своевременный даунсайз или осмотр', '8')
+						+ruleItem('Выбор мастера', '9')
+						+ruleItem('Выбор мастера', '10')
+					+e.btns-wrap
+						+e.btn.btn.btn-primary.btn-sm(href="#") Подписаться
+						+e.tag(href="#") категория
+						+e.tag(href="#") категория
+					.d-lg-none: +shareAndSave
+				+e.col-aside.d-none.d-lg-block.col-lg-3
+					+e.aside-inner
+						.text_dark.title-col Содержание
+						ul.article-navigation
+							li.active: a(href="#rule1") Выбор мастера
+							li: a(href="#rule2") Подготовка
+							li: a(href="#rule3") Выбор украшения
+							li: a(href="#rule4") Выбор украшения
+							li: a(href="#rule5") Выбор украшения
+							li: a(href="#rule6") Выбор украшения
+							li: a(href="#rule7") Выбор украшения
+							li: a(href="#rule8") Своевременный даунсайз или осмотр
+							li: a(href="#rule9") Выбор украшения
+							li: a(href="#rule10") Выбор украшения
+					+shareSocial
+	// end sArticle
+
+mixin shareSocial
+	+b.share-links
+		+e.links
+			a(href="#"): +img(src="img/svg/facebook.svg", alt="")
+			a(href="#"): +img(src="img/svg/twitter.svg", alt="")
+			a(href="#"): +img(src="img/svg/linkedin.svg", alt="")
+
+mixin shareAndSave
+	+b.share-and-save
+		+e.item.link(href="#")
+			+icon('share')
+			| Поделиться
+		+e.item.link(href="#")
+			+icon('save')
+			| Сохранить
+
+mixin timeToRead
+	+b.date-wrap
+		+e.date.small
+			+icon('calendar')
+			| 02 Декабря	2022
+		+e.time.small 3 мин. чтения
+
+mixin ruleItem(title, i)
+	+b.rule-item(id=`rule${i}`)
+		+e.item.ttu.span= `Правило №${i}`
+		+e.item.title= `${i}. ${title}`
+		+e.item: p Первое и самое важное - выбор грамотного специалиста. Можно часами изучать портфолио мастеров или пойти по наводке друга, читать отзывы и рейтинги. Но важно, чтобы прокол выполнял только компетентный специалист, строго в оборудованном кабинете и с опытом решения сложных ситуаций. Так же есть российская ассоциация профессиональных пирсеров.

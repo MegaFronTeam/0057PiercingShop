@@ -6,6 +6,7 @@
 1. <https://megafronteam.github.io/0057PiercingShop/04-favorite.html>
 3. <https://megafronteam.github.io/0057PiercingShop/05-order.html>
 3. <https://megafronteam.github.io/0057PiercingShop/06-blog.html>
+3. <https://megafronteam.github.io/0057PiercingShop/07-article.html>
 
 #### Cabinet/ Auth pages
 

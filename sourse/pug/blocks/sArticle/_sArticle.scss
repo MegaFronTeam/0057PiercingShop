@@ -1,0 +1,311 @@
+// start .sArticle
+.sArticle {
+	--sPT: #{rem(62)};
+	--sPB: #{rem(40)};
+	--sTPB: #{rem(50)};
+  @include media-breakpoint-up(lg) {
+    --sPT: #{rem(92)};
+    --sTPB: #{rem(44)};
+  }
+	
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title{
+    max-width: rem(650);
+	}
+	&__inner-wrap {
+    @include media-breakpoint-up(lg) {
+      background: $white;
+      border-radius: rem(16px);
+      padding: rem(24) rem(47);
+    }
+	}
+  h3 {
+    letter-spacing: 0.03em;
+    
+    @include media-breakpoint-up(lg) {
+      font-size: rem(32);
+    }
+  }
+
+  &__article-wrap {
+    @include media-breakpoint-down(lg) {
+      background: $white;
+      border-radius: rem(16px);
+      padding: rem(20) rem(25) rem(31);
+    }
+    @include media-breakpoint-up(xxl) {
+      margin-left: rem(30);
+    }
+    @include media-breakpoint-up(lg) {
+      margin-bottom: rem(50);
+    }
+  }
+	&__rules {
+		max-width: rem(754);
+    @include media-breakpoint-up(lg) {
+      margin-bottom: rem(60);
+    }
+	}
+  .share-and-save {
+    @include media-breakpoint-up(lg) {
+      margin-bottom: rem(24);
+    }
+  }
+  &__img-wrap {
+    position: relative;
+    min-height: rem(254);
+    margin-bottom: rem(7);
+    border-radius: 15px;
+    overflow: hidden;
+    @include media-breakpoint-up(lg) {
+      min-height: rem(411);
+      border-radius: 20px;
+      margin-bottom: rem(56);
+    }
+    img.img-bg {
+      z-index: 1;
+    }
+  }
+
+  &__btns-wrap {
+    display: flex;
+    gap: rem(5);
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: rem(105);
+    @include media-breakpoint-up(lg) {
+      gap: rem(12);
+      margin-bottom: rem(0);
+    }
+
+    .btn {
+      font-weight: 600;
+      font-size: 12px;
+      font-family: $default-font;
+      --bs-btn-padding-y: #{rem(6)};
+      width: rem(150);
+      @include media-breakpoint-up(lg) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__nav-wrap {
+    justify-content: space-between;
+    align-items: center;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: rem(39);
+    }
+  }
+  .link-back-btn {
+    border-radius: rem(20px);
+    padding: rem(4px) rem(20px);
+    background: #f9e9ac;
+    color: #818181;
+  }
+
+  &__tag {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    color: #9c9292;
+    padding: rem(6) rem(8);
+    border: 1px solid #b8adad;
+    border-radius: 14px;
+  }
+  .date-wrap  {
+    margin-bottom: rem(27);
+    @include media-breakpoint-up(lg) {
+      margin-bottom: rem(0);
+    }
+  }
+
+  &__aside-inner {
+    @include media-breakpoint-up(lg) {
+      margin-left: 15%;
+      margin-bottom: rem(53);
+    }
+  }
+
+  &__col-aside {
+    .title-col {
+      font-weight: 500;
+      font-size: rem(20);
+      margin-bottom: rem(40);
+      line-height: 116%;
+      letter-spacing: 0.02em;
+      // text-align: center;
+      margin-top: rem(30);
+    }
+    ul {
+      counter-reset: list-counter;
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: -30px;
+        top: 0;
+        height: 100%;
+        width: 5px;
+        background: #F5F5F5;
+      }
+    }
+
+    li {
+      position: relative;
+      list-style: none;
+      padding-left: rem(20px);
+      counter-increment: list-counter;
+      margin-bottom: rem(39);
+      font-size: rem(14);
+      ::before {
+        content: counter(list-counter) ".";
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      a {
+        color: $black;
+        display: inline-block;
+      }
+      &.active {
+        &:before {
+          content: "";
+          position: absolute;
+          left: -30px;
+          top: -2px;
+          height: rem(37);
+          width: 5px;
+          background: $primary;
+        }
+      }
+    }
+  }
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sArticle
+
+.share-and-save {
+  display: flex;
+  
+  .link {
+    margin-right: rem(29);
+    color: #BEBEBE;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 110%;
+    letter-spacing: 0.02em;
+    @include media-breakpoint-up(lg) {
+      margin-right: rem(29);
+      font-size: 16px;
+    }
+    .icon {
+      font-size: rem(22);
+      fill: none;
+      stroke-width: 1px;
+      stroke: #BEBEBE;
+      transform: translateY(-3px);
+      margin-right: rem(8);
+    }
+  }
+}
+
+.date-wrap {
+  display: flex;
+  gap: rem(18);
+  align-items: center;
+
+  &__date {
+    position: relative;
+    color: #777;
+    font-size: 10px;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -9px;
+      width: 1px;
+      height: 70%;
+      transform: translateY(3px);
+      background: #ebdede;
+    }
+    @include media-breakpoint-up(lg) {
+      font-size: 12px;
+    }
+  }
+  &__time {
+    padding: rem(2) rem(10);
+    background: $primary;
+    border-radius: 16px;
+    font-weight: 500;
+    font-size: 10px;
+    @include media-breakpoint-up(lg) {
+      font-size: 14px;
+    }
+  }
+
+  .icon {
+    font-size: rem(12);
+    margin-right: rem(6);
+    transform: translateY(-2px);
+    @include media-breakpoint-up(lg) {
+      transform: translateY(-1px);
+    }
+  }
+}
+
+.rule-item {
+  margin-bottom: rem(22);
+  @include media-breakpoint-up(lg) {
+    margin-bottom: rem(38);
+  }
+  &__item {
+    margin-bottom: rem(17);
+  }
+
+  .span {
+    color: #F9E9AC;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 110%;
+    letter-spacing: 0.02em;
+  }
+
+  .title {
+    font-size: rem(14);
+    @include media-breakpoint-up(lg) {
+      font-size: rem(20);
+    }
+  }
+
+  p {
+    line-height: 136%;
+    letter-spacing: 0.02em;
+    font-weight: 300;
+    
+    @include media-breakpoint-down(lg) {
+      font-size: rem(12);
+    }
+  }
+}
+
+.share-links {
+  margin-left: calc(15% - 30px);
+  a {
+    margin-right: rem(20);
+  }
+}

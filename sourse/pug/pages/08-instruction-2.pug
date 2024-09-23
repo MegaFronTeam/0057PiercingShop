@@ -1,0 +1,24 @@
+extends ../layout/main.pug
+
+include ../blocks/sForm/_sForm.pug
+
+include ../blocks/sBlog/_sBlog.pug
+include ../blocks/sArticle/_sArticle.pug
+include ../blocks/sProductSlider/_sProductSlider.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'Памятка 2'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+sArticle2
+		+sProductSlider2
+	+parts('footer')

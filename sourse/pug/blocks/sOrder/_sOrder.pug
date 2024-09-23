@@ -6,6 +6,7 @@ mixin sOrder(data)
 				+e.col.col-12.col-lg-5.order-lg-last
 					+e.item
 						h3 Ваш заказ
+						+e.edit.d-none.d-lg-inline.ttu.small.text-secondary(href='#') изменить
 						+e.products
 							+e.product
 								a(href='#').img-wrap: +img('img/cart-1.png').img

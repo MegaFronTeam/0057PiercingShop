@@ -106,13 +106,25 @@ function eventHandler() {
 		loop: true,
 	}); //
 
-	const popoverTriggerList = document.querySelectorAll(
-		'[data-bs-toggle="popover"]'
-	);
-	const popoverList = [...popoverTriggerList].map(
-		popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl)
-	);
+	// const popoverTriggerList = document.querySelectorAll(
+	// 	'[data-bs-toggle="popover"]'
+	// );
+	// const popoverList = [...popoverTriggerList].map(
+	// 	popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl)
+	// );
+  const tiny = document.querySelectorAll('.tinny-item-js');
+  tiny.forEach((el) => {
+    const template = el.querySelector('.tinny-template');
+    console.dir(tiny);
+    console.log(template);
 
+    tippy(el, {
+      content: template.innerHTML,
+      allowHTML: true,
+      interactive: true,
+      // arrow: false,
+    });
+  });
 	/* dropdown */
 	const regionLinks = document.querySelectorAll(".dropdown li");
 

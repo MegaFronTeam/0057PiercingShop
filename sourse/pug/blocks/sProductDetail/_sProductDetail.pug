@@ -58,7 +58,9 @@ mixin filterGroup2(title)
 								li Размер 2
 								li Размер 3
 								li Размер 4
-					.popover(data-bs-toggle="popover", data-bs-placement="top",	data-bs-content="Popover title" ): +icon('question')
+					.tinny-item-js
+						+icon('question')
+						.tinny-template.d-none Info
 				+e.col.col-6.col-xl-4
 					.text Цвет
 					+b.filter--color

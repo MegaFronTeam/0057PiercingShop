@@ -120,7 +120,13 @@ mixin cartProduct
 					+e.item-text 3.5ММ
 				+e.item
 					+e.item-title.text-secondary Количество:
-					+e.item-t: +input("10",'select','')
+					+e.item-t
+						select
+							option 1
+							option 2
+							option 3
+							option 4
+							option 5
 			.d-none.d-lg-block.add: +addblock()
 			+e.price.price-xxl 13 990 ₽
 		+e.icon-wrap.d-lg-none(href='#'): +icon('close')

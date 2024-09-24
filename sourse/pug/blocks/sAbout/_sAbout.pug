@@ -2,8 +2,22 @@ mixin sAbout(data)
 	// start sAbout
 	+b.SECTION.sAbout.section#sAbout&attributes(attributes)
 		.container
-			+b.section-title
+			+b.section-title.pricing
 				h2 О студии
-				
-			+e.row.row
+			p Наша уютная двухэтажная студия пирсинга находится в пяти минутах пешком от четырёх станций метро в центре Москвы. Здесь трудятся мастера с гигантским опытом работы. Мы справляемся с самыми сложными задачами: от редких проколов до изготовления украшений по индивидуальным эскизам! 
+			+e.video-wrap.video-wrap
+				video.video(src="video/video.mp4").img-bg
+				.play-wrap: +img(src="img/svg/play.svg", alt="")
+			p Мы гордимся тем, что предлагаем широчайший ассортимент украшений от брендов мировой величины. У нас вы найдёте как простые базовые украшения из титана, так и уникальные редкие экземпляры  из ценных металлов.
+		+e.slider--js
+			.swiper-wrapper
+				.swiper-slide
+					+e.img-wrap: +img(src="img/sAboutSl-1.png", alt="").img-bg
+				.swiper-slide
+					+e.img-wrap: +img(src="img/sAboutSl-2.png", alt="").img-bg
+				.swiper-slide
+					+e.img-wrap: +img(src="img/sAboutSl-1.png", alt="").img-bg
+			.swiper-pagination
+			+arrow2
+
 	// end sAbout

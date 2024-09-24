@@ -5,6 +5,8 @@
 	--sTPB: #{rem(28)};
 	
     @include media-breakpoint-up(lg) {
+      
+    --sPT: #{rem(100)};
       --sPB: #{rem(10)};
     }
 	&__categories{

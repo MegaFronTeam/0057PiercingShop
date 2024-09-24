@@ -1,9 +1,106 @@
 mixin sPrice(data)
 	// start sPrice
 	+b.SECTION.sPrice.section#sPrice&attributes(attributes)
+		+img('img/svg/ring.svg').ring.ring-top
+		+img('img/svg/ring.svg').ring.ring-bottom
 		.container
-			+b.section-title.text-center
-				h2 sPrice
-				
-			+e.row.row
+			+b.section-title.text-center.pricing
+				h2 Прайс на пирсинг
+				.sub Стоимость указана без учета украшений
+			+e.inner-wrap
+				+e.title.text-center.title.d-lg-none Название услуги
+				- var masterType = ['Старший мастер', 'Гостевой мастер', 'Эксперт']
+				.d-none.d-lg-block: +tableLg
+				.d-lg-none: +ddGroup
+					+ddGroupItem('Хрящи ушей (хлекс, конч, и т. д.)')
+						+tablePrice
+					+ddGroupItem('Крыло носа, септ ум, бридж')
+						+tablePrice
+					+ddGroupItem('Язык, пупок, бровь, губа')
+						+tablePrice
+					+ddGroupItem('Сосок, за один прокол')
+						+tablePrice
+					+ddGroupItem('Микодерма')
+						+tablePrice
+					+ddGroupItem('Генитальные')
+						+tablePrice
+					+ddGroupItem('Восстановление прокола')
+						+tablePrice
+					+ddGroupItem('Растягивание тоннеля')
+						+tablePrice
+				+e.btn-wrap.text-center
+					+e.btn.btn.btn-dark(href='#') Записаться
 	// end sPrice
+
+mixin tablePrice
+	- var masterType = ['Старший мастер', 'Гостевой мастер', 'Эксперт']
+	table
+		tbody
+			tr
+				td(data-title=masterType[0])
+					| 3 000
+				td(data-title=masterType[1])
+					| 3 000
+				td(data-title=masterType[2])
+					| 3 000
+
+mixin tableLg
+	.table-wrap
+		table
+			thead
+				tr
+					th Название услуги
+					th Старший мастер
+					th Гостевой мастер
+					th Эксперт
+			tbody
+				tr
+					td Хрящи ушей (хлекс, конч, и т. д.)
+					td 3 000 
+					td 3 000 
+					td 3 000 
+				tr
+					td Мочка, за один прокол
+					td 3 000 
+					td 3 000 
+					td 3 000 
+				tr
+					td Двойные (индастриал, орбитал)
+					td 6 000 
+					td 6 000 
+					td 6 000 
+				tr
+					td Крыло носа, септ ум, бридж
+					td 3 000 
+					td 3 000 
+					td 3 000 
+				tr
+					td Язык, пупок, бровь, губа
+					td 3 000 
+					td 3 000 
+					td 3 000 
+				tr
+					td Сосок, за один прокол
+					td 3 000 
+					td 3 000 
+					td 3 000 
+				tr
+					td Микродермал
+					td 3 000 
+					td 3 000 
+					td 3 000 
+				tr
+					td Генитальные
+					td 6 000 
+					td 6 000 
+					td 6 000 
+				tr
+					td Восстановление прокола
+					td 1 400
+					td 1 400
+					td 1 400
+				tr
+					td Растягивание тоннеля (шаг от 1 до 3 мм)
+					td 1 400
+					td 1 400
+					td 1 400

@@ -1,22 +1,240 @@
 // start .sPrice
 .sPrice {
 	// --sPT: #{rem()};
-	// --sPB: #{rem()};
-	// --sTPB: #{rem()};
-	
-	&__row{
-		// --bs-gutter-x: #{rem()};
-		// --bs-gutter-y: #{rem()};
+	--sPB: #{rem(102)};
+	--sTPB: #{rem(37)};
+    @include media-breakpoint-up(lg) {
+      --sPT: #{rem(118)};
+      --sPB: #{rem(57)};
+      --sTPB: #{rem(54)};
+    }
+	background: $primary;
+  position: relative;
+  overflow: hidden;
+
+	&__inner-wrap {
+		background: $white;
+    border-radius: rem(16);
+    padding: rem(22) rem(19) rem(27);
+    @include media-breakpoint-up(lg) {
+      padding: 0;
+      background: transparent;
+    }
 	}
+  .ring {
+    position: absolute;
+    z-index: 1;
+    width: rem(152);
+    @include media-breakpoint-up(lg) {
+      width: 30vw;
+      max-width: rem(486);
+    }
+  }
+  .ring-top {
+    left: 0;
+    top: 14px;
+    transform: rotate(99deg) translateY(40%);
+
+    @include media-breakpoint-up(lg) {
+      top: 40px;
+      transform: rotate(0deg);
+    }
+  }
+
+  .ring-bottom {
+    bottom: 10px;
+    right: 0;
+    transform: translateX(30%) rotate(90deg);
+    @include media-breakpoint-up(lg) {
+      bottom: 5px;
+      transform: translateX(19%) rotate(104deg);
+      max-width: rem(550);
+      width: 33vw;
+    }
+  }
+  .container {
+    position: relative;
+    z-index: 2;
+  }
 	.section-title{
-		
+		h2 {
+      margin-bottom: rem(18);
+      @include media-breakpoint-up(lg) {
+      margin-bottom: rem(22);
+      }
+    }
 	}
-	&__col{
-		
-	}
-	&__item{
-		
-	}
+
+  .sub {
+    @include media-breakpoint-down(lg) {
+      font-weight: 600;
+      font-size: rem(14);
+    }
+    @include media-breakpoint-up(lg) {
+      font-family: $headings-font-family;
+    }
+  }
+
+	.table-wrap {
+		max-width: rem(869);
+    margin-left: auto;
+    margin-right: auto;
+
+		background: $white;
+    border-radius: rem(20);
+    padding: rem(30);
+    padding-bottom: rem(16);
+    margin-bottom: rem(20);
+    font-family: $headings-font-family;
+    tbody tr:not(:last-child) {
+      border-bottom: 1px solid #E7E7E5;
+
+    }
+    tr td:not(:first-child) {
+      font-weight: 700;
+      text-align: end;
+    }
+    thead th {
+      padding-bottom: rem(14);
+    }
+    th {
+      font-weight: 500;
+      font-size: rem(15);
+      line-height: 1;
+    }
+    tr th:not(:first-child) {
+      text-align: end;
+    }
+
+    td {
+      padding: rem(16) 0;
+    }
+
+    tr td:first-child {
+      font-weight: 300;
+    }
+
+    tr {
+      th {
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+          width: 17.2%;
+        }
+      }
+    }
+  }
+
+
+  table {
+    width: 100%;
+  }
+  &__title {
+    font-size: rem(14);
+    margin-bottom: rem(14);
+  }
+
+  &__btn {
+      --bs-btn-padding-y: #{rem(16)};
+    @include media-breakpoint-down(lg) {
+      text-transform: lowercase;
+      font-size: 12px;
+      --bs-btn-padding-x: #{rem(38)};
+    }
+      @include media-breakpoint-up(lg) {
+      font-size: 14px;
+      --bs-btn-padding-x: #{rem(44)};
+      }
+  }
+
+  .dd-group {
+    @include media-breakpoint-down(lg) {
+      [data-title] {
+        position: relative;
+        padding: rem(2);
+        &::before {
+          content: attr(data-title);
+          font-weight: 400;
+          font-size: rem(15);
+        }
+      }
+      td {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: rem(16);
+      }
+    }
+
+    margin-bottom: rem(27);
+
+    &__head {
+      font-size: rem(12);
+      cursor: pointer;
+      border-radius: 6px;
+      font-weight: 700;
+      color: #4A4A4A;
+      padding: rem(17) rem(22);
+      font-family: $headings-font-family;
+      background: $primary;
+      position: relative;
+
+      display: flex;
+      gap: rem(10);
+      justify-content: space-between;
+      align-items: center;
+      &:after {
+				@include mt;
+				content: '';
+        flex-shrink: 0;
+				display: inline-block;
+				width: rem(25);
+				height: rem(25);
+				background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 12.5C25 12.7116 24.9159 12.9146 24.7663 13.0642C24.6167 13.2138 24.4137 13.2979 24.2021 13.2979H13.2979V24.2021C13.2979 24.4137 13.2138 24.6167 13.0642 24.7663C12.9146 24.9159 12.7116 25 12.5 25C12.2884 25 12.0854 24.9159 11.9358 24.7663C11.7862 24.6167 11.7021 24.4137 11.7021 24.2021V13.2979H0.797872C0.586263 13.2979 0.383321 13.2138 0.233691 13.0642C0.0840612 12.9146 0 12.7116 0 12.5C0 12.2884 0.0840612 12.0854 0.233691 11.9358C0.383321 11.7862 0.586263 11.7021 0.797872 11.7021H11.7021V0.797872C11.7021 0.586263 11.7862 0.383321 11.9358 0.233691C12.0854 0.0840612 12.2884 0 12.5 0C12.7116 0 12.9146 0.0840612 13.0642 0.233691C13.2138 0.383321 13.2979 0.586263 13.2979 0.797872V11.7021H24.2021C24.4137 11.7021 24.6167 11.7862 24.7663 11.9358C24.9159 12.0854 25 12.2884 25 12.5Z' fill='%236F6F6F' /%3E%3C/svg%3E");
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: contain;
+				margin-left: rem(4);
+				vertical-align: middle;
+			}
+    }
+
+    &__item {
+      margin-bottom: rem(7);
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&.active {
+				.dd-group__head:after {
+					transform: rotate(135deg);
+				}
+			}
+		}
+
+    &__content {
+      font-size: rem(16);
+      font-weight: 700;
+      background: $white;
+      padding-top: rem(14);
+      color: #070707;
+      border-radius: 0 0 var(--border-r) var(--border-r);
+      font-family: $headings-font-family;
+    }
+
+    &__inner-wrap {
+      border-radius: var(--border-r);
+      background: #F7F7F9;
+      padding: rem(12) rem(15);
+      @include media-breakpoint-up(lg) {
+        padding: rem(16);
+      }
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+  }
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

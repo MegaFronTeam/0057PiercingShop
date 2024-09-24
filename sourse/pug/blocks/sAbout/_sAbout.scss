@@ -3,16 +3,63 @@
 	--sPT: #{rem(44)};
 	--sPB: #{rem(10)};
 	--sTPB: #{rem(30)};
-	
-	&__row{
-		// --bs-gutter-x: #{rem()};
-		// --bs-gutter-y: #{rem()};
-	}
-	.section-title{
+  @include media-breakpoint-up(xl) {
+    --sPT: #{rem(60)};
+    --sPB: #{rem(44)};
+    --sTPB: #{rem(38)};
+  }
 
+	&__grid {
+    @include media-breakpoint-up(xl) {
+      display: grid;
+      grid-template-columns: .7fr .5fr .5fr .5fr ;
+      grid-template-rows: 238px 1fr 357px;
+      gap: rem(19) rem(24);
+    }
+    a {
+      display: block;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .play-text {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-weight: 600;
+      font-size: rem(20px);
+      color: #fff;
+      width: max-content;
+    }
 	}
+  .mt-10 {
+    margin-top: rem(44);
+  }
+  .item-wrap-span-2 {
+    grid-column: span 2;
+  }
+  .row-1-3 {
+    @include media-breakpoint-up(xl) {
+      grid-row: 1/3;
+    }
+  }
+  .row-2-4 {
+    grid-row: 2/4;
+  }
+
+	&__item-wrap {
+    position: relative;
+    border-radius: rem(20);
+    overflow: hidden;
+  }
+
+  &__item:not(:first-child) {
+    @include media-breakpoint-down(xl) {
+      display: none;
+    }
+  }
   .section-title, p {
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(xl) {
       text-align: center;
     }
   }
@@ -22,6 +69,11 @@
     text-align: center;
     color: #070707;
     margin-bottom: rem(32);
+    @include media-breakpoint-up(xl) {
+      text-align: start;
+      font-size: rem(16px);
+      line-height: 162%;
+    }
   }
 
 	&__video-wrap {
@@ -48,9 +100,13 @@
     background: white;
     border-radius: 50%;
     @include mt;
+    @include media-breakpoint-up(xl) {
+      padding: rem(34);
+    }
 
     img {
       display: block;
+      
     }
   }
   .video.is-playing + .play-wrap {
@@ -72,6 +128,7 @@
     z-index: 2;
   }
   .swiper-button-hand {
+    --swiperBgDef: white;
     --swiperArrowSize: 49px;
   }
   .swiper-button-hand-next {

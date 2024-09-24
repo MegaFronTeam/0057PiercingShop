@@ -59,8 +59,8 @@ function eventHandler() {
 		freeMode: true,
 		watchOverflow: true,
 		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
+			nextEl: ".sGallery-slider--js .swiper-button-next",
+			prevEl: ".sGallery-slider--js .swiper-button-prev",
 		},
 		breakpoints: {
 			992: {
@@ -85,7 +85,7 @@ function eventHandler() {
 		slidesPerView: "auto",
 		loop: true,
 		navigation: {
-			nextEl: ".swiper-button-next",
+			nextEl: ".sBrands__slider--js .swiper-button-next",
 			// prevEl: ".swiper-button-prev",
 		},
 		breakpoints: {
@@ -102,7 +102,7 @@ function eventHandler() {
 		freeMode: true,
 		watchOverflow: true,
 		navigation: {
-			nextEl: ".swiper-button-next",
+			nextEl: ".sCertificates__slider--js .swiper-button-next",
 			// prevEl: ".swiper-button-prev",
 		},
 		breakpoints: {

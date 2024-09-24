@@ -53,6 +53,21 @@ function eventHandler() {
 		freeMode: true,
 		watchOverflow: true,
 	});
+  
+  new Swiper(".sGallery-slider--js", {
+		slidesPerView: "auto",
+		freeMode: true,
+		watchOverflow: true,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		breakpoints: {
+			992: {
+        // watchOverflow: false,
+			},
+		},
+	});
 
 	const swiper4 = new Swiper(".sBanners__slider--js", {
 		// slidesPerView: 5,
@@ -151,6 +166,49 @@ function eventHandler() {
 				spaceBetween: 20,
 				slidesPerView: 4,
 			},
+		},
+	});
+
+  const instaSwiper = new Swiper(".sInsta__slider-insta--js", {
+		
+    spaceBetween: 25,
+		slidesPerView: 'auto',
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+		breakpoints: {
+			450: {
+				slidesPerView: 2,
+			},
+			1200: {
+				slidesPerView: 3,
+			},
+			1400: {
+				spaceBetween: 50,
+				slidesPerView: 3,
+			},
+		},
+	});
+
+  const promoSwiper = new Swiper(".sPromoSlider__slider--js", {
+    spaceBetween: 25,
+		slidesPerView: 'auto',
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 1,
+			},
+			992: {
+				slidesPerView: 1,
+			},
+			// 1400: {
+			// 	spaceBetween: 50,
+			// 	slidesPerView: 3,
+			// },
 		},
 	});
 

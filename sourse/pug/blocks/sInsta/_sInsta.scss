@@ -1,0 +1,168 @@
+// start .sInsta
+.sInsta {
+	--sPT: #{rem(60)};
+	--sPB: #{rem(66)};
+	--sTPB: #{rem(34)};
+	
+	@include media-breakpoint-up(lg) {
+    --sPT: #{rem(50)};
+    --sPB: #{rem(54)};
+    --sTPB: #{rem(70)};
+    }
+  background: #EFEFEF;
+
+	.section-title{
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      justify-content: center;
+      gap: rem(10);
+    }
+    a {
+      color: rgba(7, 7, 7, 0.3);
+      font-size: rem(14px);
+      font-family: $headings-font-family;
+
+      @include media-breakpoint-up(lg) {
+        font-weight: 300;
+        font-size: rem(26px);
+      }
+    }
+
+    h2 {
+      @include media-breakpoint-down(lg) {
+        margin-bottom: rem(10);
+      }
+    }
+	}
+	&__slider-insta--js{
+		max-width: rem(1221);
+    margin-left: auto;
+    margin-right: auto;
+    @include media-breakpoint-up(lg) {
+      overflow: hidden;
+    }
+	}
+
+	.swiper-pagination {
+    margin-top: rem(30);
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sInsta
+
+.insta-item {
+  position: relative;
+  min-height: rem(257px);
+  display: block;
+  border-radius: 4px 4px 10px 10px;
+  overflow: hidden;
+    aspect-ratio: 198/257;
+  @include media-breakpoint-up(lg) {
+    aspect-ratio: none;
+    // aspect-ratio: 374/530;
+    border-radius: 30px;
+  }
+  @include media-breakpoint-up(xl) {
+
+    aspect-ratio: 374/530;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: rem(6);
+    color: $dark;
+    background: $white;
+    border-radius: 4px;
+    padding: 6px 4px;
+    @include media-breakpoint-up(lg) {
+      border-radius: 0;
+      padding: 20px 30px;
+    }
+
+    position: absolute;
+    top: 0;
+    left: -1px;
+    width: calc(100% + 2px);
+    z-index: 2;
+  }
+  &__title {
+    font-size: rem(12);
+    font-weight: 500;
+    @include media-breakpoint-up(lg) {
+      font-size: rem(17);
+    }
+  }
+
+  &__img-wrap {
+    height: calc(100% - 30px);
+    margin-top: rem(70px);
+
+    padding: 0 rem(30);
+    @include media-breakpoint-up(lg) {
+    margin-top: rem(140px);
+    }
+  }
+
+
+  &__text {
+    font-family: $headings-font-family;
+    font-size: rem(10);
+    opacity: .4;
+    @include media-breakpoint-up(lg) {
+      font-size: rem(16);
+    }
+  }
+
+  .img-bg {
+    z-index: 1;
+    top: 2px;
+  }
+
+  .heart {
+    position: relative;
+    z-index: 5;
+    width: rem(24);
+    @include media-breakpoint-up(lg) {
+      width: rem(48);
+    }
+
+    // top: 30%;
+    // left: 10%;
+  }
+
+}
+
+.swiper-pagination.flat-bullets {
+  // .swiper-pagination-bullet-active, .swiper-pagination-bullet:hover {
+  //   background-color: var(--bs-primary);
+  // }
+  .swiper-pagination-bullet-active {
+    width: 40px;
+    height: 7px;
+    border-radius: 10px;
+  }
+  .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+      background-color: white;
+      border-radius: 10px;
+      height: 4px;
+      opacity: 1;
+      outline: none !important;
+      width: 20px;
+      --s: 0.36s;
+      display: inline-block;
+      margin-left: 8px;
+      margin-right: 8px;
+      margin-bottom: rem(1);
+      transition: all var(--s) ease-in-out;
+  }
+}

@@ -1,0 +1,40 @@
+mixin sInsta(data)
+	// start sInsta
+	+b.SECTION.sInsta.section#sInsta&attributes(attributes)
+		.container
+			+b.section-title.text-center.pricing
+				h2 Мы в instogram
+				a(href='#') piercing_atelie
+			+e.slider-insta--js
+				.swiper-wrapper
+					.swiper-slide: +instaSlide(1)
+					.swiper-slide: +instaSlide(3)
+					.swiper-slide: +instaSlide(2)
+					.swiper-slide: +instaSlide(2)
+					.swiper-slide: +instaSlide(3)
+				.swiper-pagination.flat-bullets
+	// end sInsta
+
+mixin instaSlide(i)
+	+b.insta-item(href='#')
+		+e.header
+			+img(src="img/svg/insta-sm.svg").svg.d-lg-none
+			+img(src="img/svg/insta-lg.svg").svg.d-none.d-lg-block
+			+e.content
+				+e.title.title Пирсинг Ателье
+				+e.text Салон тату и пирсинга
+		+e.img-wrap
+			+img(src=`img/sInsta-${i}.png`, alt="").img-bg
+			+img(src="img/svg/insta-heart.svg", alt="").heart
+
+//- mixin instaSlideContent(i)
+//- 	+b.insta-item--cont(href='#')
+//- 		+e.header
+//- 			+img(src="img/svg/insta-sm.svg").svg.d-lg-none
+//- 			+img(src="img/svg/insta-lg.svg").svg.d-none.d-lg-block
+//- 			+e.content
+//- 				+e.title.title Пирсинг Ателье
+//- 				+e.text Салон тату и пирсинга
+//- 		+e.img-wrap
+//- 			+img(src=`img/sInsta-${i}.png`, alt="").img-bg
+//- 			+img(src="img/svg/insta-heart.svg", alt="").heart

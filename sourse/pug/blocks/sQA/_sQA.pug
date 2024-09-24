@@ -5,7 +5,7 @@ mixin sQA(data)
 			+b.section-title.pricing
 				h2 Ответы на частые вопросы
 			+e.row.row
-				+e.col.col-12.col-lg-7
+				+e.col.col-12.col-lg-7.col-bg
 					+ddGroup
 						+ddGroupItem('Пирсинг - это больно?', )
 							+e.inner-wrap
@@ -26,4 +26,5 @@ mixin sQA(data)
 								p Все зависит от прокола. Средняя продолжительность заживления 3-6 месяцев. Некоторые проколы заживают за 1 месяц, некоторые за 1 год.
 
 				+e.col.col-12.col-lg
+					+sForm2()
 	// end sQA

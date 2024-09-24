@@ -53,10 +53,10 @@ class JSCCommon {
 			});
 		});
 
-		Fancybox.bind(".sProductDetail__s-img[data-fancybox]", {
-			Toolbar: false,
-		});
-		Fancybox.bind(".sCertificates__img-wrap[data-fancybox]", {
+		// Fancybox.bind(".sProductDetail__s-img[data-fancybox]", {
+		// 	Toolbar: false,
+		// });
+		Fancybox.bind("[data-fancybox]", {
 			Toolbar: false,
 		});
 

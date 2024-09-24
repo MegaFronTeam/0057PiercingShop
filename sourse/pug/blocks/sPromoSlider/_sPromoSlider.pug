@@ -1,0 +1,30 @@
+mixin sPromoSlider(data)
+	// start sPromoSlider
+	+b.SECTION.sPromoSlider.section#sPromoSlider&attributes(attributes)
+		.container
+			+e.slider--js
+				.swiper-pagination
+				.swiper-wrapper
+					.swiper-slide
+						+promoSlider('Cкидка 10% на день рождения', 'Получите скидку 10% на первый пирсинг! Приходите к нам в студию пирсинга и обновите свой образ по выгодной цене.','btn-primary', '')
+							+e.img-wrap.darken
+								+img(src="img/sPromo-0.png", alt="").img-bg
+					.swiper-slide
+						+promoSlider('Получи подарочную карту', 'Дарим подарочные карты любого номинала','btn-light', '--dark')
+							+e.img-wrap.yellow
+								+img(src="img/gift-card.png", alt="").gift-card
+					.swiper-slide
+						+promoSlider('Приведи друга и получи скидку', 'Дарим скидку за каждого приведенного друга 10 %','btn-dark', '--yellow')
+							+e.img-wrap
+								+img(src=`img/svg/sMasters-bg.svg`, alt="").img-bg.circle
+								+img(src="img/sPromo-1.png", alt="").img-bg
+	// end sPromoSlider
+
+mixin promoSlider(title, text, btnClass, cardBg)
+	+b.promo-card(class=cardBg)
+		+e.content
+			+e.title.title=title
+			+e.text=text
+			+e.btn.btn(class=btnClass) Получить скидку
+		if block
+			block

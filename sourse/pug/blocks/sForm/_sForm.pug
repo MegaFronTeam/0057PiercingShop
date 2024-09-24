@@ -11,3 +11,16 @@ mixin sForm()
 					+e.btn.btn.btn-primary(type="submit") Получить консультацию
 					+iconsWrap
 	// end sForm
+
+mixin sForm2()
+	// start sForm
+	+b.SECTION.sForm.section#sForm&attributes(attributes)
+		.contact.contact_wide
+			+b.section-title
+				h2 Получите онлайн консультацию
+				.sub-text.small Оставьте свой номер телефона и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;течении 30-ти минут
+			+form-wrap
+				+input("Телефон",'tel')
+				+e.btn.btn.btn-primary(type="submit") Получить консультацию
+				+iconsWrap
+	// end sForm

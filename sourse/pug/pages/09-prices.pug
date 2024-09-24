@@ -9,6 +9,11 @@ include ../blocks/sContact/_sContact.pug
 include ../blocks/sReviews/_sReviews.pug
 include ../blocks/sMasters/_sMasters.pug
 include ../blocks/sQA/_sQA.pug
+include ../blocks/sInsta/_sInsta.pug
+include ../blocks/sGallery/_sGallery.pug
+include ../blocks/sPrice/_sPrice.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sPromoSlider/_sPromoSlider.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -24,9 +29,14 @@ block pagecontent
 	+parts('header')
 	main
 		+headerBlock 
+		+sAbout
 		+sCertificates
+		+sPrice
+		+sGallery
+		+sInsta
 		+sMasters
 		+sReviews
+		+sPromoSlider
 		+sQA
 		+sContact()
 	+parts('footer')

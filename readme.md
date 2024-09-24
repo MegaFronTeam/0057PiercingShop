@@ -11,6 +11,7 @@
 3. <https://megafronteam.github.io/0057PiercingShop/08-instruction-2.html>
 3. <https://megafronteam.github.io/0057PiercingShop/08-instruction-3.html>
 3. <https://megafronteam.github.io/0057PiercingShop/08-instruction-4.html>
+3. <https://megafronteam.github.io/0057PiercingShop/09-prices.html>
 
 #### Cabinet/ Auth pages
 
@@ -26,5 +27,4 @@
 
 In progress
 
-3. <https://megafronteam.github.io/0057PiercingShop/09-prices.html>
 4. <https://megafronteam.github.io/0057PiercingShop/00-modal.html>

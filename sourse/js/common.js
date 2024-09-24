@@ -111,6 +111,30 @@ function eventHandler() {
 			},
 		},
 	});
+  
+	const masterSwiper = new Swiper(".master-slider--js", {
+		spaceBetween: 6,
+		slidesPerView: 3,
+		watchOverflow: true,
+		navigation: {
+			nextEl: ".master-slider--js .swiper-button-next",
+			prevEl: ".master-slider--js .swiper-button-prev",
+		},
+		breakpoints: {
+			992: {
+				spaceBetween: 13,
+			},
+    }
+	});
+	const masterCertifSwiper = new Swiper(".master-certif-slider--js", {
+		spaceBetween: 6,
+		slidesPerView: 'auto',
+		breakpoints: {
+			992: {
+				spaceBetween: 15,
+			},
+    }
+	});
 
 	const productSwiper = new Swiper("#sProductSlider1 .sProductSlider__slider--js", {
 		spaceBetween: 7,

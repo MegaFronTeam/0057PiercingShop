@@ -60,6 +60,86 @@
     }
   }
 
+  &--master {
+    width: rem(410);
+    padding: rem(30);
+    padding-right: rem(22);
+    padding-left: rem(22);
+    @include media-breakpoint-up(lg) {
+      padding: rem(48);
+      padding-bottom: rem(40);
+      padding-left: rem(20);
+      width: rem(763);
+    }
+
+    .btn {
+      @include media-breakpoint-down(lg) {
+        font-size: 12px;
+        padding: rem(5);
+      }
+      @include media-breakpoint-up(lg) {
+        --bs-btn-padding-x: #{rem(40)};
+      }
+    }
+  }
+  .master-item {
+    padding: 0;
+  }
+
+  &__exp {
+    font-family: $headings-font-family;
+    @include media-breakpoint-down(lg) {
+      font-size: $small;
+    }
+  }
+
+  &__item-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(8);
+    @include media-breakpoint-up(lg) {
+      gap: rem(20);
+      margin-top: rem(40);
+    }
+  }
+
+  &__master {
+    color: #8f8f8f;
+    font-family: $headings-font-family;
+    @include media-breakpoint-down(lg) {
+      font-size: $small;
+    }
+    margin-bottom: rem(24);
+    @include media-breakpoint-up(lg) {
+      margin-bottom: rem(30);
+    }
+  }
+
+  &__title-md {
+    @include media-breakpoint-up(lg) {
+      font-size: rem(29px);
+    }
+  }
+
+  &__title-sm {
+    font-size: rem(13px);
+    margin-bottom: rem(10);
+    @include media-breakpoint-up(lg) {
+      font-size: rem(16px);
+    }
+  }
+
+  &__item-slide {
+    margin-bottom: rem(20);
+    position: relative;
+    @include media-breakpoint-up(lg) {
+      &:not(:last-child) {
+        margin-bottom: rem(44);
+      }
+    }
+  }
+
 	.modal-content {
 		// max-width: 485px;
 		// padding-right: 40px 15px;
@@ -180,6 +260,62 @@ a {
 	}
 }
 
+.master-slider {
+  overflow: hidden;
+  .swiper-button-hand {
+    --swiperBgDef: white;
+    --swiperArrowSize: 33px;
+    box-shadow:  0 4px 21px 0 rgba(90, 90, 90, 0.53);
+    top: 20%;
+
+    .icon {
+      font-size: rem(10);
+    }
+  }
+  .swiper-button-hand-next {
+    right: -10px;
+  }
+  .swiper-button-hand-prev {
+    left: -10px;
+  }
+	&__slider {
+		position: relative;
+    height: 70px;
+  }
+
+  &__img-wrap {
+    border-radius: 6px;
+    overflow: hidden;
+    aspect-ratio: 60/71;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.master-certif-slider {
+  overflow: hidden;
+	&__slide {
+    width: auto;
+    position: relative;
+  }
+  &__img-wrap {
+    border: 1px solid #F5E7E7;
+    overflow: hidden;
+    width: 77px;
+    aspect-ratio: 77/67;
+    @include media-breakpoint-up(lg) {
+      width: 158px;
+    }
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
 
 // 
 @include media-breakpoint-up(xl) {}
@@ -255,8 +391,10 @@ a {
 }
 
 .fancybox__content>.f-button.is-close-btn  {
-  top: 32px;
-  right: 30px;
+  // top: 32px;
+  // right: 30px;
+  top: 11px;
+  right: 9px;
   --f-button-color: #{$black};
 }
 

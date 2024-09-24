@@ -45,6 +45,49 @@ mixin modal()
 						.sBasket__title.item-sum.fw-500 Итого:
 						+e.price.sBasket__price.fw-500 13 990 ₽
 				+e.btn-wrap: +e.BUTTON.btn.btn.btn-primary(type="submit"  ) Оформить заказ
+	div(id="modal-master"  style="display: none" )
+		+b.modal-win--master
+			+e.row.row
+				+e.col.col-5
+					+e.item-left
+						+b.master-item--modal
+							+e.img-wrap.text-center
+								+img(src=`img/svg/sMasters-bg.svg`, alt="").img
+								+img(src=`img/sMasters-5.png`, alt="").master
+						+e.exp Опыт: 1 год
+						+e.btn.btn.btn-primary(href='#') Записаться
+				+e.col.col-7
+					+e.title-md.title Вишня
+					+e.master Старший мастер
+					+e.item-slide
+						+e.title-sm.title Фото работ
+						+b.master-slider--js
+							.d-none.d-lg-block: +arrow2
+							.swiper-wrapper
+								+e.slide.swiper-slide
+									+e.img-wrap: +img('img/sGallery-1.png')
+								+e.slide.swiper-slide
+									+e.img-wrap: +img('img/sGallery-2.png')
+								+e.slide.swiper-slide
+									+e.img-wrap: +img('img/sGallery-3.png')
+								+e.slide.swiper-slide
+									+e.img-wrap: +img('img/sGallery-2.png')
+								+e.slide.swiper-slide
+									+e.img-wrap: +img('img/sGallery-3.png')
+					+e.item-slide
+						+e.title-sm.title Сертификаты мастера
+						+b.master-certif-slider--js
+							.swiper-wrapper
+								+e.slide.swiper-slide
+									+e.img-wrap: +img('img/sCertificates-1.png')
+								+e.slide.swiper-slide
+									+e.img-wrap: +img('img/sCertificates-2.png')
+								+e.slide.swiper-slide
+									+e.img-wrap: +img('img/sCertificates-3.png')
+								+e.slide.swiper-slide
+									+e.img-wrap: +img('img/sCertificates-2.png')
+								+e.slide.swiper-slide
+									+e.img-wrap: +img('img/sCertificates-3.png')
 	// #modal-call
 	div(id="modal-1"  style="display: none" )
 		+b.modal-win

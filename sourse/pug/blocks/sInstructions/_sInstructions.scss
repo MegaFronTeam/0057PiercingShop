@@ -68,7 +68,7 @@
           aspect-ratio: 410/236;
         }
         .instruction-card__title {
-          font-size: rem(16);
+          font-size: 3.3vw;
         }
         .img {
           height: rem(96);
@@ -106,7 +106,7 @@
   // height: 100%;
 
   img {
-    max-width: 80%;
+    max-width: 50%;
   }
 
   &__date-wrap {

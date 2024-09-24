@@ -188,8 +188,6 @@ function eventHandler() {
   const tiny = document.querySelectorAll('.tinny-item-js');
   tiny.forEach((el) => {
     const template = el.querySelector('.tinny-template');
-    console.dir(tiny);
-    console.log(template);
 
     tippy(el, {
       content: template.innerHTML,
@@ -224,20 +222,17 @@ function eventHandler() {
 		beforeEls.forEach(beforeEl => {
 			beforeEl.addEventListener("mouseenter", function () {
 				after.style.transform = "translateX(100px)";
-				console.log("вправо (before)");
 			});
 		});
 
 		afterEls.forEach(afterEl => {
 			afterEl.addEventListener("mouseenter", function () {
 				after.style.transform = "translateX(-100px)";
-				console.log("влево (after)");
 			});
 		});
 
 		headerBlock.addEventListener("mouseleave", function () {
 			after.style.transform = "translateX(0)";
-			console.log("курсор ушел из headerBlock");
 		});
 	}
 
@@ -363,7 +358,6 @@ function eventHandler() {
 				from: val,
 			});
 			$(this).prop("value", currencyFormat(val));
-			console.log(val);
 		});
 		$inputTo.on("change input ", function () {
 			var val = +$(this).prop("value").replace(/\s/g, ""); // validate

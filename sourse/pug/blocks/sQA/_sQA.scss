@@ -1,0 +1,110 @@
+// start .sQA
+.sQA {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title{
+    @include media-breakpoint-down(lg) {
+      text-align: center;
+    }
+	}
+	&__col{
+		
+	}
+	&__item{
+		
+	}
+  .dd-group {
+    // background: $white;
+    &__head {
+      font-size: rem(14);
+      cursor: pointer;
+      font-weight: 700;
+      padding: rem(13) rem(28) rem(13) rem(16);
+      font-family: $headings-font-family;
+      background: $white;
+      border-radius: rem(6px);
+
+      display: flex;
+      gap: rem(10);
+      justify-content: space-between;
+      @include media-breakpoint-up(xl) {
+        border-radius: rem(16px);
+        font-size: rem(20);
+        // padding-top: rem(27);
+        // padding-bottom: rem(22);
+        // padding-right: 0;
+
+      }
+      &:after {
+				@include mt;
+				content: '';
+				display: inline-block;
+				width: rem(18);
+				height: rem(18);
+				background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 9C18 9.15236 17.9395 9.29848 17.8317 9.40621C17.724 9.51394 17.5779 9.57447 17.4255 9.57447H9.57447V17.4255C9.57447 17.5779 9.51394 17.724 9.40621 17.8317C9.29848 17.9395 9.15236 18 9 18C8.84764 18 8.70152 17.9395 8.59379 17.8317C8.48606 17.724 8.42553 17.5779 8.42553 17.4255V9.57447H0.574468C0.42211 9.57447 0.275991 9.51394 0.168258 9.40621C0.0605241 9.29848 0 9.15236 0 9C0 8.84764 0.0605241 8.70152 0.168258 8.59379C0.275991 8.48606 0.42211 8.42553 0.574468 8.42553H8.42553V0.574468C8.42553 0.42211 8.48606 0.275991 8.59379 0.168258C8.70152 0.0605241 8.84764 0 9 0C9.15236 0 9.29848 0.0605241 9.40621 0.168258C9.51394 0.275991 9.57447 0.42211 9.57447 0.574468V8.42553H17.4255C17.5779 8.42553 17.724 8.48606 17.8317 8.59379C17.9395 8.70152 18 8.84764 18 9Z' fill='%236F6F6F' /%3E%3C/svg%3E");
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: contain;
+				margin-left: rem(4);
+				vertical-align: middle;
+        @include media-breakpoint-up(lg) {
+          width: rem(24);
+          height: rem(24);
+        }
+			}
+    }
+    &__item {
+      margin-bottom: rem(11);
+      @include media-breakpoint-up(xl) {
+        margin-bottom: rem(16);
+      }
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&.active {
+				.dd-group__head:after {
+					transform: rotate(135deg);
+				}
+			}
+		}
+    &__content {
+      font-size: rem(12);
+      padding: rem(0) rem(16) rem(21);
+      background: $white;
+      @include media-breakpoint-up(lg) {
+        font-size: rem(16);
+      }
+    }
+    &__inner-wrap {
+      border-radius: rem(6px);
+      background: #F7F7F9;
+      padding: rem(12) rem(15);
+      @include media-breakpoint-up(lg) {
+        border-radius: rem(16px);
+      }
+    }
+
+  }
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sQA
+
+.section-title.pricing h2 {
+
+  font-size: rem(24px);
+  @include media-breakpoint-up(lg) {
+    font-size: rem(36px);
+  }
+}

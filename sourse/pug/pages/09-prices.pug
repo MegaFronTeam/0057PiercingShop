@@ -8,6 +8,7 @@ include ../blocks/sCertificates/_sCertificates.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sReviews/_sReviews.pug
 include ../blocks/sMasters/_sMasters.pug
+include ../blocks/sQA/_sQA.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -26,6 +27,7 @@ block pagecontent
 		+sCertificates
 		+sMasters
 		+sReviews
+		+sQA
 		+sContact()
 	+parts('footer')
 block scripts

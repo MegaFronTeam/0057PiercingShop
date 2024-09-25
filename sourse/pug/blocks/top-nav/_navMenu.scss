@@ -210,9 +210,9 @@
 	}
 	.icon-bag {
 		fill: var(--icon-color);
-		font-size: rem(20);
+		font-size: rem(19);
 		@include media-breakpoint-up(lg) {
-			font-size: rem(24);
+			// font-size: rem(24);
 		}
 		stroke-width: 0.2;
 		stroke: var(--icon-color);

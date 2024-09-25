@@ -76,6 +76,9 @@ body {
 	&.fancybox-active {
 		overflow: hidden;
 	}
+	&.filters-show {
+		overflow: hidden;
+	}
 	&[class*="fixed"] {
 		position: absolute;
 		width: 100%;

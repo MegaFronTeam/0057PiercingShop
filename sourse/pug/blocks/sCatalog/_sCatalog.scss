@@ -108,6 +108,13 @@
     margin-bottom: rem(3);
   }
 
+  .filters-wrap--js {
+    
+    @include media-breakpoint-down(lg) {
+      overflow: auto;
+    }
+  }
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

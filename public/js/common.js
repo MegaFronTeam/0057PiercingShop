@@ -374,6 +374,7 @@ function eventHandler() {
 	if (filterNav) {
 		filterNav.addEventListener("click", () => {
 			filterWrap.classList.toggle("show");
+      document.body.classList.add("filters-show");
 		});
 	}
 
@@ -382,6 +383,7 @@ function eventHandler() {
 		closeItems.forEach(item => {
 			item.addEventListener("click", () => {
 				filterWrap.classList.remove("show");
+        document.body.classList.remove("filters-show");
 			});
 		});
 	}

@@ -261,18 +261,30 @@ function eventHandler() {
 		loop: true,
 	}); //
 
-  document.querySelectorAll('.article-navigation a').forEach(item => {
-    item.addEventListener('click', function(event) {
-        // event.preventDefault();
-        
-        let currentActive = document.querySelector('li.active');
-        if (currentActive) {
-            currentActive.classList.remove('active');
-        }
+  const sections = document.querySelectorAll('.rule-item, .sArticle__item-memo');
+  const navLinks = document.querySelectorAll('.article-navigation li');
 
-        this.parentElement.classList.add('active');
-    });
-  });
+  function highlightLink() {
+    if (!sections.length) return
+    let index = sections.length;
+
+    while (--index && window.scrollY + 100 < sections[index].offsetTop) {}
+
+    navLinks.forEach((link) => link.classList.remove('active'));
+    navLinks[index].classList.add('active');
+  }
+
+  highlightLink();
+  window.addEventListener('scroll', highlightLink);
+
+  /* side sticky */
+
+	let sidebar = document.querySelector(".sidebar-sticky");
+	new hcSticky(sidebar, {
+		stickTo: ".sticky-wrap",
+		top: 10,
+		bottomEnd: 0,
+	});
 
   /* video*/
   const videoWrap = document.querySelector('.video-wrap')

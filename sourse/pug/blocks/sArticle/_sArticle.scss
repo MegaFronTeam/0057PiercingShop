@@ -324,22 +324,8 @@
         font-size: $small;
       }
     }
-    @include media-breakpoint-up(lg) {
-      ul {
-        counter-reset: list-counter;
-      }
-      li {
-        position: relative;
-        list-style: none;
-        padding-left: rem(20px);
-        counter-increment: list-counter;
-        &::before {
-          content: counter(list-counter) ".";
-          position: absolute;
-          left: 0;
-          top: 0;
-        }
-      }
+    ol {
+      padding-left: rem(16);
     }
   }
 

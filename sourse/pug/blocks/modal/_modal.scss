@@ -16,6 +16,9 @@
 	// min-height: 100%; 
 	padding: rem(48) rem(39);
 
+  .custom-scroll {
+    height: 100%;
+  }
   &--lg {
     width: rem(664);
     padding: rem(48) rem(21) rem(43);
@@ -31,9 +34,6 @@
 
     .summary {
       margin-top: rem(12);
-    }
-    .custom-scroll {
-      height: 100%;
     }
     .modal-win {
       &__items {
@@ -120,6 +120,9 @@
     @include media-breakpoint-up(lg) {
       font-size: rem(29px);
     }
+  }
+  .col-custom {
+    max-height: calc(100dvh - 70px);
   }
 
   &__title-sm {

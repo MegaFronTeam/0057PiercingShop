@@ -7,7 +7,7 @@ mixin sBlog(data)
 				.col.col-lg-auto.order-lg-last: +e.sort
 					+e.filter Сортировать
 					+input("Все рубрики",'select','')
-				.col-12.line.col-lg-8: +e.categories.sBlog-slider--js
+				.col-12.line.col-lg-8: +e.categories.sBlog-slider--js.slider-auto--js
 					.swiper-wrapper
 						.swiper-slide: a.category.active(href='#') Все
 						.swiper-slide: a.category(href='#') Категория
@@ -25,7 +25,6 @@ mixin sBlog(data)
 						+articleItem1('img3', 'Что такое траблшутинг и зачем он нужен?', '')
 					+e.slide.swiper-slide
 						+articleItem1('img4', 'Принятие своего тела через пирсинг', '')
-			+e.row.row
 	// end sBlog
 
 mixin articleItem(img, title, itemClass)

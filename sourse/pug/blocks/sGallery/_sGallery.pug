@@ -4,28 +4,23 @@ mixin sGallery(data)
 		.container
 			+b.section-title.pricing
 				h2 Работы
-			+e.categories.sGallery-slider--js
-				.d-none.d-lg-block: +arrow2
-				.swiper-wrapper.fw-700
-					.swiper-slide: a.category.active(href='#') Вид прокола
-					.swiper-slide: a.category(href='#') Вид прокола
-					.swiper-slide: a.category(href='#') Вид прокола
-					.swiper-slide: a.category(href='#') Вид прокола
-					.swiper-slide: a.category(href='#') Вид прокола
-					.swiper-slide: a.category(href='#') Вид прокола
-					.swiper-slide: a.category(href='#') Вид прокола
-					.swiper-slide: a.category(href='#') Вид прокола
+			+e.wrap-slider.slider
+				+arrow2
+				+e.categories.sGallery-slider--js.slider-auto--js
+					.swiper-wrapper.fw-700
+						.swiper-slide: a.category.active(href='#') Вид прокола
+						.swiper-slide: a.category(href='#') Вид прокола
+						.swiper-slide: a.category(href='#') Вид прокола
+						.swiper-slide: a.category(href='#') Вид прокола
+						.swiper-slide: a.category(href='#') Вид прокола
+						.swiper-slide: a.category(href='#') Вид прокола
+						.swiper-slide: a.category(href='#') Вид прокола
+						.swiper-slide: a.category(href='#') Вид прокола
 			+e.grid
-				+e.img-wrap(href=`img/sGallery-1.png` data-fancybox='sGallery'): +img(src="img/sGallery-1.png", alt="").img-bg
-				+e.img-wrap(href=`img/sGallery-2.png` data-fancybox='sGallery'): +img(src="img/sGallery-2.png", alt="").img-bg
-				+e.img-wrap(href=`img/sGallery-3.png` data-fancybox='sGallery'): +img(src="img/sGallery-3.png", alt="").img-bg
-				+e.img-wrap.sm-h(href=`img/sGallery-4.png` data-fancybox='sGallery'): +img(src="img/sGallery-4.png", alt="").img-bg
-				+e.img-wrap.sm-h(href=`img/sGallery-5.png` data-fancybox='sGallery'): +img(src="img/sGallery-5.png", alt="").img-bg
-				+e.img-wrap.sm-h(href=`img/sGallery-6.png` data-fancybox='sGallery'): +img(src="img/sGallery-6.png", alt="").img-bg
-				+e.img-wrap.sm-h(href=`img/sGallery-7.png` data-fancybox='sGallery'): +img(src="img/sGallery-7.png", alt="").img-bg
-				+e.img-wrap.sm-h(href=`img/sGallery-8.png` data-fancybox='sGallery'): +img(src="img/sGallery-8.png", alt="").img-bg
+				- for(let i = 1; i <= 8; i++)
+					+e.img-wrap(href=`img/sGallery-${i}.png` data-fancybox='sGallery'): +img(src=`img/sGallery-${i}.png`, alt="").img-bg
 			+e.btn-wrap.text-center.d-none.d-lg-block
 				+e.btn.btn.btn-dark(href='#') Записаться
 			+e.btn-wrap.text-center.d-lg-none
-				+e.btn.btn.btn-outline-dark(href='#') смотреть еще
+				+e.btn.btn.btn-outline-dark.show-more--js смотреть еще
 	// end sGallery

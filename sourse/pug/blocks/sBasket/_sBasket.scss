@@ -24,9 +24,16 @@
     }
 	}
 
-	.section-title h2 {
+	.section-title h1 {
+    @extend .h2;
     @include media-breakpoint-down(lg) {
       font-size: rem(20);
+    }
+
+    span {
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
     }
 	}
 

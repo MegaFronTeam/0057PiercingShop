@@ -335,13 +335,19 @@
   }
 
   .dropdown {
-    min-width: rem(123);
+    --drop-width: #{rem(123)};
     @include media-breakpoint-up(lg) {
-      min-width: rem(220);
+      --drop-width: #{rem(220)};
     }
+
+    min-width: var(--drop-width);
+
     .dropdown-menu {
       padding: rem(10);
+      width: var(--drop-width);
+      min-width: auto;
     }
+  
     li {
       cursor: pointer;
       margin-bottom: 5px;

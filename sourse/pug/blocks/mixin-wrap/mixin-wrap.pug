@@ -136,7 +136,7 @@ mixin cartProduct
 							option 5
 			.d-none.d-lg-block.add: +addblock()
 			+e.price.price-xxl 13 990 ₽
-		+e.icon-wrap.d-lg-none(href='#'): +icon('close')
+		+e.icon-wrap.btn.d-lg-none(type='button'): +icon('close')
 
 mixin cartProductModal
 	+b.cart-product--modal.d-block
@@ -152,4 +152,4 @@ mixin cartProductModal
 				.text-secondary материал: Titanium ASTM F-136
 			.add: +addblocksm()
 			+e.price 13 990 ₽
-			+e.icon-wrap(href='#'): +icon('close')
+			+e.icon-wrap.btn(type='button'): +icon('close')

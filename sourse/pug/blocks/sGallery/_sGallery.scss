@@ -10,10 +10,6 @@
       --sPB: #{rem(10)};
     }
 	&__categories{
-		margin-bottom: rem(30);
-    @include media-breakpoint-up(lg) {
-      margin-bottom: rem(96);
-    }
 	}
 	.section-title {
     @include media-breakpoint-up(lg) {
@@ -24,20 +20,32 @@
   &-slider--js {
     position: relative;
     @include media-breakpoint-up(lg) {
-      max-width: rem(905);
+      max-width: calc(100% - var(--swiperArrowSize) * 2);
       margin-left: auto;
       margin-right: auto;
       overflow: hidden;
     }
   }
+
   .swiper-button-hand {
     --swiperArrowSize: 45px;
+    @include media-breakpoint-down(lg) {
+      display: none;
     }
-  .swiper-wrapper {
+  }
+
+  &__wrap-slider {
+    position: relative;
     @include media-breakpoint-up(lg) {
-      max-width: rem(735);
+      max-width: rem(905);
       margin-left: auto;
       margin-right: auto;
+      overflow: hidden;
+    }
+
+		margin-bottom: rem(30);
+    @include media-breakpoint-up(lg) {
+      margin-bottom: rem(96);
     }
   }
 
@@ -70,9 +78,10 @@
     position: relative;
     border-radius: rem(16);
     overflow: hidden;
+    @include block(220,371);
 
-    &:nth-child(3) {
-      @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(lg) {
+      &:nth-child(3n + 3) {
         grid-column: 1/-1;
       }
     }
@@ -80,9 +89,15 @@
     @include media-breakpoint-up(lg) {
       grid-column: span 2;
 
-      &:nth-child(4),
-      &:nth-child(5) {
+      &:nth-child(5n + 4),
+      &:nth-child(5n + 5) {
         grid-column: span 3;
+      }
+    }
+
+    &:nth-child(n + 4) {
+      @include media-breakpoint-down(lg) {
+        display: none;
       }
     }
   }
@@ -97,12 +112,10 @@
     }
 
     display: grid;
-    grid-template-columns: 1fr .9fr;
-    grid-template-rows: repeat(2, 219px);
+    grid-template-columns: 1fr 1fr;
     gap: rem(14) rem(11);
     @include media-breakpoint-up(lg) {
       gap: rem(30);
-      grid-template-rows: repeat(3, 220px);
       grid-template-columns: repeat(6, .6fr);
     }
   }
@@ -112,14 +125,7 @@
   }
   .btn-outline-dark {
     font-size: rem(12);
-    
     --bs-btn-padding-x: #{rem(30)};
-  }
-
-  .sm-h {
-    @include media-breakpoint-down(lg) {
-      display: none;
-    }
   }
 
 

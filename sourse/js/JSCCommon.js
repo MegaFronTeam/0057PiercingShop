@@ -53,9 +53,6 @@ class JSCCommon {
 			});
 		});
 
-		// Fancybox.bind(".sProductDetail__s-img[data-fancybox]", {
-		// 	Toolbar: false,
-		// });
 		Fancybox.bind("[data-fancybox]", {
 			Toolbar: false,
 		});
@@ -296,17 +293,17 @@ class JSCCommon {
 		);
 	}
 	static animateScroll() {
-		$(document).on("click", " .menu li a, .scroll-link", function () {
-			const elementClick = $(this).attr("href");
+		// $(document).on("click", " .menu li a, .scroll-link", function () {
+		// 	const elementClick = $(this).attr("href");
 
-			if (!document.querySelector(elementClick)) {
-				$(this).attr("href", "/" + elementClick);
-			} else {
-				let destination = $(elementClick).offset().top;
-				$("html, body").animate({scrollTop: destination - 80}, 0);
-				return false;
-			}
-		});
+		// 	if (!document.querySelector(elementClick)) {
+		// 		$(this).attr("href", "/" + elementClick);
+		// 	} else {
+		// 		let destination = $(elementClick).offset().top;
+		// 		$("html, body").animate({scrollTop: destination - 80}, 0);
+		// 		return false;
+		// 	}
+		// });
 		$(document).on("click", " .article-navigation li a", function () {
 			const elementClick = $(this).attr("href");
 			if (!document.querySelector(elementClick)) {
@@ -334,33 +331,6 @@ class JSCCommon {
 					$(this).toggleClass("active");
 				});
 		});
-		// let parents = document.querySelectorAll('.dd-group-js');
-		// for (let parent of parents) {
-		// 	if (parent) {
-		// 		// childHeads, kind of funny))
-		// 		let ChildHeads = parent.querySelectorAll('.dd-head-js:not(.disabled)');
-		// 		$(ChildHeads).click(function () {
-		// 			let clickedHead = this;
-
-		// 			$(ChildHeads).each(function () {
-		// 				if (this === clickedHead) {
-		// 					//parent element gain toggle class, style head change via parent
-		// 					$(this.parentElement).toggleClass('active');
-		// 					$(this.parentElement).find('.dd-content-js').slideToggle(function () {
-		// 						$(this).toggleClass('active');
-		// 					});
-		// 				}
-		// 				else {
-		// 					$(this.parentElement).removeClass('active');
-		// 					$(this.parentElement).find('.dd-content-js').slideUp(function () {
-		// 						$(this).removeClass('active');
-		// 					});
-		// 				}
-		// 			});
-
-		// 		});
-		// 	}
-		// }
 	}
 
 	static imgToSVG() {

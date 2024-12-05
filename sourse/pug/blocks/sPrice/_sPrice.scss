@@ -82,12 +82,14 @@
 
 		background: $white;
     border-radius: rem(20);
-    padding: rem(30);
-    padding-bottom: rem(16);
+    padding: rem(0);
+    // padding-bottom: rem(16);
     margin-bottom: rem(20);
     font-family: $headings-font-family;
 
     @include media-breakpoint-up(lg) {
+      padding: rem(30);
+      padding-bottom: rem(16);
       tbody tr:not(:last-child) {
         border-bottom: 1px solid #E7E7E5;
       }
@@ -193,7 +195,6 @@
     border-radius: 6px;
     color: #4A4A4A;
     padding: rem(17) rem(22);
-    font-family: $headings-font-family;
     background: $primary;
     position: relative;
 
@@ -222,69 +223,24 @@
         height: calc-size(0);
         transition: all 0.4s ease;
         // transition-behavior: allow-discrete;
-        display: flex;
+        display: none;
       }
     }
 
     @include media-breakpoint-down(lg) {
-    &.show {
-      & + tr {
-        visibility: visible;
-        opacity: 1;
-        height: auto;
-        display: unset;
-      }
+      &.show {
+        & + tr {
+          visibility: visible;
+          opacity: 1;
+          height: auto;
+          display: unset;
+        }
 
-      &:after {
-        transform: rotate(135deg);
-      }
-    }
-  }
-  }
-
-  .dd-group {
-
-    margin-bottom: rem(27);
-
-    &__head {
-    }
-
-    &__item {
-      margin-bottom: rem(7);
-
-			&:last-child {
-				margin-bottom: 0;
-			}
-
-			&.active {
-				.dd-group__head:after {
-					transform: rotate(135deg);
-				}
-			}
-		}
-
-    &__content {
-      font-size: rem(16);
-      font-weight: 700;
-      background: $white;
-      padding-top: rem(14);
-      color: #070707;
-      border-radius: 0 0 var(--border-r) var(--border-r);
-      font-family: $headings-font-family;
-    }
-
-    &__inner-wrap {
-      border-radius: var(--border-r);
-      background: #F7F7F9;
-      padding: rem(12) rem(15);
-      @include media-breakpoint-up(lg) {
-        padding: rem(16);
-      }
-      p:last-child {
-        margin-bottom: 0;
+        &:after {
+          transform: rotate(135deg);
+        }
       }
     }
-
   }
 
 	@include media-breakpoint-up(xl) {}

@@ -26,11 +26,7 @@ function eventHandler() {
     new Swiper(slider, {
       slidesPerView: "auto",
       freeMode: true,
-      watchOverflow: true,
-      navigation: {
-        nextEl: document.querySelector(".slider .swiper-button-next"),
-        prevEl: document.querySelector(".slider .swiper-button-prev"),
-      }
+      watchOverflow: true
     });
   })
 
@@ -56,7 +52,6 @@ function eventHandler() {
 		watchOverflow: true,
 		navigation: {
 			nextEl: ".sCertificates__slider--js .swiper-button-next",
-			// prevEl: ".swiper-button-prev",
 		},
 		breakpoints: {
 			768: {
@@ -64,6 +59,18 @@ function eventHandler() {
 			},
 		},
 	});
+
+  document.querySelectorAll(".slider").forEach(slider => {
+    new Swiper(slider.querySelector('.sGallery-slider--js'), {
+      slidesPerView: "auto",
+      freeMode: true,
+      watchOverflow: true,
+      navigation: {
+        nextEl: slider.querySelector(".swiper-button-next"),
+        prevEl: slider.querySelector(".swiper-button-prev"),
+      }
+    });
+  })
 
 	const masterSwiper = new Swiper(".master-slider--js", {
 		spaceBetween: 6,

@@ -2,15 +2,13 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		+img('img/header-img.png').img
-		.before.before-js
-		.after.after-js
 		.container
 			+img('img/svg/ring.svg').ring
 			+img('img/svg/ring.svg').ring-bottom
 			+img('img/svg/ring-dark.svg').ring-dark
 			+e.row.row
 				+e.col.col.col-lg-7
-					+e.item.item_black.before-js
+					+e.item.item_black
 						+e.title-wrap
 							h3 Студия<br>пирсинга
 							+e.btn.btn.btn-primary(href='#') записаться
@@ -28,7 +26,7 @@ mixin headerBlock()
 								+icon('list-4')
 								| Опытные мастера
 				+e.col.col.col-lg-5
-					+e.item.item_primary.after-js
+					+e.item.item_primary
 						+e.title-wrap
 							h3 Магазин<br>украшений
 							+e.btn.btn.btn-dark(href='#') купить украшение
@@ -45,4 +43,5 @@ mixin headerBlock()
 							a(href='#modal-8').link-modal-js
 								+icon('list-1')
 								| Приятные цены на любой кошелёк
+				.after
 	// end headerBlock

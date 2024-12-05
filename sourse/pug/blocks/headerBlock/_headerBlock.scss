@@ -55,20 +55,10 @@
 	@include media-breakpoint-up(lg) {
     background: $primary;
   }
-  .before {
-    @include media-breakpoint-up(lg) {
-      position: absolute;
-      height: 100%;
-      top: 0;
-      left: 0;
-      width: 40%;
-      height: 100%;
-      z-index: -1;
-    }
-  }
 
   .after {
     position: absolute;
+    margin: 0;
     height: 100%;
     right: 0;
     width: 50%;
@@ -76,6 +66,7 @@
     z-index: -1;
     background: $primary;
     transition: transform 1s ease;
+    transition-delay: .1s;
     @include media-breakpoint-up(lg) {
       width: calc(64% + 100px);
       right: -100px;
@@ -86,9 +77,18 @@
       pointer-events: none;
     }
 
-    // &:hover {
-    //   transform: translateX(-100px);
-    // }
+    &:hover {
+      transform: translateX(-100px);
+    }
+  }
+
+	@include media-breakpoint-up(lg) {
+    &__col:first-child:hover ~ .after {
+      transform: translateX(100px);
+    }
+    &__col:nth-child(2):hover ~ .after {
+      transform: translateX(-100px);
+    }
   }
 
   .img {

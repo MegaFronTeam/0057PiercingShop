@@ -351,31 +351,6 @@ function eventHandler() {
 		});
 	}
 
-	/* headerBlock animation */
-
-	// const headerBlock = document.querySelector(".headerBlock");
-	// const beforeEls = document.querySelectorAll(".before-js");
-	// const afterEls = document.querySelectorAll(".after-js");
-	// const after = document.querySelector(".after");
-
-	// if (beforeEls.length) {
-	// 	beforeEls.forEach(beforeEl => {
-	// 		beforeEl.addEventListener("mouseenter", function () {
-	// 			after.style.transform = "translateX(100px)";
-	// 		});
-	// 	});
-
-	// 	afterEls.forEach(afterEl => {
-	// 		afterEl.addEventListener("mouseenter", function () {
-	// 			after.style.transform = "translateX(-100px)";
-	// 		});
-	// 	});
-
-	// 	headerBlock.addEventListener("mouseleave", function () {
-	// 		after.style.transform = "translateX(0)";
-	// 	});
-	// }
-
 	/* filters */
 
 	const filterNav = document.querySelector(".filters-wrap.filter-nav");

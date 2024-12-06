@@ -108,6 +108,24 @@
     }
   }
 
+  .before {
+    position: absolute;
+    margin: 0;
+    height: 100%;
+    left: -50px;
+    width: calc(50px + 50%);
+    top: 0;
+    z-index: -1;
+    // background: $primary;
+    transform: skew(-23deg);
+    &:hover {
+      & ~ .container .after {
+        transform: translateX(100px);
+      }
+    }
+
+  }
+
 	&__row {
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);

@@ -96,34 +96,32 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-38%);
-    z-index: 4003;
+    z-index: 1;
     max-width: 63vw;
     width: 300px;
     @include media-breakpoint-up(lg) {
       max-width: 30vw;
-      // max-width: 31vw;
       width: auto;
-      // transform: translateX(-35%);
       transform: translateX(-42%);
     }
   }
 
-  .before {
-    position: absolute;
-    margin: 0;
-    height: 100%;
-    left: -50px;
-    width: calc(50px + 50%);
-    top: 0;
-    z-index: -1;
-    // background: $primary;
-    transform: skew(-23deg);
-    &:hover {
-      & ~ .container .after {
-        transform: translateX(100px);
+	@include media-breakpoint-up(lg) {
+    .before {
+      position: absolute;
+      margin: 0;
+      height: 100%;
+      left: -50px;
+      width: calc(50px + 50%);
+      top: 0;
+      z-index: -1;
+      transform: skew(-23deg);
+      &:hover {
+        & ~ .container .after {
+          transform: translateX(100px);
+        }
       }
     }
-
   }
 
 	&__row {
